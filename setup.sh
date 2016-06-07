@@ -6,4 +6,9 @@ if [ "$(id -u)" != "0" ]; then
    exit 1
 fi
 
+if [ -L /var/www/van ]
+then
+  rm /var/www/van
+fi
+
 ln -s /home/pi/bin/van/www /var/www/van
