@@ -1,12 +1,27 @@
 <?php
 
-create_graph("calls-gw-tok-halfday-wall.png",   "-12h",         "Tokyo calls last 12 hours",             "200", "1100");
+#create_graph("calls-gw-tok-halfday-wall.png",   "-12h",         "Tokyo calls last 12 hours",             "200", "1100");
 
 echo "<html><head>";
-echo "<meta http-equiv=\"refresh\" content=\"30\">";
-echo "</head><body bgcolor='#080808'>";
+echo "<meta http-equiv='refresh' content='30'>";
+echo "<style>";
+echo "body {background-color:darkgrey;}";
+echo "#p01 {color: blue;}";
+echo "</style>";
+echo "</head><body>";
 
-echo "<img src='calls-gw-tok-halfday-wall.png'>";
+#echo "<img src='calls-gw-tok-halfday-wall.png'>";
+
+echo "<p id='p01'>I am different</p>";
+echo "";
+echo "<img src='images/120x240.png'>";
+echo "<img src='images/240x120.png'>";
+echo "";
+echo "";
+echo "";
+echo "";
+echo "";
+echo "";
 
 echo "</body></html>";
 exit;
