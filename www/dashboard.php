@@ -13,7 +13,7 @@ echo "</style>";
 echo "</head><body>";
 
 echo "<div id='header'>";
-echo "<h1>This is page heading</h1>";
+echo "This is page heading";
 echo "</div>";
 
 echo "<table id='nav'><tr>";
