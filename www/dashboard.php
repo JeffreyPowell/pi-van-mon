@@ -16,11 +16,11 @@ echo "<div id='header'>";
 echo "<h1>This is page heading</h1>";
 echo "</div>";
 
-echo "<div id='nav'><ul>";
-echo "<li><a href='#'>Home</a></li>";
-echo "<li><a href='#'>About Us</a></li>";
-echo "<li><a href='#'>Contact Us</a></li>";
-echo "</ul></div>";
+echo "<table id='nav'><tr>";
+echo "<td><a href='#'>Home</a></td>";
+echo "<td><a href='#'>About Us</a></td>";
+echo "<td><a href='#'>Contact Us</a></td>";
+echo "</tr></table>";
 
 #echo "<img src='calls-gw-tok-halfday-wall.png'>";
 echo "<p id='p01'>I am different</p>";
