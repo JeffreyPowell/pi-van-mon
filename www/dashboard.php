@@ -12,7 +12,6 @@ echo "<meta http-equiv='refresh' content='30'>";
 #echo "</style>";
 echo "</head><body>";
 #echo "<img src='calls-gw-tok-halfday-wall.png'>";
-
 echo "<p id='p01'>I am different</p>";
 echo "";
 echo "<img src='images/120x240.png'>";
