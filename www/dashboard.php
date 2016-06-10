@@ -2,7 +2,7 @@
 
 #create_graph("calls-gw-tok-halfday-wall.png",   "-12h",         "Tokyo calls last 12 hours",             "200", "1100");
 
-echo "<html><head>";
+echo "<!DOCTYPE html><html><head>";
 echo "<meta http-equiv='refresh' content='30'>";
 echo "<style>";
 echo "body {background-color:darkgrey;}";
@@ -16,7 +16,14 @@ echo "<p id='p01'>I am different</p>";
 echo "";
 echo "<img src='images/120x240.png'>";
 echo "<img src='images/240x120.png'>";
-echo "";
+echo "<header>";
+echo "<h1>This is page heading</h1>";
+echo "</header>";
+echo "<nav><ul>";
+echo "<li><a href="#">Home</a></li>";
+echo "<li><a href="#">About Us</a></li>";
+echo "<li><a href="#">Contact Us</a></li>";
+echo "</ul></nav>";
 echo "";
 echo "";
 echo "";
