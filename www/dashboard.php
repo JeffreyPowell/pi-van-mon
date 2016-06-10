@@ -23,7 +23,7 @@ echo "<img src='images/240x120.png'>";
 echo "<nav><ul>";
 echo "<li><a href='#'>Home</a></li>";
 echo "<li><a href='#'>About Us</a></li>";
-echo "<li><a href='#''>Contact Us</a></li>";
+echo "<li><a href='#'>Contact Us</a></li>";
 echo "</ul></nav>";
 
 echo "";
