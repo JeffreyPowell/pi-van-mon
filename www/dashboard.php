@@ -5,9 +5,9 @@
 echo "<!DOCTYPE html><html><head>";
 echo "<meta http-equiv='refresh' content='30'>";
 echo "<style>";
-#echo "body {background-color:darkgrey;}";
-#echo "header {padding:0px; text-align:center;}";
-#echo "nav {padding:5px; text-align:center;}";
+echo "body {background-color:darkgrey;}";
+echo "header {padding:0px; text-align:center;}";
+echo "nav {padding:5px; text-align:center;}";
 echo "#p01 {color: blue;}";
 echo "</style>";
 echo "</head><body>";
