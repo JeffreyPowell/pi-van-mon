@@ -15,12 +15,12 @@ echo "</head><body>";
 echo "<div id='header'>";
 echo "This is page heading";
 echo "</div>";
-
+echo "<div id='nav'>";
 echo "<table id='nav'><tr>";
 echo "<td><a href='#'>Home</a></td>";
 echo "<td><a href='#'>About Us</a></td>";
 echo "<td><a href='#'>Contact Us</a></td>";
-echo "</tr></table>";
+echo "</tr></table></div>";
 
 #echo "<img src='calls-gw-tok-halfday-wall.png'>";
 echo "<p id='p01'>I am different</p>";
