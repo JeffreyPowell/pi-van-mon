@@ -7,7 +7,7 @@ echo "<meta http-equiv='refresh' content='30'>";
 echo "<style>";
 echo "body {background-color:grey;}";
 echo "#header {padding:5px; font-family:sans-serif; font-size:22px; text-align:center; color:white; background-color:black;}";
-echo "#nav {border:1px solid red; padding:5px; text-align:center; display: block; background-color:yellow;}";
+echo "#nav {border:1px solid red; padding:5px; font-family:sans-serif; font-size:12px; text-align:center; display: block; background-color:yellow;}";
 echo "#p01 {color: blue;}";
 echo "</style>";
 echo "</head><body>";
