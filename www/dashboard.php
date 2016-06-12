@@ -14,6 +14,8 @@ echo "</head><body>";
 
 echo "<div id='header'>";
 echo "This is page heading";
+echo "<div>";
+echo "</div>";
 echo "</div>";
 echo "<div id='nav'>";
 echo "<table id='nav'><tr>";
