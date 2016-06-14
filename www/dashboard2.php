@@ -9,18 +9,16 @@ echo "<meta http-equiv='refresh' content='30'>";
 $agent = $_SERVER['HTTP_USER_AGENT'];
 
 if (ereg("(iPhone|BlackBerry|PalmSource)", $agent) != false) {
-echo <<<END
-<meta name='viewport' content='width = device-width'>
-<link rel='stylesheet' href='/mobile.css'>
-<link rel="apple-touch-icon" href="images/custom_icon.png"/>
-END;
+  echo "<meta name='viewport' content='width = device-width'>";
+  echo "<link rel='stylesheet' href='/mobile.css'>";
+  echo "<link rel='apple-touch-icon' href='images/custom_icon.png'>";
 }
 else {
-   echo "<!-- not mobile -->";
-   echo "<link href='desktop.css' type='text/css' rel='stylesheet' />"
+  echo "<!-- not mobile -->";
+  echo "<link href='desktop.css' type='text/css' rel='stylesheet'>"
 }
 
-echo "</head><body>";
+echo "</head><body><div id='screen'>";
 
 echo "<div id='header'>";
 echo "This is page heading";
@@ -46,7 +44,7 @@ echo "";
 echo "";
 echo "";
 
-echo "</body></html>";
+echo "</div></body></html>";
 exit;
 
 

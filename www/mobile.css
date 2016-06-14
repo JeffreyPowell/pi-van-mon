@@ -1,5 +1,6 @@
 
-body {background-color:red;}
+body {background-color:red}
+#screen {width:320px;}
 #header {padding:5px; font-family:sans-serif; font-size:22px; text-align:center; color:white; background-color:black;}
 #nav {border:1px solid red; padding:5px; font-family:sans-serif; font-size:12px; text-align:center; display: block; background-color:yellow;}
 #p01 {color: blue;}
