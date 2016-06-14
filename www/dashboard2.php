@@ -10,7 +10,7 @@ $agent = $_SERVER['HTTP_USER_AGENT'];
 
 if (ereg("(iPhone|BlackBerry|PalmSource)", $agent) != false) {
   echo "<meta name='viewport' content='width = device-width'>";
-  echo "<link rel='stylesheet' href='/mobile.css'>";
+  echo "<link rel='stylesheet' href='mobile.css'>";
   echo "<link rel='apple-touch-icon' href='images/custom_icon.png'>";
 }
 else {
