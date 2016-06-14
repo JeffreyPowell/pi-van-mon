@@ -15,7 +15,7 @@ if (ereg("(iPhone|BlackBerry|PalmSource)", $agent) != false) {
 }
 else {
   echo "<!-- not mobile -->";
-  echo "<link href='desktop.css' type='text/css' rel='stylesheet'>"
+  echo "<link href='desktop.css' type='text/css' rel='stylesheet'>";
 }
 
 echo "</head><body><div id='screen'>";
