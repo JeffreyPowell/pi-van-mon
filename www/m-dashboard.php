@@ -8,15 +8,15 @@ echo "<meta http-equiv='refresh' content='30'>";
 
 $agent = $_SERVER['HTTP_USER_AGENT'];
 
-if (ereg("(iPhone|BlackBerry|PalmSource)", $agent) != false) {
-  echo "<meta name='viewport' content='width = device-width'>";
+#if (ereg("(iPhone|BlackBerry|PalmSource)", $agent) != false) {
+#  echo "<meta name='viewport' content='width = device-width'>";
   echo "<link rel='stylesheet' href='mobile.css'>";
   echo "<link rel='apple-touch-icon' href='images/custom_icon.png'>";
-}
-else {
-  echo "<!-- not mobile -->";
-  echo "<link href='desktop.css' type='text/css' rel='stylesheet'>";
-}
+#}
+#else {
+#  echo "<!-- not mobile -->";
+#  echo "<link href='desktop.css' type='text/css' rel='stylesheet'>";
+#}
 
 echo "</head><body><div id='screen'>";
 
