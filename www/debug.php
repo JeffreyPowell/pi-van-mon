@@ -11,6 +11,9 @@ echo "</head><body bgcolor='#FAFAFA'>";
 
 exec("date")
 
+exec("tail /var/log/messages")
+
+exec("ll /var/log/")
 
 echo "</body></html>";
 
