@@ -19,7 +19,7 @@ echo shell_exec("tail /var/log/messages");
 
 echo "<br>";
 
-echo shell_exec("ls -l /var/log/");
+#echo shell_exec("ls -l /var/log/");
 
 echo "</pre>";
 
