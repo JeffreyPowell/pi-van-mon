@@ -14,12 +14,12 @@ echo "<pre>";
 echo shell_exec("date");
 
 echo "<br>";
-
-echo shell_exec("tail /var/log/messages");
+echo "<h1>messages</h1>";
+echo shell_exec("tail -n 20 /var/log/messages");
 
 echo "<br>";
-
-#echo shell_exec("ls -l /var/log/");
+echo "<h1>error.log</h1>";
+echo shell_exec("tail -n 20 /var/log/apache2/error.log");
 
 echo "</pre>";
 
