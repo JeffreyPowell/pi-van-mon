@@ -9,11 +9,11 @@ echo "<html><head>";
 echo "<meta http-equiv=\"refresh\" content=\"10\">";
 echo "</head><body bgcolor='#FAFAFA'>";
 
-exec("date");
+shell_exec("date");
 
-exec("tail /var/log/messages");
+shell_exec("tail /var/log/messages");
 
-exec("ll /var/log/");
+shell_exec("ll /var/log/");
 
 echo "</body></html>";
 
