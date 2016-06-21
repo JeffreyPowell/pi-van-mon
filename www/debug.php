@@ -13,7 +13,7 @@ shell_exec("date");
 
 shell_exec("tail /var/log/messages");
 
-shell_exec("ll /var/log/");
+shell_exec("ls -l /var/log/");
 
 echo "</body></html>";
 
