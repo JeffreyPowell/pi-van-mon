@@ -7,11 +7,16 @@ $width="200";
 
 echo "<html><head>";
 echo "<meta http-equiv=\"refresh\" content=\"10\">";
-echo "</head><body bgcolor='#FAFAFA'>";
+echo "<link rel='stylesheet' href='debug.css'>";
+echo "</head><body>";
 
-echo "<pre>";
+echo "<div id='code'>";
 
 echo shell_exec("date");
+
+echo "</div>";
+
+echo "<pre>";
 
 echo "<br>";
 echo "<h1>messages</h1>";
