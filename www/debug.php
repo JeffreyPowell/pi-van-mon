@@ -28,6 +28,12 @@ echo "<div id='code'>";
 echo shell_exec("tail -n 20 /var/log/apache2/error.log");
 echo "</div>";
 
+echo "<br>";
+echo "<h1>access.log</h1>";
+
+echo "<div id='code'>";
+echo shell_exec("tail -n 20 /var/log/apache2/access.log");
+echo "</div>";
 
 echo "</body></html>";
 
