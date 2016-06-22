@@ -4,3 +4,4 @@ body {background-color:grey;}
 #header {padding:5px; font-family:sans-serif; font-size:22px; text-align:center; color:white; background-color:black;}
 #nav {border:1px solid red; padding:5px; font-family:sans-serif; font-size:12px; text-align:center; display: block; background-color:yellow;}
 #p01 {color: blue;}
+#code {border:1px solid red; padding:5px; font-size:12px; text-align:left; font-family:monospace; white-space:pre;}
