@@ -31,4 +31,4 @@ echo "</div>";
 echo "</body></html>";
 
 exit;
-</php>
+?>
