@@ -26,9 +26,9 @@ class ADCPi :
   __signbit = False # signed bit checker
   __lsb = 0.0000078125 # default lsb value for 18 bit
 
-  
+
   # create byte array and fill with initial values to define size
-  __adcreading = bytearray()  
+  __adcreading = bytearray()
   __adcreading.append(0x00)
   __adcreading.append(0x00)
   __adcreading.append(0x00)
@@ -46,13 +46,13 @@ class ADCPi :
           i2c_bus = 1
         break
 
-    # Define I2C bus and init        
+    # Define I2C bus and init
   global bus
-  bus = smbus.SMBus(i2c_bus); 
+  bus = smbus.SMBus(i2c_bus);
 
-  #local methods    
+  #local methods
 
-  def __updatebyte(self, byte, bit, value): 
+  def __updatebyte(self, byte, bit, value):
       # internal method for setting the value of a single bit within a byte
     if value == 0:
         return byte & ~(1 << bit)
@@ -60,20 +60,20 @@ class ADCPi :
         return byte | (1 << bit)
 
 
-  def __checkbit(self, byte, bit): 
+  def __checkbit(self, byte, bit):
       # internal method for reading the value of a single bit within a byte
     bitval = ((byte&(1<<bit))!=0)
     if (bitval == 1):
         return True
     else:
         return False
-  
+
   def __twos_comp(self, val, bits):
     if( (val&(1<<(bits-1))) != 0 ):
         val = val - (1<<bits)
     return val
 
-  def __setchannel(self, channel): 
+  def __setchannel(self, channel):
     # internal method for updating the config to the selected channel
     if channel < 5:
         if channel != self.__currentchannel1:
@@ -112,31 +112,31 @@ class ADCPi :
                 self.__config2 = self.__updatebyte(self.__config2, 6, 1)
                 self.__currentchannel2 = 8
     return
- 
+
   #init object with i2caddress, default is 0x68, 0x69 for ADCoPi board
   def __init__(self, address=0x68, address2=0x69, rate=18):
     self.__address = address
     self.__address2 = address2
     self.setBitRate(rate)
-    
 
-  def readVoltage(self, channel): 
+
+  def readVoltage(self, channel):
       # returns the voltage from the selected adc channel - channels 1 to 8
       raw = self.readRaw(channel)
-      if (self.__signbit): 
-          return float(0.0) # returned a negative voltage so return 0  
-      else:          
+      if (self.__signbit):
+          return float(0.0) # returned a negative voltage so return 0
+      else:
           voltage = (raw * (self.__lsb/self.__pga)) * 2.448579823702253
           return float(voltage)
 
-  
-  def readRaw(self, channel): 
+
+  def readRaw(self, channel):
       # reads the raw value from the selected adc channel - channels 1 to 8
       h = 0
       l = 0
       m = 0
       s = 0
-      
+
       self.__setchannel(channel) # get the config and i2c address for the selected channel
       if (channel < 5):
           config = self.__config1
@@ -157,8 +157,8 @@ class ADCPi :
               m = __adcreading[1]
               s = __adcreading[2]
           if self.__checkbit(s, 7) == 0:
-              break;      
-          
+              break;
+
       self.__signbit = False
       t = 0.0
       # extract the returned bytes and combine in the correct order
@@ -170,7 +170,7 @@ class ADCPi :
           t = (h << 8) | m
           if self.__checkbit(h, 1) == 1:
              self.__signbit = bool(self.__checkbit(t, 15))
-      
+
       if self.__bitrate == 14:
           t = ((h & 0b00011111) << 8) | m
           self.__signbit = self.__checkbit(t, 13)
@@ -178,7 +178,7 @@ class ADCPi :
       if self.__bitrate == 12:
           t = ((h & 0b00000111) << 8) | m
           self.__signbit = self.__checkbit(t, 11)
-     
+
       return t
 
 
@@ -212,12 +212,12 @@ class ADCPi :
         self.__config2 = self.__updatebyte(self.__config2, 0, 1)
         self.__config2 = self.__updatebyte(self.__config2, 1, 1)
         self.__pga = 3.90625
-       
+
       bus.write_byte(self.__address, self.__config1)
       bus.write_byte(self.__address2, self.__config2)
       return
 
-  def setBitRate(self, rate): 
+  def setBitRate(self, rate):
       # sample rate and resolution
       #12 = 12 bit (240SPS max)
       #14 = 14 bit (60SPS max)
@@ -251,8 +251,7 @@ class ADCPi :
         self.__config2 = self.__updatebyte(self.__config2, 3, 1)
         self.__bitrate = 18
         self.__lsb = 0.0000078125
-       
+
       bus.write_byte(self.__address, self.__config1)
       bus.write_byte(self.__address2, self.__config2)
       return
-                  
