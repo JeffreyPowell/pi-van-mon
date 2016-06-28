@@ -79,8 +79,8 @@ for i in range(0, 1):
         #s7 = "%4.4f" % ( ( v7-z )/y )
         #s8 = "%4.4f" % ( ( v8-z )/y )
 
-#os.system('/usr/bin/rrdtool update /usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd `date +"%s"`:$V1:$V2:$V3:$V4:$V5:$V6:$V7:$V8')
+        #os.system('/usr/bin/rrdtool update /usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd `date +"%s"`:$V1:$V2:$V3:$V4:$V5:$V6:$V7:$V8')
 
-print( s1, s2, s3, s4, s5, s6, s7, s8 )
+        print( s1, s2, s3, s4, s5, s6, s7, s8 )
 
-#os.system('/usr/bin/rrdtool update /usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd '+str(t)+':'+str(s1))
+        #os.system('/usr/bin/rrdtool update /usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd '+str(t)+':'+str(s1))

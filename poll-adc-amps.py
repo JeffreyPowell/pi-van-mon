@@ -6,13 +6,13 @@ import datetime
 import os
 
 # Sample rate can be 12,14, 16 or 18
-adc = ADCPi(0x68, 0x69, 12)
+adc = ADCPi(0x6a, 0x6b, 12)
 
 
-x1 = 769.0 / 12.91
-x2 = 773.0 / 12.91
-x3 = 768.0 / 12.91
-x4 = 767.0 / 12.86
+x1 = 1
+x2 = 1
+x3 = 1
+x4 = 1
 x5 = 1
 x6 = 1
 x7 = 1
@@ -79,8 +79,8 @@ for i in range(0, 1):
         #s7 = "%4.4f" % ( ( v7-z )/y )
         #s8 = "%4.4f" % ( ( v8-z )/y )
 
-#os.system('/usr/bin/rrdtool update /usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd `date +"%s"`:$V1:$V2:$V3:$V4:$V5:$V6:$V7:$V8')
+        #os.system('/usr/bin/rrdtool update /usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd `date +"%s"`:$V1:$V2:$V3:$V4:$V5:$V6:$V7:$V8')
 
-print( s1, s2, s3, s4, s5, s6, s7, s8 )
+        print( s1, s2, s3, s4, s5, s6, s7, s8 )
 
-#os.system('/usr/bin/rrdtool update /usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd '+str(t)+':'+str(s1))
+        #os.system('/usr/bin/rrdtool update /usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd '+str(t)+':'+str(s1))
