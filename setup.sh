@@ -27,3 +27,5 @@ RRA:AVERAGE:0.5:60:8760
 export PYTHONPATH=${PYTHONPATH}:~/Desktop/ABElectronics_Python_Libraries/ADCDACPi/
 
 apt-get install python-smbus
+
+adduser pi i2c
