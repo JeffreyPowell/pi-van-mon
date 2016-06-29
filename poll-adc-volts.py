@@ -9,7 +9,7 @@ import yaml
 config = yaml.safe_load(open("config.yaml"))
 
 print( config )
-
+print( config.devices.adc1i2c.adda )
 
 # Sample rate can be 12,14, 16 or 18
 adc = ADCPi(0x68, 0x69, 12)
