@@ -12,7 +12,7 @@ print( config )
 print( config['devices']['adc1i2c']['adda'] )
 
 # Sample rate can be 12,14, 16 or 18
-adc1 = ADCPi(config['devices']['adc1i2c']['adda'], config['devices']['adc1i2c']['addb'], 12)
+adc1 = ADCPi(int(config['devices']['adc1i2c']['adda']), int(config['devices']['adc1i2c']['addb']), 12)
 
 
 x1 = 769.0 / 12.91
