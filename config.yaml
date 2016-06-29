@@ -1,8 +1,8 @@
 devices:
   adc1i2c:
-    adda: '0x68'
-    addb: '0x69'
+    adda: 0x68
+    addb: 0x69
   adc2i2c:
-    adda: '0x6a'
-    addb: '0x6b'
+    adda: 0x6a
+    addb: 0x6b
   
