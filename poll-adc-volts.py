@@ -4,6 +4,12 @@ from ABElectronics_ADCPi import ADCPi
 import time
 import datetime
 import os
+import yaml
+
+config = yaml.safe_load(open("config.yaml"))
+
+print( config )
+
 
 # Sample rate can be 12,14, 16 or 18
 adc = ADCPi(0x68, 0x69, 12)
