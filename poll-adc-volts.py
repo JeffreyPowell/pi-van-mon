@@ -12,7 +12,7 @@ print( config )
 print( config['devices']['adc1i2c']['adda'] )
 
 # Sample rate can be 12,14, 16 or 18
-adc = ADCPi(0x68, 0x69, 12)
+adc1 = ADCPi(config['devices']['adc1i2c']['adda'], config['devices']['adc1i2c']['addb'], 12)
 
 
 x1 = 769.0 / 12.91
@@ -49,14 +49,14 @@ for i in range(0, 1):
 
         for j in range(0, samples):
 
-                v1 = v1 + adc.readRaw(1)
-                v2 = v2 + adc.readRaw(2)
-                v3 = v3 + adc.readRaw(3)
-                v4 = v4 + adc.readRaw(4)
-                v5 = v5 + adc.readRaw(5)
-                v6 = v6 + adc.readRaw(6)
-                v7 = v7 + adc.readRaw(7)
-                v8 = v8 + adc.readRaw(8)
+                v1 = v1 + adc1.readRaw(1)
+                v2 = v2 + adc1.readRaw(2)
+                v3 = v3 + adc1.readRaw(3)
+                v4 = v4 + adc1.readRaw(4)
+                v5 = v5 + adc1.readRaw(5)
+                v6 = v6 + adc1.readRaw(6)
+                v7 = v7 + adc1.readRaw(7)
+                v8 = v8 + adc1.readRaw(8)
                 #v5 = v5 + int("%8.0f" % (adc.readRaw(5)/3))
                 #v6 = v6 + int("%8.0f" % (adc.readRaw(6)/3))
                 #v7 = v7 + int("%8.0f" % (adc.readRaw(7)/3))

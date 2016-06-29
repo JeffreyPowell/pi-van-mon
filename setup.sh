@@ -29,3 +29,5 @@ export PYTHONPATH=${PYTHONPATH}:~/Desktop/ABElectronics_Python_Libraries/ADCDACP
 apt-get install python-smbus
 
 adduser pi i2c
+
+apt-get install python-yaml
