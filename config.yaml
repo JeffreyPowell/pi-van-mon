@@ -1,8 +1,42 @@
 devices:
-  adc1i2c:
-    adda: 0x68
-    addb: 0x69
-  adc2i2c:
-    adda: 0x6a
-    addb: 0x6b
-  
+  adci2c:
+    1:
+      adda: 0x68
+      addb: 0x69
+      rate: 12
+      pins:
+        1:
+          name: Van Battery 1
+          unit: Volts
+          factor: 5.0
+          offset: 0.0
+        2:
+          name: Van Battery 2
+          unit: Volts
+          factor: 5.0
+          offset: 0.0
+        3:
+          name: Van Battery 3
+          unit: Volts
+          factor: 5.0
+          offset: 0.0
+    2:
+      adda: 0x6a
+      addb: 0x6b
+      rate: 12
+      pins:
+        1:
+          name: Van Battery 1
+          unit: Amps
+          factor: 5.0
+          offset: 0.0
+        2:
+          name: Van Battery 2
+          unit: Amps
+          factor: 5.0
+          offset: 0.0
+        3:
+          name: Van Battery 3
+          unit: Amps
+          factor: 5.0
+          offset: 0.0
