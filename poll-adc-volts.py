@@ -11,8 +11,19 @@ config = yaml.safe_load(open("config.yaml"))
 print( config )
 print( config['devices']['adc1i2c']['adda'] )
 
-for device in config['devices']:
+for device in config['devices']['adci2c']:
     print( device )
+
+    adda = int(config['devices'][device]['adda'])
+    addb = int(config['devices'][device]['addb'])
+
+    rate = int(config['devices'][device]['rate'])
+
+    print( adda, addb, rate )
+
+    x1
+
+    adc = ADCPi( adda, addb, rate)
 
 
 # Sample rate can be 12,14, 16 or 18
