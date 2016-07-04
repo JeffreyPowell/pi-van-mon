@@ -8,18 +8,43 @@ devices:
         1:
           name: Van Battery 1
           unit: Volts
-          factor: 5.1
-          offset: 0.1
+          factor: 5.0
+          offset: 0.0
         2:
           name: Van Battery 2
           unit: Volts
-          factor: 5.2
-          offset: 0.2
+          factor: 5.0
+          offset: 0.0
         3:
           name: Van Battery 3
           unit: Volts
-          factor: 5.3
-          offset: 0.3
+          factor: 5.0
+          offset: 0.0
+        4:
+          name: Van Battery 4
+          unit: Volts
+          factor: 5.0
+          offset: 0.0
+        5:
+          name: Van Battery 5
+          unit: Volts
+          factor: 5.0
+          offset: 0.0
+        6:
+          name: Van Battery 6
+          unit: Volts
+          factor: 5.0
+          offset: 0.0
+        7:
+          name: Van Battery 7
+          unit: Volts
+          factor: 5.0
+          offset: 0.0
+        8:
+          name: Van Battery 7
+          unit: Volts
+          factor: 5.0
+          offset: 0.0
     2:
       adda: 0x6a
       addb: 0x6b
@@ -37,6 +62,31 @@ devices:
           offset: 0.0
         3:
           name: Van Battery 3
+          unit: Amps
+          factor: 5.0
+          offset: 0.0
+        4:
+          name: Van Battery 4
+          unit: Amps
+          factor: 5.0
+          offset: 0.0
+        5:
+          name: Van Battery 5
+          unit: Amps
+          factor: 5.0
+          offset: 0.0
+        6:
+          name: Van Battery 6
+          unit: Amps
+          factor: 5.0
+          offset: 0.0
+        7:
+          name: Van Battery 7
+          unit: Amps
+          factor: 5.0
+          offset: 0.0
+        8:
+          name: Van Battery 7
           unit: Amps
           factor: 5.0
           offset: 0.0
