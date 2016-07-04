@@ -22,7 +22,7 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
   $device_name = (string) $config['devices']['name'][$device_index];
   $device_units = (string) $config['devices']['units'][$device_index];
 
-  $span           = '-1h';
+  $span           = '-24h';
 
   #print_r( $device_index );
   #print_r( $device_type );
@@ -41,7 +41,7 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
 
   # create the rrd image
 
-  create_graph( $rrd_filename, $img_filename,  $span, $device_name.' '.$span, $device_units, "100", "800");
+  create_graph( $rrd_filename, $img_filename,  $span, $device_name.' '.$span, $device_units, "200", "500");
 
   # display the image
 
@@ -60,7 +60,7 @@ function create_graph($input, $output, $start, $title, $units, $height, $width) 
     "--start", $start,
     "--title=$title",
     "--vertical-label=$units",
-    "--lower=0",
+#    "--lower=0",
     "--height=$height",
     "--width=$width",
     "-cBACK#161616",
