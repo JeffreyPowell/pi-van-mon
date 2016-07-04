@@ -41,7 +41,7 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
 
   # create the rrd image
 
-  create_graph( $rrd_filename, $img_filename,  $span,         $device_name.' '.$span.' '.$device_units,             "150", "800");
+  create_graph( $rrd_filename, $img_filename,  $span, $device_name.' '.$span, $device_units, "150", "800");
 
   # display the image
 
@@ -53,13 +53,13 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
 echo "</body></html>";
 exit;
 
-function create_graph($input, $output, $start, $title, $height, $width) {
+function create_graph($input, $output, $start, $title, $units, $height, $width) {
 
   $options = array(
     "--slope-mode",
     "--start", $start,
     "--title=$title",
-    "--vertical-label=Active Calls",
+    "--vertical-label=$units",
     "--lower=0",
     "--height=$height",
     "--width=$width",
@@ -79,9 +79,9 @@ function create_graph($input, $output, $start, $title, $height, $width) {
     "DEF:dataavg=$input:data:AVERAGE",
     "CDEF:transdataavg=dataavg,1,*",
     "AREA:transdataavg#b6d14b40",
-    "LINE4:transdataavg#a0b842:Active SIP Calls",
+    "LINE4:transdataavg#a0b842:$title $units",
     "COMMENT:\\n",
-    "GPRINT:transdataavg:MAX:Calls avg %6.2lf"
+    "GPRINT:transdataavg:MAX:$units Avergage %6.2lf"
   );
 
  $ret = rrd_graph($output, $options );
