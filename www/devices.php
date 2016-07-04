@@ -23,8 +23,8 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
 
   $img_name = $device_type.'-'.$device_id.'-'.$device_pin_num;
 
-  $img_filename = '/home/pi/bin/van/www/images/'.$img_name.'.png';
-  $rrd_filename = '/home/pi/bin/van/data/'.$img_name.'-12h.rrd';
+  $img_filename = '/home/pi/bin/van/www/images/'.$img_name.'-12h.png';
+  $rrd_filename = '/home/pi/bin/van/data/'.$img_name.'.rrd';
 
   print_r( $rrd_filename );
   print_r( $img_filename );
