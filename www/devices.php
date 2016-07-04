@@ -4,15 +4,22 @@ $config = parse_ini_file('/home/pi/bin/van/www/config.ini', true);
 
 print_r( $config );
 
-$numdevices = count($config['devices']['type']);
+$device_count = count($config['devices']['type']);
 
-for ($count=0; $count < $numdevices; $count++) {
-  print_r( $count );
+for ($device_index=0; $device_index < $device_count; $device_index++) {
+  print_r( $device );
   print_r( "===\n" );
-  print_r( $config['devices']['type'][$count] );
-  print_r( $config['devices']['device'][$count] );
-  print_r( $config['devices']['pin'][$count] );
+
+  $device_type    = $config['devices']['type'][$device_index];
+  $device_id      = $config['devices']['device'][$device_index];
+  $device_pin_num = $config['devices']['pin'][$device_index];
+
+  print_r( $device_type );
+  print_r( $device_id );
+  print_r( $device_pin_num );
   print_r( "---\n" );
+
+  $rrd_filename = '/home/pi/bin/van/data/'+;
 }
 
 
