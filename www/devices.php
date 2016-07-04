@@ -7,7 +7,7 @@ print_r( $config );
 $device_count = count($config['devices']['type']);
 
 for ($device_index=0; $device_index < $device_count; $device_index++) {
-  print_r( $device );
+  #print_r( $device );
   print_r( "===\n" );
 
   $device_type    = $config['devices']['type'][$device_index];
@@ -19,12 +19,12 @@ for ($device_index=0; $device_index < $device_count; $device_index++) {
   print_r( $device_pin_num );
   print_r( "---\n" );
 
-  $rrd_filename = '/home/pi/bin/van/data/'+$device_type+'-'+$device_id+'-'+$device_pin_num+'.rrd';
+  $rrd_filename = '/home/pi/bin/van/data/'.$device_type.'-'.$device_id.'-'.$device_pin_num.'.rrd';
 
   print_r( $rrd_filename );
   print_r( "***\n" );
 
-  
+
 }
 
 
