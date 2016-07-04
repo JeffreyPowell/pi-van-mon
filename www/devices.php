@@ -80,7 +80,7 @@ function create_graph($input, $output, $start, $title, $height, $width) {
     "GPRINT:transdatamax:MAX:Calls Max %6.2lf"
   );
 
- $ret = rrd_graph($output, $options, count($options));
+ $ret = rrd_graph($output, $options );
 
   if (! $ret) {
     echo "<b>Graph error: </b>".rrd_error()."\n";
