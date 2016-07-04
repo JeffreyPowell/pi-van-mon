@@ -6,7 +6,7 @@ print_r( $config );
 
 $device_count = count($config['devices']['type']);
 
-for ($device_index=0; $device_index < $device_count; $device_index++) {
+for ($device_index=1; $device_index < $device_count; $device_index++) {
   #print_r( $device );
   print_r( "===\n" );
 
