@@ -19,6 +19,8 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
   $device_id      = (string) $config['devices']['id'][$device_index];
   $device_pin_num = (string) $config['devices']['pin'][$device_index];
 
+  $span           = '-12h';
+
   #print_r( $device_index );
   #print_r( $device_type );
   #print_r( $device_id );
@@ -27,7 +29,7 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
 
   $img_name = $device_type.'-'.$device_id.'-'.$device_pin_num;
 
-  $img_filename = '/home/pi/bin/van/www/images/'.$img_name.'-12h.png';
+  $img_filename = '/home/pi/bin/van/www/images/'.$img_name.$span'.png';
   $rrd_filename = '/home/pi/bin/van/data/'.$img_name.'.rrd';
 
   #print_r( $rrd_filename );
@@ -36,7 +38,7 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
 
   # create the rrd image
 
-  create_graph( $rrd_filename, $img_filename,  "-12h",         "SIP CALLS last 12 hours",             "200", "1100");
+  create_graph( $rrd_filename, $img_filename,  $span,         $img_name.$span,             "200", "800");
 
   # display the image
 
