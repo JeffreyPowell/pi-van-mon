@@ -8,7 +8,7 @@ devices:
         1:
           name: Van Battery 1
           unit: Volts
-          factor: 5.2
+          factor: 5.5
           offset: 0.0
         2:
           name: Van Battery 2
