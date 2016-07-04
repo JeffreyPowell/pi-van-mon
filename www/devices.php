@@ -4,11 +4,14 @@ $config = parse_ini_file('/home/pi/bin/van/www/config.ini', true);
 
 print_r( $config );
 
-foreach( $config['display']['device'] as $device )
-{
-  print_r( $device );
+$numdevices = count($config['devices']['type']);
+
+for ($count=0; $count < $numdevices; $count++) {
+  print_r( $count );
   print_r( "===\n" );
-  print_r( $config['display']['device'][device]['type'] );
+  print_r( $config['devices']['type'][$count] );
+  print_r( $config['devices']['device'][$count] );
+  print_r( $config['devices']['pin'][$count] );
   print_r( "---\n" );
 }
 
