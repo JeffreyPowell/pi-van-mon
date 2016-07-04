@@ -45,7 +45,7 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
 
   # display the image
 
-  echo "<img src='images/".$img_name.$span.".png' alt='Generated RRD image'>";
+  echo "<img src='images/".$img_name.$span.".png' alt='Generated RRD image'><br>";
 
 }
 
