@@ -19,7 +19,10 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
   $device_id      = (string) $config['devices']['id'][$device_index];
   $device_pin_num = (string) $config['devices']['pin'][$device_index];
 
-  $span           = '-2h';
+  $device_name = (string) $config['devices']['name'][$device_index];
+  $device_units = (string) $config['devices']['units'][$device_index];
+
+  $span           = '-1h';
 
   #print_r( $device_index );
   #print_r( $device_type );
@@ -38,7 +41,7 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
 
   # create the rrd image
 
-  create_graph( $rrd_filename, $img_filename,  $span,         $img_name.$span,             "200", "800");
+  create_graph( $rrd_filename, $img_filename,  $span,         $device_name.$span.$device_units,             "150", "600");
 
   # display the image
 
