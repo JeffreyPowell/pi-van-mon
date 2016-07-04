@@ -73,7 +73,7 @@ function create_graph($input, $output, $start, $title, $units, $height, $width) 
     "-nTITLE:10",
     "-nAXIS:9",
     "-nUNIT:10",
-#    "-y 1:5",
+    "-y 1:1",
     "-cFRAME#ffffff",
     "-cARROW#000000",
     "DEF:dataavg=$input:data:AVERAGE",
