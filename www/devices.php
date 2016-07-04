@@ -72,12 +72,12 @@ function create_graph($input, $output, $start, $title, $height, $width) {
     "-y 1:5",
     "-cFRAME#ffffff",
     "-cARROW#000000",
-    "DEF:datamax=$input:data:MAX",
-    "CDEF:transdatamax=datamax,1,*",
-    "AREA:transdatamax#b6d14b40",
-    "LINE4:transdatamax#a0b842:Active SIP Calls",
+    "DEF:dataavg=$input:data:AVERAGE",
+    "CDEF:transdataavg=dataavg,1,*",
+    "AREA:transdataavg#b6d14b40",
+    "LINE4:transdataavg#a0b842:Active SIP Calls",
     "COMMENT:\\n",
-    "GPRINT:transdatamax:MAX:Calls Max %6.2lf"
+    "GPRINT:transdataavg:MAX:Calls avg %6.2lf"
   );
 
  $ret = rrd_graph($output, $options );
