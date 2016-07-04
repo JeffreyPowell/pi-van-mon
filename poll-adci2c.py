@@ -38,7 +38,7 @@ for device in config['devices']['adci2c']:
       rawdata = adc.readVoltage( pin )
       data = str( ( rawdata * factor ) - offset )
 
-      print( device, pin, rawdata, data )
+      #print( device, pin, rawdata, data )
 
       filename = '/home/pi/bin/van/data/adci2c-'+str(device)+'-'+str(pin)+'.rrd'
 
