@@ -3,6 +3,7 @@
 $config = parse_ini_file('/home/pi/bin/van/www/config.ini', true);
 
 print_r( $config );
+print_r( "\n\n" );
 
 $device_count = count($config['devices']['type']);
 
@@ -14,6 +15,7 @@ for ($device_index=1; $device_index < $device_count; $device_index++) {
   $device_id      = (string) $config['devices']['device'][$device_index];
   $device_pin_num = (string) $config['devices']['pin'][$device_index];
 
+  print_r( $device_index );
   print_r( $device_type );
   print_r( $device_id );
   print_r( $device_pin_num );
