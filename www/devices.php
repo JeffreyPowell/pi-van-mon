@@ -2,33 +2,37 @@
 
 $config = parse_ini_file('/home/pi/bin/van/www/config.ini', true);
 
-print_r( $config );
-print_r( "\n\n" );
+#print_r( $config );
+#print_r( "\n\n" );
 
 $device_count = count($config['devices']['type']);
 
+echo "<html><head>";
+echo "<meta http-equiv=\"refresh\" content=\"30\">";
+echo "</head><body bgcolor='#808080'>";
+
 for ($device_index=1; $device_index <= $device_count; $device_index++) {
   #print_r( $device );
-  print_r( "===\n" );
+  #print_r( "===\n" );
 
   $device_type    = (string) $config['devices']['type'][$device_index];
   $device_id      = (string) $config['devices']['id'][$device_index];
   $device_pin_num = (string) $config['devices']['pin'][$device_index];
 
-  print_r( $device_index );
-  print_r( $device_type );
-  print_r( $device_id );
-  print_r( $device_pin_num );
-  print_r( "---\n" );
+  #print_r( $device_index );
+  #print_r( $device_type );
+  #print_r( $device_id );
+  #print_r( $device_pin_num );
+  #print_r( "---\n" );
 
   $img_name = $device_type.'-'.$device_id.'-'.$device_pin_num;
 
   $img_filename = '/home/pi/bin/van/www/images/'.$img_name.'-12h.png';
   $rrd_filename = '/home/pi/bin/van/data/'.$img_name.'.rrd';
 
-  print_r( $rrd_filename );
-  print_r( $img_filename );
-  print_r( "***\n" );
+  #print_r( $rrd_filename );
+  #print_r( $img_filename );
+  #print_r( "***\n" );
 
   # create the rrd image
 
@@ -40,15 +44,6 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
 
 }
 
-
-
-
-
-echo "<html><head>";
-echo "<meta http-equiv=\"refresh\" content=\"30\">";
-echo "</head><body bgcolor='#808080'>";
-
-echo "DEVICES";
 
 echo "</body></html>";
 exit;
