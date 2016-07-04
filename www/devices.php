@@ -41,7 +41,7 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
 
   # create the rrd image
 
-  create_graph( $rrd_filename, $img_filename,  $span, $device_name.' '.$span, $device_units, "150", "800");
+  create_graph( $rrd_filename, $img_filename,  $span, $device_name.' '.$span, $device_units, "100", "800");
 
   # display the image
 
@@ -71,7 +71,7 @@ function create_graph($input, $output, $start, $title, $units, $height, $width) 
     "-cGRID#888800",
     "-cMGRID#ffffff",
     "-nTITLE:10",
-    "-nAXIS:12",
+    "-nAXIS:9",
     "-nUNIT:10",
 #    "-y 1:5",
     "-cFRAME#ffffff",
