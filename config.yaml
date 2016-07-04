@@ -13,37 +13,37 @@ devices:
         2:
           name: Van Battery 2
           unit: Volts
-          factor: 5.0
+          factor: 6.6
           offset: 0.0
         3:
           name: Van Battery 3
           unit: Volts
-          factor: 5.0
+          factor: 6.6
           offset: 0.0
         4:
           name: Van Battery 4
           unit: Volts
-          factor: 5.0
+          factor: 6.6
           offset: 0.0
         5:
           name: Van Battery 5
           unit: Volts
-          factor: 5.0
+          factor: 6.6
           offset: 0.0
         6:
           name: Van Battery 6
           unit: Volts
-          factor: 5.0
+          factor: 6.6
           offset: 0.0
         7:
           name: Van Battery 7
           unit: Volts
-          factor: 5.0
+          factor: 6.6
           offset: 0.0
         8:
-          name: Van Battery 7
+          name: Van Battery 8
           unit: Volts
-          factor: 5.0
+          factor: 6.6
           offset: 0.0
     2:
       adda: 0x6a
