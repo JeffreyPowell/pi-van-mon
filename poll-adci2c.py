@@ -20,7 +20,7 @@ for device in config['devices']['adci2c']:
 
     #print( adda, addb, rate )
 
-    
+
 
     adc = ADCPi( adda, addb, rate)
 
@@ -38,9 +38,9 @@ for device in config['devices']['adci2c']:
       rawdata = adc.readRaw( pin )
       data = str( ( rawdata * factor ) - offset )
 
-      #print( rawdata, data )
+      print( device, pin, rawdata, data )
 
-      filename = '/home/pi/bin/van/data/adci2c-'+str(device)+'-'+str(pin)+'.rrd'      
+      filename = '/home/pi/bin/van/data/adci2c-'+str(device)+'-'+str(pin)+'.rrd'
 
 
       if( not os.path.exists( filename ) ):
@@ -48,4 +48,3 @@ for device in config['devices']['adci2c']:
         os.system('/usr/bin/rrdtool create '+filename+' --step 60 --start now DS:data:GAUGE:120:U:U RRA:AVERAGE:0.5:1:1400 RRA:AVERAGE:0.5:5:8640 RRA:AVERAGE:0.5:60:8760')
 
       os.system('/usr/bin/rrdtool update '+filename+" "+str(t)+':'+data)
-
