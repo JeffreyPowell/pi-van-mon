@@ -34,6 +34,10 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
 
   create_graph( $rrd_filename, $img_filename,  "-12h",         "SIP CALLS last 12 hours",             "200", "1100");
 
+  # display the image
+
+  echo "<img src='images/".$img_name."-12h.png' alt='Generated RRD image'>";
+
 }
 
 
