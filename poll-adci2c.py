@@ -45,6 +45,6 @@ for device in config['devices']['adci2c']:
 
       if( not os.path.exists( filename ) ):
         #print ( os.path.exists( filename ))
-        os.system('/usr/bin/rrdtool create '+filename+' --step 60 --start now DS:data:GAUGE:120:U:U RRA:AVERAGE:0.5:1:1400 RRA:AVERAGE:0.5:5:8640 RRA:AVERAGE:0.5:60:8760')
+        os.system('/usr/bin/rrdtool create '+filename+' --step 60 --start now DS:data:GAUGE:120:U:U RRA:AVERAGE:0.5:1:10080 RRA:AVERAGE:0.5:5:51840 RRA:AVERAGE:0.5:60:4380')
 
       os.system('/usr/bin/rrdtool update '+filename+" "+str(t)+':'+data)
