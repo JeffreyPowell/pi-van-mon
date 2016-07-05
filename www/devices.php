@@ -73,7 +73,7 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
   create_graph( $rrd_filename, $img_filename,  $period_span, $device_name.' '.$period_span, $device_units, $chart_height, $chart_width);
 
   # display the image
-  echo "<a href='dayonday.php?id=$device_index'>";
+  echo "<a href='device-dod.php?id=$device_index'>";
   echo "<img src='images/".$img_name.".png' alt='Generated RRD image'><br><br>";
   echo "</a>";
 }
