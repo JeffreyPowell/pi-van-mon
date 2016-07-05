@@ -23,8 +23,8 @@ for device in config['devices']['adci2c']:
 
     try:
         adc = ADCPi( adda, addb, rate)
-    except:
-        # Device probably not plugged in :(
+    except: # Device probably not plugged in :(
+        pass
 
     for pin in config['devices']['adci2c'][device]['pins']:
 
