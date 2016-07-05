@@ -21,6 +21,7 @@ echo "<input type='button' onclick=\"location.href='devices.php?p=-1d';\" value=
 echo "<input type='button' onclick=\"location.href='devices.php?p=-1w';\" value='One Week' />";
 echo "<input type='button' onclick=\"location.href='devices.php?p=-1m';\" value='One Month' />";
 echo "<input type='button' onclick=\"location.href='devices.php?p=-1y';\" value='One Year' />";
+echo "<br>";
 
 for ($device_index=1; $device_index <= $device_count; $device_index++) {
   #print_r( $device );
