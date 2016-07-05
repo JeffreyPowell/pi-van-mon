@@ -21,8 +21,10 @@ for device in config['devices']['adci2c']:
     #print( adda, addb, rate )
 
 
-
-    adc = ADCPi( adda, addb, rate)
+    try:
+        adc = ADCPi( adda, addb, rate)
+    except:
+        # Device probably not plugged in :(
 
     for pin in config['devices']['adci2c'][device]['pins']:
 
@@ -36,7 +38,7 @@ for device in config['devices']['adci2c']:
       #print( factor, offset )
 
       rawdata = adc.readVoltage( pin )
-      data = str( ( rawdata * factor ) - offset )
+      data = str( ( rawdata * factor ) + offset )
 
       #print( device, pin, rawdata, data )
 
