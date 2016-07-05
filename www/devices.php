@@ -52,10 +52,11 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
   #print_r( $device_pin_num );
   #print_r( "---\n" );
 
-  $img_name = $device_type.'-'.$device_id.'-'.$device_pin_num.'-'.$chart_height.'x'.$chart_width;
+  $img_name = $device_type.'-'.$device_id.'-'.$device_pin_num.'-'.$period_span.'-'.$chart_height.'x'.$chart_width;
+  $rrd_name = $device_type.'-'.$device_id.'-'.$device_pin_num;
 
-  $img_filename = '/home/pi/bin/van/www/images/'.$img_name.$period_span.'.png';
-  $rrd_filename = '/home/pi/bin/van/data/'.$img_name.'.rrd';
+  $img_filename = '/home/pi/bin/van/www/images/'.$img_name.'.png';
+  $rrd_filename = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 
   #print_r( $rrd_filename );
   #print_r( $img_filename );
