@@ -25,8 +25,8 @@ echo "<input type='button' onclick=\"location.href='devices.php?p=-1w&w="+$chart
 echo "<input type='button' onclick=\"location.href='devices.php?p=-1m&w="+$chart_width+"';\" value='One Month' />";
 echo "<input type='button' onclick=\"location.href='devices.php?p=-1y&w="+$chart_width+"';\" value='One Year' />";
 echo "<br>";
-$chart_bigger = str( int($chart_width)+100);
-$chart_smaller = str( int($chart_width)-100);
+$chart_bigger = strval( intval($chart_width) + 100);
+$chart_smaller = strval( intval($chart_width) - 100);
 echo "<input type='button' onclick=\"location.href='devices.php?p="+$period_span+"&w="+$chart_bigger+"';\" value='Width +' />";
 echo "<input type='button' onclick=\"location.href='devices.php?p="+$period_span+"&w="+$chart_smaller+"';\" value='Width -' />";
 echo "<br>";
