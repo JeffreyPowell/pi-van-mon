@@ -1,13 +1,33 @@
 <?php
 
+//Detect special conditions devices
+$iPod    = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
+$iPhone  = stripos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+$iPad    = stripos($_SERVER['HTTP_USER_AGENT'],"iPad");
+$Android = stripos($_SERVER['HTTP_USER_AGENT'],"Android");
+$webOS   = stripos($_SERVER['HTTP_USER_AGENT'],"webOS");
+
+//do something with this information
+if( $iPod || $iPhone ){
+    $default_width = 300 ; $default_height = 100 ;
+}else if($iPad){
+    $default_width = 300 ; $default_height = 100 ;
+}else if($Android){
+    $default_width = 300 ; $default_height = 100 ;
+}else if($webOS){
+    $default_width = 300 ; $default_height = 100 ;
+}else{
+    $default_width = 800 ; $default_height = 300 ;
+}
+
 $period_span = $_GET['p'];
 $chart_width = $_GET['w'];
 $chart_height = $_GET['h'];
 
 #$PERIOD ='-1y';
 if( $period_span == "" )  { $period_span = '-8h';  $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width&h=$chart_height"); exit; }
-if( $chart_width == "" )  { $chart_width = '300';  $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width&h=$chart_height"); exit; }
-if( $chart_height == "" ) { $chart_height = '100'; $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width&h=$chart_height"); exit; }
+if( $chart_width == "" )  { $chart_width  = $default_width;  $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width&h=$chart_height"); exit; }
+if( $chart_height == "" ) { $chart_height = $default_height; $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width&h=$chart_height"); exit; }
 
 $config = parse_ini_file('/home/pi/bin/van/www/config.ini', true);
 
