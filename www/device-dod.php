@@ -34,6 +34,11 @@ create_graph_dayonday($DEVICEID, "images/d-dayonday-temp-$DEVICEID.png", "temp",
 echo "<img src='images/d-dayonday-temp-$DEVICEID.png'>";
 
 
+create_graph_dayonday( $rrd_filename, $img_filename,  $period_span, $device_name.' '.$period_span, $device_units, $chart_height, $chart_width);
+
+echo "<img src='images/".$img_name.".png' alt='Generated RRD image'><br><br>";
+  
+
 echo "</body></html>";
 
 exit;
