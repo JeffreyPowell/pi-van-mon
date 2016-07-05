@@ -1,12 +1,32 @@
 <?php
 
+//Detect special conditions devices
+$iPod    = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
+$iPhone  = stripos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+$iPad    = stripos($_SERVER['HTTP_USER_AGENT'],"iPad");
+$Android = stripos($_SERVER['HTTP_USER_AGENT'],"Android");
+$webOS   = stripos($_SERVER['HTTP_USER_AGENT'],"webOS");
+//do something with this information
+if( $iPod || $iPhone ){
+    $default_width = 300 ; $default_height = 100 ;
+}else if($iPad){
+    $default_width = 800 ; $default_height = 200 ;
+}else if($Android){
+    $default_width = 300 ; $default_height = 100 ;
+}else if($webOS){
+    $default_width = 300 ; $default_height = 100 ;
+}else{
+    $default_width = 1200 ; $default_height = 500 ;
+}
+
+
 $device_id = $_GET['id'];
 $chart_width = $_GET['w'];
 $chart_height = $_GET['h'];
 
 if( $device_id == "" )    { $device_id = '1';      header("Location: device-dod.php?id=$device_id&w=$chart_width&h=$chart_height"); exit; }
-if( $chart_width == "" )  { $chart_width = '800';  header("Location: device-dod.php?id=$device_id&w=$chart_width&h=$chart_height"); exit; }
-if( $chart_height == "" ) { $chart_height = '350'; header("Location: device-dod.php?id=$device_id&w=$chart_width&h=$chart_height"); exit; }
+if( $chart_width == "" )  { $chart_width = $default_width;   header("Location: device-dod.php?id=$device_id&w=$chart_width&h=$chart_height"); exit; }
+if( $chart_height == "" ) { $chart_height = $default_height; header("Location: device-dod.php?id=$device_id&w=$chart_width&h=$chart_height"); exit; }
 
 
 echo "<html><head>";
