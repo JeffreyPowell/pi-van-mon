@@ -153,7 +153,7 @@ function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $dat
      );
  }
 
-$ret = rrd_graph($output, $options);
+$ret = rrd_graph($outputimg, $options);
  if (! $ret) {
    echo "<b>Graph error: </b>".rrd_error()."\n";
  }
