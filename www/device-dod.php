@@ -9,20 +9,31 @@ if( $chart_width == "" )  { $chart_width = '800';  header("Location: device-dod.
 if( $chart_height == "" ) { $chart_height = '350'; header("Location: device-dod.php?id=$device_id&w=$chart_width&h=$chart_height"); exit; }
 
 
-
-$sensors = file('/home/pi/bin/therm/sensors.txt');
-
-#$charts = array("-30m", "-1h", "-1d", "-1w", "-1m", "-1y");
-#$charts = array("-1h", "-1d", "-1w");
-
 echo "<html><head>";
 echo "<meta http-equiv=\"refresh\" content=\"240\">";
 echo "<style type='text/css'>a {text-decoration: none}</style>";
 echo "</head><body bgcolor='#080808'>";
 echo "<a href='devices.php' style='font-family:helvetica;font-size:20px;color:grey;'>All Devices</a><br>";
 
-##$height="350";
-##$width="800";
+$config = parse_ini_file('/home/pi/bin/van/www/config.ini', true);
+$device_count = count($config['devices']['type']);
+for ($device_index=1; $device_index <= $device_count; $device_index++) {
+  #print_r( $device );
+  #print_r( "===\n" );
+  $device_type    = (string) $config['devices']['type'][$device_index];
+  $device_id      = (string) $config['devices']['id'][$device_index];
+  $device_pin_num = (string) $config['devices']['pin'][$device_index];
+  $device_name = (string) $config['devices']['name'][$device_index];
+  $device_units = (string) $config['devices']['units'][$device_index];$config = parse_ini_file('/home/pi/bin/van/www/config.ini', true);
+$device_count = count($config['devices']['type']);
+for ($device_index=1; $device_index <= $device_count; $device_index++) {
+  #print_r( $device );
+  #print_r( "===\n" );
+  $device_type    = (string) $config['devices']['type'][$device_index];
+  $device_id      = (string) $config['devices']['id'][$device_index];
+  $device_pin_num = (string) $config['devices']['pin'][$device_index];
+  $device_name = (string) $config['devices']['name'][$device_index];
+  $device_units = (string) $config['devices']['units'][$device_index];
 
 
 create_graph_dayonday($DEVICEID, "images/d-dayonday-temp-$DEVICEID.png", "temp",    "( C )",      "AVERAGE", $width, $height);
