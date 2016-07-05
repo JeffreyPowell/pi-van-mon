@@ -2,10 +2,12 @@
 
 $period_span = $_GET['p'];
 $chart_width = $_GET['w'];
+$chart_height = $_GET['h'];
 
 #$PERIOD ='-1y';
-if( $period_span == "" ) { $period_span = '-1d'; $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width"); exit; }
-if( $chart_width == "" ) { $chart_width = '500'; $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width"); exit; }
+if( $period_span == "" ) { $period_span = '-1d'; $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width&h=$chart_height"); exit; }
+if( $chart_width == "" ) { $chart_width = '500'; $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width&h=$chart_height"); exit; }
+if( $chart_height == "" ) { $chart_width = '100'; $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width&h=$chart_height"); exit; }
 
 $config = parse_ini_file('/home/pi/bin/van/www/config.ini', true);
 
@@ -50,7 +52,7 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
   #print_r( $device_pin_num );
   #print_r( "---\n" );
 
-  $img_name = $device_type.'-'.$device_id.'-'.$device_pin_num;
+  $img_name = $device_type.'-'.$device_id.'-'.$device_pin_num.'-'.$chart_height.'x'.$chart_width;
 
   $img_filename = '/home/pi/bin/van/www/images/'.$img_name.$period_span.'.png';
   $rrd_filename = '/home/pi/bin/van/data/'.$img_name.'.rrd';
@@ -61,7 +63,7 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
 
   # create the rrd image
 
-  create_graph( $rrd_filename, $img_filename,  $period_span, $device_name.' '.$period_span, $device_units, "200", $chart_width);
+  create_graph( $rrd_filename, $img_filename,  $period_span, $device_name.' '.$period_span, $device_units, $chart_height, $chart_width);
 
   # display the image
 
