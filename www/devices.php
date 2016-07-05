@@ -1,8 +1,11 @@
 <?php
 
 $period_span = $_GET['p'];
+$chart_width = $_GET['w'];
+
 #$PERIOD ='-1y';
-if( $period_span == "" ) { header("Location: devices.php?p=-1d"); exit; }
+if( $period_span == "" ) { $period_span = '-1d'; $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width"); exit; }
+if( $chart_width == "" ) { $chart_width = '500'; $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width"); exit; }
 
 $config = parse_ini_file('/home/pi/bin/van/www/config.ini', true);
 
@@ -15,12 +18,17 @@ echo "<html><head>";
 echo "<meta http-equiv=\"refresh\" content=\"30\">";
 echo "</head><body bgcolor='#080808'>";
 
-echo "<input type='button' onclick=\"location.href='devices.php?p=-1h';\" value='One Hour' />";
-echo "<input type='button' onclick=\"location.href='devices.php?p=-8h';\" value='Eight Hours' />";
-echo "<input type='button' onclick=\"location.href='devices.php?p=-1d';\" value='One Day' />";
-echo "<input type='button' onclick=\"location.href='devices.php?p=-1w';\" value='One Week' />";
-echo "<input type='button' onclick=\"location.href='devices.php?p=-1m';\" value='One Month' />";
-echo "<input type='button' onclick=\"location.href='devices.php?p=-1y';\" value='One Year' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=-1h&w="+$chart_width+"';\" value='One Hour' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=-8h&w="+$chart_width+"';\" value='Eight Hours' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=-1d&w="+$chart_width+"';\" value='One Day' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=-1w&w="+$chart_width+"';\" value='One Week' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=-1m&w="+$chart_width+"';\" value='One Month' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=-1y&w="+$chart_width+"';\" value='One Year' />";
+echo "<br>";
+$chart_bigger = str( int($chart_width)+100);
+$chart_smaller = str( int($chart_width)-100);
+echo "<input type='button' onclick=\"location.href='devices.php?p="+$period_span+"&w="+$chart_bigger+"';\" value='Width +' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p="+$period_span+"&w="+$chart_smaller+"';\" value='Width -' />";
 echo "<br>";
 
 for ($device_index=1; $device_index <= $device_count; $device_index++) {
@@ -53,7 +61,7 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
 
   # create the rrd image
 
-  create_graph( $rrd_filename, $img_filename,  $period_span, $device_name.' '.$period_span, $device_units, "200", "500");
+  create_graph( $rrd_filename, $img_filename,  $period_span, $device_name.' '.$period_span, $device_units, "200", $chart_width);
 
   # display the image
 
