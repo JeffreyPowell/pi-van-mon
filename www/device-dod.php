@@ -52,7 +52,7 @@ exit;
 function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $datacf, $height, $width) {
 
  $red          = "FF0000";
- $red_dark     = "";
+ $red_dark     = "880000";
  $orange       = "FFA500";
  $yellow       = "FFFF00";
  $yellow_dark  = "888800";
@@ -78,7 +78,8 @@ function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $dat
    6 => $violet
  );
 
- $linewidth=2.5;
+ $titlept=9;
+ $linewidth=4;
  $vertaxislabelpt=6;
  $allaxisvaluept=10;
  $legendpt=8;
@@ -90,7 +91,7 @@ function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $dat
    "--slope-mode",
    "--end=midnight",
    "--start=end-1d",
-#    "--vertical-label=$dataunit",
+   "--vertical-label=$dataunit",
    "--height=$height",
    "--width=$width",
    "-cBACK#$grey_dark_vv",
@@ -100,9 +101,9 @@ function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $dat
    "-cCANVAS#$grey_dark_v",
    "-cGRID#$yellow_dark",
    "-cMGRID#$white",
-   "-cFRAME#5e5e5e",
-   "-cARROW#5e5e5e",
-   "-nTITLE:9",
+   "-cFRAME#$white",
+   "-cARROW#$black",
+   "-nTITLE:$titlept",
    "-nLEGEND:$legendpt",
    "-nAXIS:$allaxisvaluept",
    "-nUNIT:$vertaxislabelpt"
