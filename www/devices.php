@@ -22,7 +22,7 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
   $device_name = (string) $config['devices']['name'][$device_index];
   $device_units = (string) $config['devices']['units'][$device_index];
 
-  $span           = '-1h';
+  $span           = '-12h';
 
   #print_r( $device_index );
   #print_r( $device_type );
