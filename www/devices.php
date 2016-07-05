@@ -11,13 +11,13 @@ $webOS   = stripos($_SERVER['HTTP_USER_AGENT'],"webOS");
 if( $iPod || $iPhone ){
     $default_width = 300 ; $default_height = 100 ;
 }else if($iPad){
-    $default_width = 300 ; $default_height = 100 ;
+    $default_width = 800 ; $default_height = 200 ;
 }else if($Android){
     $default_width = 300 ; $default_height = 100 ;
 }else if($webOS){
     $default_width = 300 ; $default_height = 100 ;
 }else{
-    $default_width = 800 ; $default_height = 300 ;
+    $default_width = 1200 ; $default_height = 200 ;
 }
 
 $period_span = $_GET['p'];
