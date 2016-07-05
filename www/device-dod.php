@@ -52,13 +52,20 @@ exit;
 function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $datacf, $height, $width) {
 
  $red          = "FF0000";
+ $red_dark     = "";
  $orange       = "FFA500";
  $yellow       = "FFFF00";
+ $yellow_dark  = "888800";
  $green        = "00FF00";
  $blue         = "00FFFF";
  $indigo       = "0000FF";
  $violet       = "8D38C9";
-
+ 
+ $grey_dark_vv = "161616";
+ $black        = "000000";
+ 
+ $grey_dark_v  = "1e1e1e";
+ $grey_light   = "c7c7c7";
 
  $days = array(
    0 => $red,
@@ -85,12 +92,12 @@ function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $dat
 #    "--vertical-label=$dataunit",
    "--height=$height",
    "--width=$width",
-   "-cBACK#EEEEEE00",
-   "-cSHADEA#EEEEEE00",
-   "-cSHADEB#EEEEEE00",
-   "-cFONT#000000",
-   "-cCANVAS#FFFFFF00",
-   "-cGRID#a5a5a5",
+   "-cBACK#$grey_dark_vv",
+   "-cSHADEA#$black",
+   "-cSHADEB#$black",
+   "-cFONT#$grey_light",
+   "-cCANVAS#$grey_dark_v",
+   "-cGRID#$yellow_dark",
    "-cMGRID#FF9999",
    "-cFRAME#5e5e5e",
    "-cARROW#5e5e5e",
