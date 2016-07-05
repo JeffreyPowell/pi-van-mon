@@ -27,14 +27,17 @@ $device_pin_num = (string) $config['devices']['pin'][$device_id];
 $device_name    = (string) $config['devices']['name'][$device_id];
 $device_units   = (string) $config['devices']['units'][$device_id];
   
+$img_name = $device_type.'-'.$device_id.'-'.$device_pin_num.'-dod-'.$chart_height.'x'.$chart_width;
+$rrd_name = $device_type.'-'.$device_id.'-'.$device_pin_num;
+
+$img_filename = '/home/pi/bin/van/www/images/'.$img_name.'.png';
+$rrd_filename = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+
+#create_graph_dayonday($DEVICEID, "images/d-dayonday-temp-$DEVICEID.png", "temp",    "( C )",      "AVERAGE", $width, $height);
+#echo "<img src='images/d-dayonday-temp-$DEVICEID.png'>";
 
 
-create_graph_dayonday($DEVICEID, "images/d-dayonday-temp-$DEVICEID.png", "temp",    "( C )",      "AVERAGE", $width, $height);
-
-echo "<img src='images/d-dayonday-temp-$DEVICEID.png'>";
-
-
-create_graph_dayonday( $rrd_filename, $img_filename,  $period_span, $device_name.' '.$period_span, $device_units, $chart_height, $chart_width);
+create_graph_dayonday( $rrd_filename, $img_filename, $device_name.' '.$period_span, $device_units, "AVERAGE",$chart_height, $chart_width);
 
 echo "<img src='images/".$img_name.".png' alt='Generated RRD image'><br><br>";
   
@@ -46,7 +49,7 @@ exit;
 
 
 
-function create_graph_dayonday($DEVICEID, $output, $dataname, $dataunit, $datacf, $width, $height) {
+function create_graph_dayonday($DEVICEID, $output, $dataname, $dataunit, $datacf, $height, $width) {
 
  $red          = "FF0000";
  $orange       = "FFA500";
