@@ -16,7 +16,7 @@ if( $iPod || $iPhone ){
 }else if($webOS){
     $default_width = 300 ; $default_height = 100 ;
 }else{
-    $default_width = 1600 ; $default_height = 800 ;
+    $default_width = 1200 ; $default_height = 600 ;
 }
 
 
