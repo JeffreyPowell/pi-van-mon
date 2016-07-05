@@ -78,7 +78,7 @@ function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $dat
    6 => $violet
  );
 
- $titlept=9;
+ $titlept=12;
  $linewidth=4;
  $vertaxislabelpt=6;
  $allaxisvaluept=10;
