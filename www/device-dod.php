@@ -14,8 +14,8 @@ $sensors = file('/home/pi/bin/therm/sensors.txt');
 echo "<html><head>";
 echo "<meta http-equiv=\"refresh\" content=\"240\">";
 echo "<style type='text/css'>a {text-decoration: none}</style>";
-echo "</head><body bgcolor='#FAFAFA'>";
-echo "<a href='dashboard.php' style='font-family:helvetica;font-size:20px;color:grey;'>Home</a><br>";
+echo "</head><body bgcolor='#080808'>";
+echo "<a href='devices.php' style='font-family:helvetica;font-size:20px;color:grey;'>All Devices</a><br>";
 
 $height="350";
 $width="800";
