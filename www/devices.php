@@ -29,13 +29,6 @@ if( $period_span == "" )  { $period_span = '-8h';  $chart_width = header("Locati
 if( $chart_width == "" )  { $chart_width  = $default_width;  $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width&h=$chart_height"); exit; }
 if( $chart_height == "" ) { $chart_height = $default_height; $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width&h=$chart_height"); exit; }
 
-$config = parse_ini_file('/home/pi/bin/van/www/config.ini', true);
-
-#print_r( $config );
-#print_r( "\n\n" );
-
-$device_count = count($config['devices']['type']);
-
 echo "<html><head>";
 echo "<meta http-equiv=\"refresh\" content=\"30\">";
 echo "</head><body bgcolor='#080808'>";
@@ -58,6 +51,10 @@ echo "<input type='button' onclick=\"location.href='devices.php?p=$period_span&w
 echo "<input type='button' onclick=\"location.href='devices.php?p=$period_span&w=$chart_width&h=$chart_taller';\" value='Height +' />";
 echo "<input type='button' onclick=\"location.href='devices.php?p=$period_span&w=$chart_width&h=$chart_shorter';\" value='Height -' />";
 echo "<br>";
+
+$config = parse_ini_file('/home/pi/bin/van/www/config.ini', true);
+
+$device_count = count($config['devices']['type']);
 
 for ($device_index=1; $device_index <= $device_count; $device_index++) {
   #print_r( $device );
