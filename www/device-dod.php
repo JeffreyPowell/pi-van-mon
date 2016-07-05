@@ -4,9 +4,9 @@ $device_id = $_GET['id'];
 $chart_width = $_GET['w'];
 $chart_height = $_GET['h'];
 
-if( $device_id == "" )    { $device_id = '1';      $chart_width = header("Location: devices.php?id=$device_id&w=$chart_width&h=$chart_height"); exit; }
-if( $chart_width == "" )  { $chart_width = '800';  $chart_width = header("Location: devices.php?id=$device_id&w=$chart_width&h=$chart_height"); exit; }
-if( $chart_height == "" ) { $chart_height = '350'; $chart_width = header("Location: devices.php?id=$device_id&w=$chart_width&h=$chart_height"); exit; }
+if( $device_id == "" )    { $device_id = '1';      header("Location: device-dod.php?id=$device_id&w=$chart_width&h=$chart_height"); exit; }
+if( $chart_width == "" )  { $chart_width = '800';  header("Location: device-dod.php?id=$device_id&w=$chart_width&h=$chart_height"); exit; }
+if( $chart_height == "" ) { $chart_height = '350'; header("Location: device-dod.php?id=$device_id&w=$chart_width&h=$chart_height"); exit; }
 
 
 
