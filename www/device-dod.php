@@ -85,6 +85,7 @@ function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $dat
  $legendpt=8;
 
  $options = array(
+   "--title=$dataname",
    "--alt-y-grid",
   # "--alt-autoscale",
   # "--rigid",
