@@ -37,7 +37,7 @@ $rrd_filename = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 #echo "<img src='images/d-dayonday-temp-$DEVICEID.png'>";
 
 
-create_graph_dayonday( $rrd_filename, $img_filename, $device_name.' '.$period_span, $device_units, "AVERAGE",$chart_height, $chart_width);
+create_graph_dayonday( $rrd_filename, $img_filename, $device_name.' Day on Day', $device_units, "AVERAGE",$chart_height, $chart_width);
 
 echo "<img src='images/".$img_name.".png' alt='Generated RRD image'><br><br>";
   
@@ -61,12 +61,13 @@ function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $dat
  $indigo       = "0000FF";
  $violet       = "8D38C9";
  
- $grey_dark_vv = "161616";
+
  $black        = "000000";
- 
+ $grey_dark_vv = "161616";
  $grey_dark_v  = "1e1e1e";
  $grey_light   = "c7c7c7";
-
+ $white        = "ffffff";
+ 
  $days = array(
    0 => $red,
    1 => $orange,
@@ -98,7 +99,7 @@ function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $dat
    "-cFONT#$grey_light",
    "-cCANVAS#$grey_dark_v",
    "-cGRID#$yellow_dark",
-   "-cMGRID#FF9999",
+   "-cMGRID#$white",
    "-cFRAME#5e5e5e",
    "-cARROW#5e5e5e",
    "-nTITLE:9",
