@@ -5,9 +5,9 @@ $chart_width = $_GET['w'];
 $chart_height = $_GET['h'];
 
 #$PERIOD ='-1y';
-if( $period_span == "" )  { $period_span = '-1d';  $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width&h=$chart_height"); exit; }
-if( $chart_width == "" )  { $chart_width = '500';  $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width&h=$chart_height"); exit; }
-if( $chart_height == "" ) { $chart_height = '200'; $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width&h=$chart_height"); exit; }
+if( $period_span == "" )  { $period_span = '-8h';  $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width&h=$chart_height"); exit; }
+if( $chart_width == "" )  { $chart_width = '300';  $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width&h=$chart_height"); exit; }
+if( $chart_height == "" ) { $chart_height = '100'; $chart_width = header("Location: devices.php?p=$period_span&w=$chart_width&h=$chart_height"); exit; }
 
 $config = parse_ini_file('/home/pi/bin/van/www/config.ini', true);
 
