@@ -1,5 +1,9 @@
 <?php
 
+$period_span = $_GET['p'];
+#$PERIOD ='-1y';
+if( $period_span == "" ) { header("Location: devices.php?p=-1d"); exit; }
+
 $config = parse_ini_file('/home/pi/bin/van/www/config.ini', true);
 
 #print_r( $config );
@@ -10,6 +14,13 @@ $device_count = count($config['devices']['type']);
 echo "<html><head>";
 echo "<meta http-equiv=\"refresh\" content=\"30\">";
 echo "</head><body bgcolor='#080808'>";
+
+echo "<input type='button' onclick=\"location.href='devices.php?p=-1h';\" value='One Hour' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=-8h';\" value='Eight Hours' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=-1d';\" value='One Day' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=-1w';\" value='One Week' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=-1m';\" value='One Month' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=-1y';\" value='One Year' />";
 
 for ($device_index=1; $device_index <= $device_count; $device_index++) {
   #print_r( $device );
@@ -22,7 +33,7 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
   $device_name = (string) $config['devices']['name'][$device_index];
   $device_units = (string) $config['devices']['units'][$device_index];
 
-  $span           = '-12h';
+  #$span           = '-12h';
 
   #print_r( $device_index );
   #print_r( $device_type );
@@ -32,7 +43,7 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
 
   $img_name = $device_type.'-'.$device_id.'-'.$device_pin_num;
 
-  $img_filename = '/home/pi/bin/van/www/images/'.$img_name.$span.'.png';
+  $img_filename = '/home/pi/bin/van/www/images/'.$img_name.$period_span.'.png';
   $rrd_filename = '/home/pi/bin/van/data/'.$img_name.'.rrd';
 
   #print_r( $rrd_filename );
@@ -41,11 +52,11 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
 
   # create the rrd image
 
-  create_graph( $rrd_filename, $img_filename,  $span, $device_name.' '.$span, $device_units, "200", "500");
+  create_graph( $rrd_filename, $img_filename,  $period_span, $device_name.' '.$period_span, $device_units, "200", "500");
 
   # display the image
 
-  echo "<img src='images/".$img_name.$span.".png' alt='Generated RRD image'><br><br>";
+  echo "<img src='images/".$img_name.$period_span.".png' alt='Generated RRD image'><br><br>";
 
 }
 
