@@ -20,17 +20,23 @@ echo "<html><head>";
 echo "<meta http-equiv=\"refresh\" content=\"30\">";
 echo "</head><body bgcolor='#080808'>";
 
-echo "<input type='button' onclick=\"location.href='devices.php?p=-1h&w=$chart_width';\" value='One Hour' />";
-echo "<input type='button' onclick=\"location.href='devices.php?p=-8h&w=$chart_width';\" value='Eight Hours' />";
-echo "<input type='button' onclick=\"location.href='devices.php?p=-1d&w=$chart_width';\" value='One Day' />";
-echo "<input type='button' onclick=\"location.href='devices.php?p=-1w&w=$chart_width';\" value='One Week' />";
-echo "<input type='button' onclick=\"location.href='devices.php?p=-1m&w=$chart_width';\" value='One Month' />";
-echo "<input type='button' onclick=\"location.href='devices.php?p=-1y&w=$chart_width';\" value='One Year' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=-1h&w=$chart_width&h=$chart_height';\" value='One Hour' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=-8h&w=$chart_width&h=$chart_height';\" value='Eight Hours' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=-1d&w=$chart_width&h=$chart_height';\" value='One Day' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=-1w&w=$chart_width&h=$chart_height';\" value='One Week' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=-1m&w=$chart_width&h=$chart_height';\" value='One Month' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=-1y&w=$chart_width&h=$chart_height';\" value='One Year' />";
 echo "<br>";
+
 $chart_bigger = strval( intval($chart_width) + 100);
 $chart_smaller = strval( intval($chart_width) - 100);
-echo "<input type='button' onclick=\"location.href='devices.php?p=$period_span&w=$chart_bigger';\" value='Width +' />";
-echo "<input type='button' onclick=\"location.href='devices.php?p=$period_span&w=$chart_smaller';\" value='Width -' />";
+$chart_taller = strval( intval($chart_height) + 50);
+$chart_shorter = strval( intval($chart_height) - 50);
+
+echo "<input type='button' onclick=\"location.href='devices.php?p=$period_span&w=$chart_bigger&h=$chart_height';\" value='Width +' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=$period_span&w=$chart_smaller&h=$chart_height';\" value='Width -' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=$period_span&w=$chart_width&h=$chart_taller';\" value='Height +' />";
+echo "<input type='button' onclick=\"location.href='devices.php?p=$period_span&w=$chart_width&h=$chart_shorter';\" value='Height -' />";
 echo "<br>";
 
 for ($device_index=1; $device_index <= $device_count; $device_index++) {
