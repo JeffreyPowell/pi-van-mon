@@ -49,7 +49,7 @@ exit;
 
 
 
-function create_graph_dayonday($DEVICEID, $output, $dataname, $dataunit, $datacf, $height, $width) {
+function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $datacf, $height, $width) {
 
  $red          = "FF0000";
  $orange       = "FFA500";
@@ -120,7 +120,7 @@ function create_graph_dayonday($DEVICEID, $output, $dataname, $dataunit, $datacf
    $DAYEND   = $DAYEND."d";
 
    array_push($options,
-     "DEF:a".$DAYIDST."=/home/pi/bin/therm/data/sensor-".$DEVICEID."-temp.rrd:data:".$datacf.":start=midnight".$DAYSTART.":end=midnight".$DAYEND,
+     "DEF:a".$DAYIDST."=$inputrrd:data:".$datacf.":start=midnight".$DAYSTART.":end=midnight".$DAYEND,
      "CDEF:b$DAYIDST=a$DAYIDST,1,*",
      "AREA:b$DAYIDST#$areacol"
 #      "LINE$linewidth:b$DAYIDST#$linecol:$DAYNAME",
