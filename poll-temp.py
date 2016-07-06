@@ -1,4 +1,18 @@
+import time
+import datetime
+import os
+import yaml
 
+config = yaml.safe_load(open("/home/pi/bin/van/config.yaml"))
+
+print( config )
+
+for device in config['devices']['adci2c']:
+    print( device )
+
+
+
+***************************************************************************
 #!/bin/bash
 #
 #
