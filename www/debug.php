@@ -14,13 +14,13 @@ echo "</h1>";
 echo "<br>";
 echo "<h1>one wire</h1>";
 echo "<div id='code'>";
-echo shell_exec("ll /sys/bus/w1/devices");
+echo shell_exec("ls -l /sys/bus/w1/devices");
 echo "</div>";
 
 echo "<br>";
 echo "<h1>i2c</h1>";
 echo "<div id='code'>";
-echo shell_exec("i2cdetect -y 1");
+echo shell_exec("/usr/sbin/i2cdetect -y 1");
 echo "</div>";
 
 echo "<br>";
