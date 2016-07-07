@@ -20,7 +20,7 @@ echo "</div>";
 echo "<br>";
 echo "<h1>i2c</h1>";
 echo "<div id='code'>";
-echo shell_exec("/usr/sbin/i2cdetect -y 1");
+echo shell_exec("sudo /usr/sbin/i2cdetect -y 1");
 echo "</div>";
 
 echo "<br>";
