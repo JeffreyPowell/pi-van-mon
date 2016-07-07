@@ -92,7 +92,7 @@ devices:
           unit: Amps
           factor: 5.0
           offset: 0.0
-  onewire:
+  w1:
     1:
       type: therm
       add: 28-000005d0065c
