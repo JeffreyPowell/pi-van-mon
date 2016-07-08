@@ -16,7 +16,7 @@ if( $iPod || $iPhone ){
 }else if($webOS){
     $default_width = 300 ; $default_height = 100 ;
 }else{
-    $default_width = 1200 ; $default_height = 600 ;
+    $default_width = 1000 ; $default_height = 600 ;
 }
 
 
@@ -46,7 +46,7 @@ $device_id      = (string) $config['devices']['id'][$device_id];
 $device_pin_num = (string) $config['devices']['pin'][$device_id];
 $device_name    = (string) $config['devices']['name'][$device_id];
 $device_units   = (string) $config['devices']['units'][$device_id];
-  
+
 $img_name = $device_type.'-'.$device_id.'-'.$device_pin_num.'-dod-'.$chart_height.'x'.$chart_width;
 $rrd_name = $device_type.'-'.$device_id.'-'.$device_pin_num;
 
@@ -60,7 +60,7 @@ $rrd_filename = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 create_graph_dayonday( $rrd_filename, $img_filename, $device_name.' Day on Day', $device_units, "AVERAGE",$chart_height, $chart_width);
 
 echo "<img src='images/".$img_name.".png' alt='Generated RRD image'><br><br>";
-  
+
 
 echo "</body></html>";
 
@@ -80,14 +80,14 @@ function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $dat
  $blue         = "00FFFF";
  $indigo       = "0000FF";
  $violet       = "8D38C9";
- 
+
 
  $black        = "000000";
  $grey_dark_vv = "161616";
  $grey_dark_v  = "1e1e1e";
  $grey_light   = "c7c7c7";
  $white        = "ffffff";
- 
+
  $days = array(
    0 => $red,
    1 => $orange,

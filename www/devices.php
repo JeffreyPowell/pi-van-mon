@@ -17,7 +17,7 @@ if( $iPod || $iPhone ){
 }else if($webOS){
     $default_width = 300 ; $default_height = 100 ;
 }else{
-    $default_width = 1200 ; $default_height = 200 ;
+    $default_width = 1000 ; $default_height = 150 ;
 }
 
 $period_span = $_GET['p'];
