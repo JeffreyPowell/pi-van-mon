@@ -41,8 +41,6 @@ for device in config['devices']['w1']:
     offset = float(config['devices']['w1'][device]['offset'])
 
     #print( factor, offset )
-
-    rawdata = adc.readVoltage( pin )
     data = str( ( temperatue * factor ) + offset )
 
     filename = '/home/pi/bin/van/data/w1-'+str(device)+'-'+str(add)+'.rrd'
