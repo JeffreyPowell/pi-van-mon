@@ -12,7 +12,7 @@ print( config )
 for device in config['devices']['w1']:
     print( device )
 
-    add = int(config['devices']['w1'][device]['add'])
+    add = str(config['devices']['w1'][device]['add'])
 
 
     try:
