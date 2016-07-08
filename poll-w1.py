@@ -7,10 +7,10 @@ import yaml
 
 config = yaml.safe_load(open("/home/pi/bin/van/config.yaml"))
 
-print( config )
+#print( config )
 
 for device in config['devices']['w1']:
-    print( device )
+    #print( device )
 
     add = str(config['devices']['w1'][device]['add'])
 
@@ -43,6 +43,8 @@ for device in config['devices']['w1']:
 
         filename = '/home/pi/bin/van/data/w1-'+str(device)+'-'+str(add)+'.rrd'
 
+        print filename
+        
         if( not os.path.exists( filename ) ):
             #print ( os.path.exists( filename ))
             os.system('/usr/bin/rrdtool create '+filename+' --step 60 \
