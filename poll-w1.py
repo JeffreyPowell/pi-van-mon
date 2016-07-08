@@ -44,8 +44,7 @@ for device in config['devices']['w1']:
     data = str( ( temperature * factor ) + offset )
 
     filename = '/home/pi/bin/van/data/w1-'+str(device)+'-'+str(add)+'.rrd'
-
-    print filename
+    #print filename
     
     if( not os.path.exists( filename ) ):
         #print ( os.path.exists( filename ))
