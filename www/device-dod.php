@@ -47,8 +47,12 @@ for ($device_loop=1; $device_loop <= $device_count; $device_loop++) {
   $device_pin_num = (string) $config['devices']['pin'][$device_loop];
   $device_name    = (string) $config['devices']['name'][$device_loop];
   $device_units   = (string) $config['devices']['units'][$device_loop];
-  echo "<option value='device-dod.php?id=$device_loop&w=$chart_width&h=$chart_height'>$device_name</option>";
-}
+  if( $device_loop == $device_index ){
+    echo "<option value='device-dod.php?id=$device_loop&w=$chart_width&h=$chart_height' selected>$device_name</option>";
+    }else{
+    echo "<option value='device-dod.php?id=$device_loop&w=$chart_width&h=$chart_height'>$device_name</option>";
+    }
+  }
 
 echo "</select>";
 
