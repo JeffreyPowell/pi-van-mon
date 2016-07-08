@@ -1,6 +1,6 @@
 #!/bin/bash
 
- 
+
 datafile="sensor-28-000005cf873e-temp"
 start="-1d"
 dataname="Kitchen temp"
