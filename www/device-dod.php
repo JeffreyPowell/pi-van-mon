@@ -42,11 +42,11 @@ $device_count = count($config['devices']['type']);
 echo "<select onChange='window.location.href=this.value'>";
 
 for ($device_loop=1; $device_loop <= $device_count; $device_loop++) {
-  $device_type    = (string) $config['devices']['type'][$device_index];
-  $device_id      = (string) $config['devices']['id'][$device_index];
-  $device_pin_num = (string) $config['devices']['pin'][$device_index];
-  $device_name = (string) $config['devices']['name'][$device_index];
-  $device_units = (string) $config['devices']['units'][$device_index];
+  $device_type    = (string) $config['devices']['type'][$device_loop];
+  $device_id      = (string) $config['devices']['id'][$device_loop];
+  $device_pin_num = (string) $config['devices']['pin'][$device_loop];
+  $device_name    = (string) $config['devices']['name'][$device_loop];
+  $device_units   = (string) $config['devices']['units'][$device_loop];
   echo "<option value='device-dod.php?id=$device_loop&w=$chart_width&h=$chart_height'>$device_name</option>";
 }
 
