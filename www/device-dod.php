@@ -23,8 +23,8 @@ $device_index = $_GET['id'];
 $chart_width = $_GET['w'];
 $chart_height = $_GET['h'];
 
-if( $device_index == "" )    { $device_index = '1';      header("Location: device-dod.php?id=$device_index&w=$chart_width&h=$chart_height"); exit; }
-if( $chart_width == "" )  { $chart_width = $default_width;   header("Location: device-dod.php?id=$device_index&w=$chart_width&h=$chart_height"); exit; }
+if( $device_index == "" ) { $device_index = '1';             header("Location: device-dod.php?id=$device_index&w=$chart_width&h=$chart_height"); exit; }
+if( $chart_width  == "" ) { $chart_width  = $default_width;  header("Location: device-dod.php?id=$device_index&w=$chart_width&h=$chart_height"); exit; }
 if( $chart_height == "" ) { $chart_height = $default_height; header("Location: device-dod.php?id=$device_index&w=$chart_width&h=$chart_height"); exit; }
 
 
