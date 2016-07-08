@@ -47,7 +47,8 @@ for ($device_loop=1; $device_loop <= $device_count; $device_loop++) {
   $device_pin_num = (string) $config['devices']['pin'][$device_index];
   $device_name = (string) $config['devices']['name'][$device_index];
   $device_units = (string) $config['devices']['units'][$device_index];
-  echo "<option value='device-dod.php?id=$device_index&w=$chart_width&h=$chart_height'>$device_name</option>";
+  echo "<option value='device-dod.php?id=$device_loop&w=$chart_width&h=$chart_height'>$device_name</option>";
+}
 
 echo "</select>";
 
