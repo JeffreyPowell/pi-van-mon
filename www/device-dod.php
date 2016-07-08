@@ -20,7 +20,7 @@ if( $iPod || $iPhone ){
 }
 
 
-$device_id = $_GET['id'];
+$device_index = $_GET['id'];
 $chart_width = $_GET['w'];
 $chart_height = $_GET['h'];
 
@@ -39,13 +39,13 @@ $config = parse_ini_file('/home/pi/bin/van/www/config.ini', true);
 
 $device_count = count($config['devices']['type']);
 
-if( $device_id > $device_count ) { exit; }
+if( $device_index > $device_count ) { exit; }
 
-$device_type    = (string) $config['devices']['type'][$device_id];
-$device_id      = (string) $config['devices']['id'][$device_id];
-$device_pin_num = (string) $config['devices']['pin'][$device_id];
-$device_name    = (string) $config['devices']['name'][$device_id];
-$device_units   = (string) $config['devices']['units'][$device_id];
+$device_type    = (string) $config['devices']['type'][$device_index];
+$device_id      = (string) $config['devices']['id'][$device_index];
+$device_pin_num = (string) $config['devices']['pin'][$device_index];
+$device_name    = (string) $config['devices']['name'][$device_index];
+$device_units   = (string) $config['devices']['units'][$device_index];
 
 $img_name = $device_type.'-'.$device_id.'-'.$device_pin_num.'-dod-'.$chart_height.'x'.$chart_width;
 $rrd_name = $device_type.'-'.$device_id.'-'.$device_pin_num;
