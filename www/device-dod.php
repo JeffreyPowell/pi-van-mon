@@ -50,6 +50,9 @@ $device_units   = (string) $config['devices']['units'][$device_index];
 $img_name = $device_type.'-'.$device_id.'-'.$device_pin_num.'-dod-'.$chart_height.'x'.$chart_width;
 $rrd_name = $device_type.'-'.$device_id.'-'.$device_pin_num;
 
+print $device_pin_num;
+echo "<br>:$device_pin_num:<br>";
+
 $img_filename = '/home/pi/bin/van/www/images/'.$img_name.'.png';
 $rrd_filename = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 
