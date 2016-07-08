@@ -16,9 +16,8 @@ if( $iPod || $iPhone ){
 }else if($webOS){
     $default_width = 300 ; $default_height = 100 ;
 }else{
-    $default_width = 1000 ; $default_height = 600 ;
+    $default_width = 1000 ; $default_height = 500 ;
 }
-
 
 $device_index = $_GET['id'];
 $chart_width = $_GET['w'];
