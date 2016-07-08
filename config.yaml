@@ -95,22 +95,15 @@ devices:
   w1:
     1:
       type: therm
-      add: 28-000005d0065c
+      add: 28-000005cf908e
       name: Van fridge
       unit: deg c
       factor: 1.0
       offset: 0.0
     2:
       type: therm
-      add: 28-000005d01a5a
+      add: 28-000005d01306
       name: Van int
-      unit: deg c
-      factor: 1.0
-      offset: 0.0
-    3:
-      type: therm
-      add: 28-000005cf873e
-      name: Van ext
       unit: deg c
       factor: 1.0
       offset: 0.0
