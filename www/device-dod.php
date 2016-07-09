@@ -34,6 +34,19 @@ echo "<style type='text/css'>a {text-decoration: none}</style>";
 echo "</head><body bgcolor='#080808'>";
 echo "<a href='devices.php' style='font-family:helvetica;font-size:20px;color:grey;'>All Devices</a><br>";
 
+echo "<br>";
+
+$chart_bigger = strval( intval($chart_width) + 100);
+$chart_smaller = strval( intval($chart_width) - 100);
+$chart_taller = strval( intval($chart_height) + 50);
+$chart_shorter = strval( intval($chart_height) - 50);
+
+echo "<input type='button' onclick=\"location.href='devices-dod.php?id=$device_index&w=$chart_bigger&h=$chart_height';\" value='Width +' />";
+echo "<input type='button' onclick=\"location.href='devices-dod.php?id=$device_index&w=$chart_smaller&h=$chart_height';\" value='Width -' />";
+echo "<input type='button' onclick=\"location.href='devices-dod.php?id=$device_index&w=$chart_width&h=$chart_taller';\" value='Height +' />";
+echo "<input type='button' onclick=\"location.href='devices-dod.php?id=$device_index&w=$chart_width&h=$chart_shorter';\" value='Height -' />";
+echo "<br>";
+
 $config = parse_ini_file('/home/pi/bin/van/www/config.ini', true);
 
 $device_count = count($config['devices']['type']);
