@@ -40,32 +40,45 @@ echo "</tr></table></div>";
 echo "<p id='p01'>I am different</p>";
 echo "<table><tr>";
 echo "<td>";
-echo "<div style='background-image: url(images/120x240.png);'>";
+
+echo "<div style='background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
 echo "one";
 echo "</div>";
 #echo "<br>";
-echo "<div>";
+
 echo "<div style='background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
 echo "two";
 echo "</div>";
-echo "<br>";
-echo "<div>";
-echo "<div style='background-image: url(images/120x240.png);'>";
+
+echo "<div style='background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
 echo "three";
 echo "</div>";
-echo "<br>";
-echo "<div>";
+
 echo "</td>";
-echo "<td></td>";
+
 echo "<td>";
-echo "<img src='images/240x120.png'>";
-echo "<img src='images/240x120.png'>";
-echo "<img src='images/240x120.png'>";
+
+echo "<div style='background-image: url(images/240x120.png); height: 240px; width: 240px; border: 1px solid yellow;'>";
+echo "one";
+echo "</div>";
+
 echo "</td>";
+
 echo "<td>";
-echo "<img src='images/120x240.png'><br>";
-echo "<img src='images/120x240.png'><br>";
-echo "<img src='images/120x240.png'>";
+
+echo "<div style='background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
+echo "one";
+echo "</div>";
+#echo "<br>";
+
+echo "<div style='background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
+echo "two";
+echo "</div>";
+
+echo "<div style='background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
+echo "three";
+echo "</div>";
+
 echo "</td>";
 echo "";
 echo "";
