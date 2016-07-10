@@ -2,6 +2,18 @@
 
 #create_graph("calls-gw-tok-halfday-wall.png",   "-12h",         "Tokyo calls last 12 hours",             "200", "1100");
 
+$dash_id = $_GET['id'];
+$chart_width = $_GET['w'];
+$chart_height = $_GET['h'];
+
+if( $dash_id      == "" ) { $dash_id      = '1';             header("Location: device-dod.php?id=$device_index&w=$chart_width&h=$chart_height"); exit; }
+if( $chart_width  == "" ) { $chart_width  = $default_width;  header("Location: device-dod.php?id=$device_index&w=$chart_width&h=$chart_height"); exit; }
+if( $chart_height == "" ) { $chart_height = $default_height; header("Location: device-dod.php?id=$device_index&w=$chart_width&h=$chart_height"); exit; }
+
+$config = parse_ini_file('/home/pi/bin/van/www/config2.ini', true);
+
+$dash_count = count($config['dashboard']['type']);
+
 echo "<html><head>";
 echo "<meta http-equiv='refresh' content='300'>";
 echo "<style>";
@@ -26,15 +38,28 @@ echo "</tr></table></div>";
 
 #echo "<img src='calls-gw-tok-halfday-wall.png'>";
 echo "<p id='p01'>I am different</p>";
-echo "";
+echo "<table><tr>";
+echo "<td>";
 echo "<img src='images/120x240.png'>";
+echo "<img src='images/120x240.png'>";
+echo "<img src='images/120x240.png'>";
+echo "</td>";
+echo "<td></td>";
+echo "<td>";
 echo "<img src='images/240x120.png'>";
-
+echo "<img src='images/240x120.png'>";
+echo "<img src='images/240x120.png'>";
+echo "</td>";
+echo "<td>";
+echo "<img src='images/120x240.png'>";
+echo "<img src='images/120x240.png'>";
+echo "<img src='images/120x240.png'>";
+echo "</td>";
 echo "";
 echo "";
 echo "";
 echo "";
-echo "";
+echo "</tr></table>";
 
 echo "</body></html>";
 exit;
