@@ -41,7 +41,7 @@ echo "<p id='p01'>I am different</p>";
 echo "<table><tr>";
 echo "<td>";
 echo "<div style='background-image: url(images/120x240.png);'>";
-echo "<img src='images/120x240.png'>";
+echo "one";
 echo "</div>";
 #echo "<br>";
 echo "<div>";
