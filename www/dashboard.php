@@ -46,7 +46,7 @@ echo "one";
 echo "</div>";
 #echo "<br>";
 
-echo "<div style='background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
+echo "<div style='background-color:#eeeeee; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
 echo "two";
 echo "</div>";
 
