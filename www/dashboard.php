@@ -41,16 +41,16 @@ echo "<p id='p01'>I am different</p>";
 echo "<table><tr>";
 echo "<td>";
 
-echo "<div style='background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
+echo "<div style='background-color:#161616; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
 echo "one";
 echo "</div>";
 #echo "<br>";
 
-echo "<div style='background-color:#eeeeee; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
+echo "<div style='background-color:#161616; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
 echo "two";
 echo "</div>";
 
-echo "<div style='background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
+echo "<div style='background-color:#161616; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
 echo "three";
 echo "</div>";
 
@@ -58,7 +58,7 @@ echo "</td>";
 
 echo "<td>";
 
-echo "<div style='background-image: url(images/240x120.png); height: 240px; width: 240px; border: 1px solid yellow;'>";
+echo "<div style='background-color:#161616; background-image: url(images/240x120.png); height: 240px; width: 240px; border: 1px solid yellow;'>";
 echo "one";
 echo "</div>";
 
@@ -66,16 +66,16 @@ echo "</td>";
 
 echo "<td>";
 
-echo "<div style='background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
+echo "<div style='background-color:#161616; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
 echo "one";
 echo "</div>";
 #echo "<br>";
 
-echo "<div style='background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
+echo "<div style='background-color:#161616; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
 echo "two";
 echo "</div>";
 
-echo "<div style='background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
+echo "<div style='background-color:#161616; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
 echo "three";
 echo "</div>";
 
