@@ -43,7 +43,7 @@ echo "<td>";
 echo "<div>";
 echo "<img src='images/120x240.png'>";
 echo "</div>";
-echo "<br>";
+#echo "<br>";
 echo "<div>";
 echo "<img src='images/120x240.png'>";
 echo "</div>";
