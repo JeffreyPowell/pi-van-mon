@@ -10,7 +10,7 @@ if( $dash_id      == "" ) { $dash_id      = '1';             header("Location: d
 if( $chart_width  == "" ) { $chart_width  = $default_width;  header("Location: dashboard.php?id=$dash_id&w=$chart_width&h=$chart_height"); exit; }
 if( $chart_height == "" ) { $chart_height = $default_height; header("Location: dashboard.php?id=$dash_id&w=$chart_width&h=$chart_height"); exit; }
 
-$config = parse_ini_file('/home/pi/bin/van/www/config1.ini', true);
+$config = parse_ini_file('/home/pi/bin/van/www/config.ini', true);
 
 $dash_count = count($config['dashboard']['name']);
 
