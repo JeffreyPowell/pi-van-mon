@@ -178,5 +178,7 @@ function read_last_value($rrd_filename) {
   print_r( "X" );
   print_r( $ret );
   print_r( "X" );
+
+  return $ret;
 }
 ?>
