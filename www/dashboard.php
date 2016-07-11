@@ -173,7 +173,7 @@ function create_graph($output, $start, $title, $height, $width) {
 
 function read_last_value($rrd_filename) {
 
- $ret = lastupdate( $rrd_filename );
+ $ret = rrd_last( $rrd_filename );
 
   if (! $ret) {
     echo "<b>Read error: </b>".rrd_error()."\n";
