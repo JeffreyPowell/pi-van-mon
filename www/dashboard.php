@@ -12,7 +12,7 @@ if( $chart_height == "" ) { $chart_height = $default_height; header("Location: d
 
 $config = parse_ini_file('/home/pi/bin/van/www/config2.ini', true);
 
-$dash_count = count($config['dashboard']['type']);
+$dash_count = count($config['dashboard']['id']);
 
 echo "<html><head>";
 echo "<meta http-equiv='refresh' content='300'>";
@@ -68,12 +68,18 @@ echo "<h1>$device_units</h1>";
 echo "</div>";
 
 echo "</td>";
+
 echo "<td>";
 
-$device_id = 1;
-$device_name = (string) $config['devices']['name'][$device_id];
-$device_units = (string) $config['devices']['units'][$device_id];
-$rrd_name = $device_type.'-'.$device_id.'-'.$device_pin_num;
+$device_id   = 1;
+$device_type    = (string) $config['devices']['type'][$device_id];
+$device_ref      = (string) $config['devices']['id'][$device_id];
+$device_pin_num = (string) $config['devices']['pin'][$device_id];
+
+$device_name    = (string) $config['devices']['name'][$device_id];
+$device_units   = (string) $config['devices']['units'][$device_id];
+
+$rrd_name = $device_type.'-'.$device_ref.'-'.$device_pin_num;
 $rrd_filename = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value = read_last_value($rrd_filename);
 
@@ -90,7 +96,7 @@ echo "<td>";
 $device_id = 3;
 $device_name = (string) $config['devices']['name'][$device_id];
 $device_units = (string) $config['devices']['units'][$device_id];
-$rrd_name = $device_type.'-'.$device_id.'-'.$device_pin_num;
+$rrd_name = $device_type.'-'.$device_ref.'-'.$device_pin_num;
 $rrd_filename = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value = read_last_value($rrd_filename);
 
