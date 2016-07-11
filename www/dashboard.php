@@ -79,8 +79,8 @@ $last_value = read_last_value($rrd_filename)
 
 echo "<div style='background-color:#161616; background-image: url(images/240x120.png); height: 240px; width: 240px; border: 1px solid yellow;'>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
-echo "<p style='border: 1px solid red;'>$device_units</p>";
-echo "<p style='border: 1px solid red;'>$last_value</p>";
+echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
+echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";
 echo "</div>";
 
 echo "</td>";
