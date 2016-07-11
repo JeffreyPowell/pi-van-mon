@@ -70,7 +70,7 @@ $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
 $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value     = read_last_value($rrd_filename);
 
-echo "<div style='background-color:#161616; background-image: url(images/240x120.png); height: 120px; width: 120px; border: 1px solid yellow;'>";
+echo "<div style='background-color:#161616; background-image: url(images/240x120.png); height: 120px; width: 120px; border: 3px solid yellow;'>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";
@@ -92,7 +92,7 @@ $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
 $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value     = read_last_value($rrd_filename);
 
-echo "<div style='background-color:#161616; background-image: url(images/240x120.png); height: 240px; width: 240px; border: 1px solid yellow;'>";
+echo "<div style='background-color:#161616; background-image: url(images/240x120.png); height: 240px; width: 240px; border: 3px solid yellow;'>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";
@@ -114,7 +114,7 @@ $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
 $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value     = read_last_value($rrd_filename);
 
-echo "<div style='background-color:#161616; background-image: url(images/240x120.png); height: 120px; width: 120px; border: 1px solid yellow;'>";
+echo "<div style='background-color:#161616; background-image: url(images/240x120.png); height: 120px; width: 120px; border: 3px solid yellow;'>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";
