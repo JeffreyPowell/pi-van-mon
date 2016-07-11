@@ -77,6 +77,7 @@ $device_units = (string) $config['devices']['units'][$device_id];
 echo "<div style='background-color:#161616; background-image: url(images/240x120.png); height: 240px; width: 240px; border: 1px solid yellow;'>";
 echo "<p style='border: 1px solid red;'>$device_name</p>";
 echo "<p style='border: 1px solid red;'>$device_units</p>";
+echo "<p style='border: 1px solid red;'>12.8</p>";
 echo "</div>";
 
 echo "</td>";
