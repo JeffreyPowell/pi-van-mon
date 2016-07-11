@@ -154,11 +154,12 @@ function read_last_value($rrd_filename) {
     echo "<b>Read error: </b>".rrd_error()."\n";
   }
   $data = $ret['data'][0];
-  print_r( "X" );
-  print_r( $ret );
-  print_r( $data );
-  print_r( "X" );
 
-  return $ret;
+  #print_r( "X" );
+  #print_r( $ret );
+  #print_r( $data );
+  #print_r( "X" );
+
+  return $data;
 }
 ?>
