@@ -172,6 +172,6 @@ function read_last_value($rrd_filename) {
   if (! $ret) {
     echo "<b>Read error: </b>".rrd_error()."\n";
   }
-  print_r( $ret )
+  print_r( $ret );
 }
 ?>
