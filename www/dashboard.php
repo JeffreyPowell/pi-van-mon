@@ -42,16 +42,16 @@ echo "<table><tr>";
 echo "<td>";
 
 echo "<div style='background-color:#161616; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
-echo "one";
+echo "Aone";
 echo "</div>";
 #echo "<br>";
 
 echo "<div style='background-color:#161616; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
-echo "two";
+echo "Atwo";
 echo "</div>";
 
 echo "<div style='background-color:#161616; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
-echo "three";
+echo "Athree";
 echo "</div>";
 
 echo "</td>";
@@ -71,17 +71,17 @@ echo "</td>";
 
 echo "<td>";
 
-$device_id   = 1;
+$device_id      = 1;
 $device_type    = (string) $config['devices']['type'][$device_id];
-$device_ref      = (string) $config['devices']['ref'][$device_id];
+$device_ref     = (string) $config['devices']['ref'][$device_id];
 $device_pin_num = (string) $config['devices']['pin'][$device_id];
 
 $device_name    = (string) $config['devices']['name'][$device_id];
 $device_units   = (string) $config['devices']['units'][$device_id];
 
-$rrd_name = $device_type.'-'.$device_ref.'-'.$device_pin_num;
-$rrd_filename = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
-$last_value = read_last_value($rrd_filename);
+$rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
+$rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+$last_value     = read_last_value($rrd_filename);
 
 echo "<div style='background-color:#161616; background-image: url(images/240x120.png); height: 240px; width: 240px; border: 1px solid yellow;'>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
@@ -110,23 +110,20 @@ echo "</td>";
 echo "<td>";
 
 echo "<div style='background-color:#161616; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
-echo "one";
+echo "Bone";
 echo "</div>";
 #echo "<br>";
 
 echo "<div style='background-color:#161616; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
-echo "two";
+echo "Btwo";
 echo "</div>";
 
 echo "<div style='background-color:#161616; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
-echo "three";
+echo "Bthree";
 echo "</div>";
 
 echo "</td>";
-echo "";
-echo "";
-echo "";
-echo "";
+
 echo "</tr></table>";
 
 echo "</body></html>";
