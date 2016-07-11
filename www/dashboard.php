@@ -58,7 +58,7 @@ echo "</td>";
 
 echo "<td>";
 
-$device_id = 1;
+$device_id = 2;
 $device_name = (string) $config['devices']['name'][$device_id];
 $device_units = (string) $config['devices']['units'][$device_id];
 
@@ -87,7 +87,7 @@ echo "</td>";
 
 echo "<td>";
 
-$device_id = 2;
+$device_id = 3;
 $device_name = (string) $config['devices']['name'][$device_id];
 $device_units = (string) $config['devices']['units'][$device_id];
 $rrd_name = $device_type.'-'.$device_id.'-'.$device_pin_num;
