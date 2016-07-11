@@ -153,9 +153,9 @@ function read_last_value($rrd_filename) {
   if (! $ret) {
     echo "<b>Read error: </b>".rrd_error()."\n";
   }
-  $data = $ret['data']
+  $data = $ret['data'];
   print_r( "X" );
-  print_r( $ret );
+  print_r( $ret, $data );
   print_r( "X" );
 
   return $ret;
