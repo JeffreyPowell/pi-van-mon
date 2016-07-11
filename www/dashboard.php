@@ -6,9 +6,9 @@ $dash_id = $_GET['id'];
 $chart_width = $_GET['w'];
 $chart_height = $_GET['h'];
 
-if( $dash_id      == "" ) { $dash_id      = '1';             header("Location: device-dod.php?id=$device_index&w=$chart_width&h=$chart_height"); exit; }
-if( $chart_width  == "" ) { $chart_width  = $default_width;  header("Location: device-dod.php?id=$device_index&w=$chart_width&h=$chart_height"); exit; }
-if( $chart_height == "" ) { $chart_height = $default_height; header("Location: device-dod.php?id=$device_index&w=$chart_width&h=$chart_height"); exit; }
+if( $dash_id      == "" ) { $dash_id      = '1';             header("Location: dashboard.php?id=$device_index&w=$chart_width&h=$chart_height"); exit; }
+if( $chart_width  == "" ) { $chart_width  = $default_width;  header("Location: dashboard.php?id=$device_index&w=$chart_width&h=$chart_height"); exit; }
+if( $chart_height == "" ) { $chart_height = $default_height; header("Location: dashboard.php?id=$device_index&w=$chart_width&h=$chart_height"); exit; }
 
 $config = parse_ini_file('/home/pi/bin/van/www/config2.ini', true);
 
@@ -57,6 +57,7 @@ echo "</div>";
 echo "</td>";
 
 echo "<td>";
+$device_id = 1;
 
 echo "<div style='background-color:#161616; background-image: url(images/240x120.png); height: 240px; width: 240px; border: 1px solid yellow;'>";
 echo "one";
