@@ -64,8 +64,8 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
   $device_id      = (string) $config['devices']['id'][$device_index];
   $device_pin_num = (string) $config['devices']['pin'][$device_index];
 
-  $device_name = (string) $config['devices']['name'][$device_index];
-  $device_units = (string) $config['devices']['units'][$device_index];
+  $device_name    = (string) $config['devices']['name'][$device_index];
+  $device_units   = (string) $config['devices']['units'][$device_index];
 
   #$span           = '-12h';
 
