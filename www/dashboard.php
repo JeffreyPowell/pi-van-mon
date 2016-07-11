@@ -12,7 +12,7 @@ if( $chart_height == "" ) { $chart_height = $default_height; header("Location: d
 
 $config = parse_ini_file('/home/pi/bin/van/www/config2.ini', true);
 
-$dash_count = count($config['dashboard']['id']);
+$dash_count = count($config['dashboard']['name']);
 
 echo "<html><head>";
 echo "<meta http-equiv='refresh' content='300'>";
@@ -73,7 +73,7 @@ echo "<td>";
 
 $device_id   = 1;
 $device_type    = (string) $config['devices']['type'][$device_id];
-$device_ref      = (string) $config['devices']['id'][$device_id];
+$device_ref      = (string) $config['devices']['ref'][$device_id];
 $device_pin_num = (string) $config['devices']['pin'][$device_id];
 
 $device_name    = (string) $config['devices']['name'][$device_id];
