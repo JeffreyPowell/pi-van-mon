@@ -73,11 +73,14 @@ echo "<td>";
 $device_id = 1;
 $device_name = (string) $config['devices']['name'][$device_id];
 $device_units = (string) $config['devices']['units'][$device_id];
+$rrd_name = $device_type.'-'.$device_id.'-'.$device_pin_num;
+$rrd_filename = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+$last_value = read_last_value($rrd_filename)
 
 echo "<div style='background-color:#161616; background-image: url(images/240x120.png); height: 240px; width: 240px; border: 1px solid yellow;'>";
 echo "<p style='border: 1px solid red;'>$device_name</p>";
 echo "<p style='border: 1px solid red;'>$device_units</p>";
-echo "<p style='border: 1px solid red;'>12.8</p>";
+echo "<p style='border: 1px solid red;'>$last_value</p>";
 echo "</div>";
 
 echo "</td>";
@@ -87,6 +90,9 @@ echo "<td>";
 $device_id = 1;
 $device_name = (string) $config['devices']['name'][$device_id];
 $device_units = (string) $config['devices']['units'][$device_id];
+$rrd_name = $device_type.'-'.$device_id.'-'.$device_pin_num;
+$rrd_filename = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+$last_value = read_last_value($rrd_filename)
 
 echo "<div style='background-color:#161616; background-image: url(images/240x120.png); height: 120px; width: 120px; border: 1px solid yellow;'>";
 echo "<h1>$device_name</h1>";
@@ -159,4 +165,43 @@ function create_graph($output, $start, $title, $height, $width) {
   }
 }
 
+function read_last_value($rrd_filename) {
+
+  $options = array(
+    "--slope-mode",
+    "--start", $start,
+    "--title=$title",
+    "--vertical-label=Calls",
+    "--lower=0",
+    "--height=$height",
+    "--width=$width",
+    "-cBACK#161616",
+    "-cCANVAS#1e1e1e",
+    "-cSHADEA#000000",
+    "-cSHADEB#000000",
+    "-cFONT#c7c7c7",
+    "-cGRID#888800",
+    "-cMGRID#ffffff",
+    "-nTITLE:10",
+    "-nAXIS:12",
+    "-nUNIT:10",
+    "-y 1:5",
+    "-cFRAME#ffffff",
+    "-cARROW#000000",
+    "DEF:callmax=/usr/local/scripts/git/jcall2/data/jcall-gw-tok.rrd:callstot:MAX",
+    "CDEF:transcalldatamax=callmax,1,*",
+    "AREA:transcalldatamax#a0b84240",
+    "LINE4:transcalldatamax#a0b842:Calls",
+    "COMMENT:\\n",
+#    "GPRINT:transcalldatamax:LAST:Calls Now %6.2lf",
+    "GPRINT:transcalldatamax:MAX:Calls Max %6.2lf"
+  );
+
+ $ret = lastupdate( $rrd_filename );
+
+  if (! $ret) {
+    echo "<b>Graph error: </b>".rrd_error()."\n";
+  }
+  print_r( $ret )
+}
 ?>
