@@ -155,7 +155,8 @@ function read_last_value($rrd_filename) {
   }
   $data = $ret['data'];
   print_r( "X" );
-  print_r( $ret, $data );
+  print_r( $ret );
+  print_r( $data );
   print_r( "X" );
 
   return $ret;
