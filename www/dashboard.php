@@ -62,8 +62,34 @@ $device_id = 1;
 $device_name = (string) $config['devices']['name'][$device_id];
 $device_units = (string) $config['devices']['units'][$device_id];
 
-echo "<div style='background-color:#161616; background-image: url(images/240x120.png); height: 240px; width: 240px; border: 1px solid yellow;'>";
+echo "<div style='background-color:#161616; background-image: url(images/240x120.png); height: 120px; width: 212px; border: 1px solid yellow;'>";
 echo "<h1>$device_name</h1>";
+echo "<h1>$device_units</h1>";
+echo "</div>";
+
+echo "</td>";
+echo "<td>";
+
+$device_id = 1;
+$device_name = (string) $config['devices']['name'][$device_id];
+$device_units = (string) $config['devices']['units'][$device_id];
+
+echo "<div style='background-color:#161616; background-image: url(images/240x120.png); height: 240px; width: 240px; border: 1px solid yellow;'>";
+echo "<p style='border: 1px solid red;'>$device_name</p>";
+echo "<p style='border: 1px solid red;'>$device_units</p>";
+echo "</div>";
+
+echo "</td>";
+
+echo "<td>";
+
+$device_id = 1;
+$device_name = (string) $config['devices']['name'][$device_id];
+$device_units = (string) $config['devices']['units'][$device_id];
+
+echo "<div style='background-color:#161616; background-image: url(images/240x120.png); height: 120px; width: 120px; border: 1px solid yellow;'>";
+echo "<h1>$device_name</h1>";
+echo "<h1>$device_units</h1>";
 echo "</div>";
 
 echo "</td>";
