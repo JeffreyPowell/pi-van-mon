@@ -40,8 +40,12 @@ echo "</head><body>";
 
 #echo "<img src='calls-gw-tok-halfday-wall.png'>";
 #echo "<p id='p01'>I am different</p>";
+echo "<div style='display: table; background-color:#000000; height: 100%; width: 100%; border: 6px dashed yellow;'>";
 
-echo "<div style='display: table; background-color:#000000; height: 100%; width: 100%; border: 1px dashed yellow;'>";
+echo "</div>";
+
+
+echo "<div style='background-color:#000000; height: 100%; width: 100%; border: 1px dashed yellow;'>";
 echo "<table style='width:100%; border: 3px dashed blue;'><tr>";
 #========== Column Left
 echo "<td style='width:240px; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
