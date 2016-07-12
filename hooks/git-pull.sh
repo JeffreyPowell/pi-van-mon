@@ -4,11 +4,11 @@ cd /home/pi/bin/van
 
 #git pull | mail -s "Van Git Pull1" jffrypwll@googlemail.com
 
-result=$( git pull )
+result=$( git pull 1>&2 )
 
 if [ "$result" = "Already up-to-date." ]; then
-  echo "[$result]" | mail -s "Van Git Pull - no change" jffrypwll@googlemail.com
+  echo "$result" | mail -s "Van Git Pull - no change" jffrypwll@googlemail.com
 else
-  echo "[$result]" | mail -s "Van Git Pull - something changed" jffrypwll@googlemail.com
+  echo "$result" | mail -s "Van Git Pull - something changed" jffrypwll@googlemail.com
 fi
 ##
