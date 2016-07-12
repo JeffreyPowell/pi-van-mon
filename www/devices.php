@@ -61,7 +61,7 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
   #print_r( "===\n" );
 
   $device_type    = (string) $config['devices']['type'][$device_index];
-  $device_id      = (string) $config['devices']['id'][$device_index];
+  $device_ref      = (string) $config['devices']['ref'][$device_index];
   $device_pin_num = (string) $config['devices']['pin'][$device_index];
 
   $device_name    = (string) $config['devices']['name'][$device_index];
@@ -75,8 +75,8 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
   #print_r( $device_pin_num );
   #print_r( "---\n" );
 
-  $img_name = $device_type.'-'.$device_id.'-'.$device_pin_num.$period_span.'-'.$chart_height.'x'.$chart_width;
-  $rrd_name = $device_type.'-'.$device_id.'-'.$device_pin_num;
+  $img_name = $device_type.'-'.$device_ref.'-'.$device_pin_num.$period_span.'-'.$chart_height.'x'.$chart_width;
+  $rrd_name = $device_type.'-'.$device_ref.'-'.$device_pin_num;
 
   $img_filename = '/home/pi/bin/van/www/images/'.$img_name.'.png';
   $rrd_filename = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';

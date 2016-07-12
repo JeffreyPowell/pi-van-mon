@@ -55,7 +55,7 @@ echo "<select onChange='window.location.href=this.value'>";
 
 for ($device_loop=1; $device_loop <= $device_count; $device_loop++) {
   $device_type    = (string) $config['devices']['type'][$device_loop];
-  $device_id      = (string) $config['devices']['id'][$device_loop];
+  $device_ref     = (string) $config['devices']['ref'][$device_loop];
   $device_pin_num = (string) $config['devices']['pin'][$device_loop];
   $device_name    = (string) $config['devices']['name'][$device_loop];
   $device_units   = (string) $config['devices']['units'][$device_loop];
@@ -71,13 +71,13 @@ echo "</select>";
 if( $device_index > $device_count ) { exit; }
 
 $device_type    = (string) $config['devices']['type'][$device_index];
-$device_id      = (string) $config['devices']['id'][$device_index];
+$device_ref     = (string) $config['devices']['ref'][$device_index];
 $device_pin_num = (string) $config['devices']['pin'][$device_index];
 $device_name    = (string) $config['devices']['name'][$device_index];
 $device_units   = (string) $config['devices']['units'][$device_index];
 
-$img_name = $device_type.'-'.$device_id.'-'.$device_pin_num.'-dod-'.$chart_height.'x'.$chart_width;
-$rrd_name = $device_type.'-'.$device_id.'-'.$device_pin_num;
+$img_name = $device_type.'-'.$device_ref.'-'.$device_pin_num.'-dod-'.$chart_height.'x'.$chart_width;
+$rrd_name = $device_type.'-'.$device_ref.'-'.$device_pin_num;
 
 print $device_pin_num;
 echo "<br>:$device_pin_num:<br>";

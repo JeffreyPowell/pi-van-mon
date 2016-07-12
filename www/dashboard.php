@@ -1,6 +1,8 @@
 <?php
 
 #create_graph("calls-gw-tok-halfday-wall.png",   "-12h",         "Tokyo calls last 12 hours",             "200", "1100");
+$default_width = 300;
+$default_height = 300;
 
 $dash_id = $_GET['id'];
 $chart_width = $_GET['w'];
@@ -92,7 +94,7 @@ $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
 $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value     = read_last_value($rrd_filename);
 
-echo "<div style='background-color:#161616; background-image: url(images/240x120.png); height: 360px; width: 360px; border: 3px solid yellow;'>";
+echo "<div style='background-color:#161616; background-image: url(images/battery-symbol-orn.png); height: 360px; width: 360px; border: 3px solid yellow;'>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";
@@ -153,10 +155,13 @@ function read_last_value($rrd_filename) {
   if (! $ret) {
     echo "<b>Read error: </b>".rrd_error()."\n";
   }
-  print_r( "X" );
-  print_r( $ret );
-  print_r( "X" );
+  $data = $ret['data'][0];
 
-  return $ret;
+  #print_r( "X" );
+  #print_r( $ret );
+  #print_r( $data );
+  #print_r( "X" );
+
+  return $data;
 }
 ?>
