@@ -49,7 +49,7 @@ echo "<td style='width:30px'";
 echo "<td style='width:05px'";
 echo "<td style='width:30px'";
 echo "</tr></table>";
-echo "</div>"
+echo "</div>";
 
 
 
