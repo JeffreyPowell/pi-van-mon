@@ -109,8 +109,22 @@ echo "</div>";
 echo "</div></td>";
 
 #========== Column Center
-echo "<td style='width:30px; border: 1px dashed green;'>";
-echo "3</td>";
+echo "<td style='width:30px; border: 1px dashed green;'><div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
+$device_id      = 16;
+$device_type    = (string) $config['devices']['type'][$device_id];
+$device_ref     = (string) $config['devices']['ref'][$device_id];
+$device_pin_num = (string) $config['devices']['pin'][$device_id];
+$device_name    = (string) $config['devices']['name'][$device_id];
+$device_units   = (string) $config['devices']['units'][$device_id];
+$rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
+$rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+$last_value     = read_last_value($rrd_filename);
+echo "<div style='display: inline; background-color:#242424; background-image: url(images/none.png); height: 360px; width: 360px; border: 5px solid yellow;'>";
+echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:18px; text-align:center; color:white;'>$device_name</p>";
+echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</p>";
+echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</p>";
+echo "</div>";
+echo "</div></td>";
 
 #========== Column Right Mid
 echo "<td style='width:05px; border: 1px dashed green;'>";
@@ -173,7 +187,6 @@ echo "<div style='display: inline; background-color:#242424; background-image: u
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</p>";
-
 echo "</div>";
 
 $device_id      = 14;
