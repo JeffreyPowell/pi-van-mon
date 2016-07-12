@@ -44,7 +44,7 @@ echo "</head><body>";
 echo "<div style='background-color:#000000; height: 100%; width: 100%; border: 1px dashed yellow;'>";
 echo "<table style='width:100%; border: 3px dashed blue;'><tr>";
 #========== Column Left
-echo "<td style='width:30px; border: 1px dashed green;'><div style='display: block; position: relative; width: 100%; height: 100%; border: 5px solid red;'>";
+echo "<td style='width:30px; border: 1px dashed green;'><div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
 $device_id      = 14;
 $device_type    = (string) $config['devices']['type'][$device_id];
 $device_ref     = (string) $config['devices']['ref'][$device_id];
