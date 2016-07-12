@@ -82,7 +82,7 @@ echo "</td>";
 
 echo "<td>";
 
-$device_id      = 2;
+$device_id      = 16;
 $device_type    = (string) $config['devices']['type'][$device_id];
 $device_ref     = (string) $config['devices']['ref'][$device_id];
 $device_pin_num = (string) $config['devices']['pin'][$device_id];
