@@ -41,8 +41,13 @@ echo "</head><body>";
 #echo "<img src='calls-gw-tok-halfday-wall.png'>";
 #echo "<p id='p01'>I am different</p>";
 echo "<div style='display: table; background-color:#000000; height: 100%; width: 100%; border: 6px dashed yellow;'>";
+echo "<div style='display: table-row; width: 100%; height: 100%; border: 3px solid green;'>";
+echo "<div style='display: table-cell; height: 120px; width: 120px; background-color:#242424; background-image: url(images/none.png); border: 1px solid blue;'>";
 
 echo "</div>";
+echo "</div>";
+echo "</div>";
+
 
 
 echo "<div style='background-color:#000000; height: 100%; width: 100%; border: 1px dashed yellow;'>";
