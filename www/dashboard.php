@@ -55,17 +55,17 @@ $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
 $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value     = read_last_value($rrd_filename);
 
-echo "<div style='background-color:#161616; background-image: url(images/none.png); height: 120px; width: 240px; border: 5px solid black;'>";
-echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
-echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
-echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";
+echo "<div style='background-color:#242424; background-image: url(images/none.png); height: 120px; width: 240px; border: 5px solid black;'>";
+echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
+echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
+echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";
 echo "</div>";
 
-echo "<div style='background-color:#161616; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
+echo "<div style='background-color:#242424; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
 echo "Atwo";
 echo "</div>";
 
-echo "<div style='background-color:#161616; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
+echo "<div style='background-color:#242424; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
 echo "Athree";
 echo "</div>";
 
@@ -85,10 +85,10 @@ $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
 $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value     = read_last_value($rrd_filename);
 
-echo "<div style='background-color:#161616; background-image: url(images/none.png); height: 120px; width: 120px; border: 5px solid black;'>";
-echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
-echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
-echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";
+echo "<div style='background-color:#242424; background-image: url(images/none.png); height: 120px; width: 120px; border: 5px solid black;'>";
+echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
+echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
+echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";
 echo "</div>";
 
 echo "</td>";
@@ -107,10 +107,10 @@ $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
 $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value     = read_last_value($rrd_filename);
 
-echo "<div style='background-color:#161616; background-image: url(images/battery-symbol-orn.png); height: 360px; width: 360px; border: 5px solid black;'>";
-echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
-echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
-echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";
+echo "<div style='background-color:#242424; background-image: url(images/battery-symbol-orn.png); height: 360px; width: 360px; border: 5px solid black;'>";
+echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
+echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
+echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";
 echo "</div>";
 
 echo "</td>";
@@ -129,26 +129,26 @@ $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
 $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value     = read_last_value($rrd_filename);
 
-echo "<div style='background-color:#161616; background-image: url(images/240x120.png); height: 120px; width: 120px; border: 5px solid black;'>";
-echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
-echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
-echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";
+echo "<div style='background-color:#242424; background-image: url(images/240x120.png); height: 120px; width: 120px; border: 5px solid black;'>";
+echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
+echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
+echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";
 echo "</div>";
 
 echo "</td>";
 
 echo "<td>";
 
-echo "<div style='background-color:#161616; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
+echo "<div style='background-color:#242424; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
 echo "Bone";
 echo "</div>";
 #echo "<br>";
 
-echo "<div style='background-color:#161616; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
+echo "<div style='background-color:#242424; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
 echo "Btwo";
 echo "</div>";
 
-echo "<div style='background-color:#161616; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
+echo "<div style='background-color:#242424; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
 echo "Bthree";
 echo "</div>";
 
