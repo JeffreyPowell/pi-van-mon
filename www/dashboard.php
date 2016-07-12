@@ -40,6 +40,16 @@ echo "</head><body>";
 
 #echo "<img src='calls-gw-tok-halfday-wall.png'>";
 #echo "<p id='p01'>I am different</p>";
+
+echo "<div style='background-color:#000000; height: 100%; width: 100%; border: 1px dashed yellow;'>";
+echo "<table><tr>";
+
+echo "</tr></table>";
+echo "</div>"
+
+
+
+
 echo "<table><tr>";
 echo "<td>";
 
