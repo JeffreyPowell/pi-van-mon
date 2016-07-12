@@ -54,8 +54,8 @@ $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value     = read_last_value($rrd_filename);
 echo "<div style='background-color:#242424; background-image: url(images/none.png); height: 120px; width: 240px; border: 5px solid black;'>";
 echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
-echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
-echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";
+echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
+
 echo "</div>";
 
 $device_id      = 1;
@@ -69,8 +69,9 @@ $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value     = read_last_value($rrd_filename);
 echo "<div style='background-color:#242424; background-image: url(images/none.png); height: 120px; width: 120px; border: 5px solid black;'>";
 echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
+echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
 echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
-echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";
+
 echo "</div>";
 
 $device_id      = 1;
@@ -84,8 +85,9 @@ $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value     = read_last_value($rrd_filename);
 echo "<div style='background-color:#242424; background-image: url(images/none.png); height: 120px; width: 120px; border: 5px solid black;'>";
 echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
+echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
 echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
-echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";
+
 echo "</div>";
 
 echo "<div style='background-color:#242424; background-image: url(images/120x240.png); height: 120px; width: 240px; border: 1px solid yellow;'>";
@@ -110,8 +112,9 @@ $last_value     = read_last_value($rrd_filename);
 
 echo "<div style='background-color:#242424; background-image: url(images/none.png); height: 120px; width: 120px; border: 5px solid black;'>";
 echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
-echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
 echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";
+echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
+
 echo "</div>";
 
 echo "</td>";
@@ -132,8 +135,9 @@ $last_value     = read_last_value($rrd_filename);
 
 echo "<div style='background-color:#242424; background-image: url(images/none.png); height: 360px; width: 360px; border: 5px solid black;'>";
 echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
-echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
 echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";
+echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
+
 echo "</div>";
 
 echo "</td>";
@@ -154,8 +158,9 @@ $last_value     = read_last_value($rrd_filename);
 
 echo "<div style='background-color:#242424; background-image: url(images/240x120.png); height: 120px; width: 120px; border: 5px solid black;'>";
 echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
-echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
 echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$last_value</p>";
+echo "<p style='border: 0px solid red; font-family:sans-serif; font-size:9px; text-align:center; color:white;'>$device_units</p>";
+
 echo "</div>";
 
 echo "</td>";
