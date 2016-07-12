@@ -43,11 +43,11 @@ echo "</head><body>";
 
 echo "<div style='background-color:#000000; height: 100%; width: 100%; border: 1px dashed yellow;'>";
 echo "<table style='width:100%; border: 1px dashed blue;'><tr>";
-echo "<td style='width:30px'";
-echo "<td style='width:05px'";
-echo "<td style='width:30px'";
-echo "<td style='width:05px'";
-echo "<td style='width:30px'";
+echo "<td style='width:30px; border: 1px dashed blue;'";
+echo "<td style='width:05px; border: 1px dashed blue;'";
+echo "<td style='width:30px; border: 1px dashed blue;'";
+echo "<td style='width:05px; border: 1px dashed blue;'";
+echo "<td style='width:30px; border: 1px dashed blue;'";
 echo "</tr></table>";
 echo "</div>";
 
