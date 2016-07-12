@@ -11,4 +11,4 @@ if [ "$result" = "Already up-to-date." ]; then
 else
   echo "[$result]" | mail -s "Van Git Pull - something changed" jffrypwll@googlemail.com
 fi
-#
+##
