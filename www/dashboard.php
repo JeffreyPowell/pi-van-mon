@@ -146,7 +146,7 @@ $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value     = read_last_value($rrd_filename);
 
 echo "<div style='display: inline; background-color:#242424; background-image: url(images/none.png); height: 360px; width: 360px; border: 5px solid yellow;'>";
-echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
+echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:18px; text-align:center; color:white;'>$device_name</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</p>";
 
