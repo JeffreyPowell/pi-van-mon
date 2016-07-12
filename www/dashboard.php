@@ -44,7 +44,7 @@ echo "</head><body>";
 echo "<div style='background-color:#000000; height: 100%; width: 100%; border: 1px dashed yellow;'>";
 echo "<table style='width:100%; border: 3px dashed blue;'><tr>";
 #========== Column Left
-echo "<td style='width:30px; border: 1px dashed green;'>";
+echo "<td style='width:30px; border: 1px dashed green;'><div>";
 $device_id      = 14;
 $device_type    = (string) $config['devices']['type'][$device_id];
 $device_ref     = (string) $config['devices']['ref'][$device_id];
@@ -87,7 +87,7 @@ echo "<p style='display: inline; border: 1px solid red; font-family:sans-serif; 
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</p>";
 echo "</div>";
-echo "</td>";
+echo "</div></td>";
 
 #========== Column Left Mid
 echo "<td style='width:05px; border: 1px dashed green;'>";
