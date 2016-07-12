@@ -43,6 +43,7 @@ echo "</head><body>";
 
 echo "<div style='background-color:#000000; height: 100%; width: 100%; border: 1px dashed yellow;'>";
 echo "<table style='width:100%; border: 3px dashed blue;'><tr>";
+#========== Column Left
 echo "<td style='width:30px; border: 1px dashed green;'>";
 $device_id      = 14;
 $device_type    = (string) $config['devices']['type'][$device_id];
@@ -59,14 +60,23 @@ echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; t
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</p>";
 echo "</div>";
 echo "</td>";
+
+#========== Column Left Mid
 echo "<td style='width:05px; border: 1px dashed green;'>";
 echo "2</td>";
+
+#========== Column Center
 echo "<td style='width:30px; border: 1px dashed green;'>";
 echo "3</td>";
+
+#========== Column Right Mid
 echo "<td style='width:05px; border: 1px dashed green;'>";
 echo "4</td>";
+
+#========== Column Right
 echo "<td style='width:30px; border: 1px dashed green;'>";
 echo "5</td>";
+
 echo "</tr></table>";
 echo "</div>";
 
