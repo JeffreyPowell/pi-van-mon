@@ -44,7 +44,7 @@ echo "</head><body>";
 echo "<div style='background-color:#000000; height: 100%; width: 100%; border: 1px dashed yellow;'>";
 echo "<table style='width:100%; border: 3px dashed blue;'><tr>";
 #========== Column Left
-echo "<td style='width:30px; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
+echo "<td style='width:30%; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
 echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
 $device_id      = 14;
 $device_type    = (string) $config['devices']['type'][$device_id];
@@ -91,7 +91,7 @@ echo "</div>";
 echo "</div></td>";
 
 #========== Column Left Mid
-echo "<td style='width:05px; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
+echo "<td style='width:05%; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
 echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
 $device_id      = 14;
 $device_type    = (string) $config['devices']['type'][$device_id];
@@ -111,7 +111,7 @@ echo "</div>";
 echo "</div></td>";
 
 #========== Column Center
-echo "<td style='width:30px; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
+echo "<td style='width:30%; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
 echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
 $device_id      = 16;
 $device_type    = (string) $config['devices']['type'][$device_id];
@@ -130,11 +130,11 @@ echo "</div>";
 echo "</div></td>";
 
 #========== Column Right Mid
-echo "<td style='width:05px; border: 1px dashed green;'>";
+echo "<td style='width:05%; border: 1px dashed green;'>";
 echo "4</td>";
 
 #========== Column Right
-echo "<td style='width:30px; border: 1px dashed green;'>";
+echo "<td style='width:30%; border: 1px dashed green;'>";
 echo "5</td>";
 
 echo "</tr></table>";
