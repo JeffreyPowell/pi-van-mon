@@ -26,47 +26,6 @@ echo "#p01 {color: blue;}";
 echo "</style>";
 echo "</head><body>";
 
-#echo "<div id='header'>";
-#echo "This is page heading";
-#echo "<div>";
-#echo "</div>";
-#echo "</div>";
-#echo "<div id='nav'>";
-#echo "<table id='nav'><tr>";
-#echo "<td><a href='#'>Home</a></td>";
-#echo "<td><a href='#'>About Us</a></td>";
-#echo "<td><a href='#'>Contact Us</a></td>";
-#echo "</tr></table></div>";
-
-#echo "<img src='calls-gw-tok-halfday-wall.png'>";
-#echo "<p id='p01'>I am different</p>";
-echo "<div style='display: table; background-color:#000000; height: 100%; width: 100%; border: 6px dashed yellow;'>";
-
-echo "<div style='display: table-row; width: 100%; height: 50%; border: 3px solid green;'>";
-
-echo "<div style='display: table-cell; height: 120px; width: 120px; background-color:#242424; background-image: url(images/none.png); border: 2px solid blue;'>";
-echo "</div>";
-echo "<div style='display: table-cell; height: 120px; width: 120px; background-color:#242424; background-image: url(images/none.png); border: 2px solid blue;'>";
-echo "</div>";
-echo "<div style='display: table-cell; height: 120px; width: 120px; background-color:#242424; background-image: url(images/none.png); border: 2px solid blue;'>";
-echo "</div>";
-
-echo "</div>";
-
-echo "<div style='display: table-row; width: 100%; height: 50%; border: 3px solid green;'>";
-
-echo "<div style='display: table-cell; height: 120px; width: 120px; background-color:#242424; background-image: url(images/none.png); border: 2px solid blue;'>";
-echo "</div>";
-echo "<div style='display: table-cell; height: 120px; width: 120px; background-color:#242424; background-image: url(images/none.png); border: 2px solid blue;'>";
-echo "</div>";
-echo "<div style='display: table-cell; height: 120px; width: 120px; background-color:#242424; background-image: url(images/none.png); border: 2px solid blue;'>";
-echo "</div>";
-
-echo "</div>";
-
-echo "</div>";
-
-
 
 echo "<div style='background-color:#000000; height: 100%; width: 100%; border: 1px dashed yellow;'>";
 echo "<table style='width:100%; border: 3px dashed blue;'><tr>";
@@ -96,7 +55,7 @@ $device_units   = (string) $config['devices']['units'][$device_id];
 $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
 $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value     = round( read_last_value($rrd_filename), 2 );
-echo "<div style='position: static; top: 0;	left: 120px; height: 120px; width: 120px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+echo "<div style='position: static; top: 120px;	left: 240px; height: 120px; width: 120px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
 echo "<p style='display: inline; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</p>";
