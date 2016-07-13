@@ -142,6 +142,8 @@ echo "</div></td>";
 echo "<td style='width: 10%'></td>";
 
 #========== Column Right
+echo "<td style='width:240px; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
+echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
 $device_id      = 17;
 $device_type    = (string) $config['devices']['type'][$device_id];
 $device_ref     = (string) $config['devices']['ref'][$device_id];
