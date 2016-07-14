@@ -1,4 +1,4 @@
-<?php
+  <?php
 
 #create_graph("calls-gw-tok-halfday-wall.png",   "-12h",         "Tokyo calls last 12 hours",             "200", "1100");
 $default_width = 300;
