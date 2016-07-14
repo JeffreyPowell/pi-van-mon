@@ -100,7 +100,7 @@ echo "</div></td>";
 echo "<td style='width: 10%'></td>";
 
 #========== Column Center
-echo "<td style='width:360px; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
+echo "<td style='width:240px; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
 echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
 $device_id      = 16;
 $device_type    = (string) $config['devices']['type'][$device_id];
@@ -111,7 +111,7 @@ $device_units   = (string) $config['devices']['units'][$device_id];
 $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
 $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value     = read_last_value($rrd_filename);
-echo "<div style='position: static; top: 0;	left: 0; height: 360px; width: 360px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+echo "<div style='position: static; top: 0;	left: 0; height: 360px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:18px; text-align:center; color:white;'>$device_name</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</p>";
