@@ -37,7 +37,7 @@ echo "<div style='display: block; position: relative; width: 100%; height: 100%;
 
 #---------- Van battery status
 
-echo "<div style='position: static; top: 0;	left: 0; height: 240px; width: 120px; background-color:#242424; border: 2px solid yellow;'>";
+echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 240px; background-color:#242424; border: 2px solid yellow;'>";
 $device_id      = 14;
 $device_type    = (string) $config['devices']['type'][$device_id];
 $device_ref     = (string) $config['devices']['ref'][$device_id];
@@ -68,7 +68,7 @@ echo "</div>";
 
 #---------- Solar panels status
 
-echo "<div style='position: static; top: 120px;	left: 240px; height: 120px; width: 120px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+echo "<div style='position: static; top: 120px;	left: 240px; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
 $device_id      = 16;
 $device_type    = (string) $config['devices']['type'][$device_id];
 $device_ref     = (string) $config['devices']['ref'][$device_id];
@@ -142,8 +142,8 @@ $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value     = read_last_value($rrd_filename);
 
 $period_span    = '-12h';
-$chart_height   = 100;
 $chart_height   = 50;
+$chart_height   = 20;
 $img_name = $device_type.'-'.$device_ref.'-'.$device_pin_num.$period_span.'-'.$chart_height.'x'.$chart_width;
 $img_filename = '/home/pi/bin/van/www/images/'.$img_name.'.png';
 create_graph( $rrd_filename, $img_filename,  $period_span, $device_name.' '.$period_span, $device_units, $chart_height, $chart_width);
