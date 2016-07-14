@@ -151,7 +151,7 @@ create_graph( $rrd_filename, $img_filename,  $period_span, $device_name.' '.$per
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:18px; text-align:center; color:white;'>$device_name</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</p>";
-echo "<img src='images/$img_name' style='position: relative; top: 0px; left: 0px; border: 1px solid red; '>";
+echo "<img src='images/$img_name.png' style='position: relative; top: 0px; left: 0px; border: 1px solid red; '>";
 echo "</div>";
 echo "</div></td>";
 
