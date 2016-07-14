@@ -136,12 +136,22 @@ $device_ref     = (string) $config['devices']['ref'][$device_id];
 $device_pin_num = (string) $config['devices']['pin'][$device_id];
 $device_name    = (string) $config['devices']['name'][$device_id];
 $device_units   = (string) $config['devices']['units'][$device_id];
+
 $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
 $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value     = read_last_value($rrd_filename);
+
+$period_span    = '-12h'
+$chart_height   = 100;
+$chart_height   = 50;
+$img_name = $device_type.'-'.$device_ref.'-'.$device_pin_num.$period_span.'-'.$chart_height.'x'.$chart_width;
+$img_filename = '/home/pi/bin/van/www/images/'.$img_name.'.png';
+create_graph( $rrd_filename, $img_filename,  $period_span, $device_name.' '.$period_span, $device_units, $chart_height, $chart_width);
+
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:18px; text-align:center; color:white;'>$device_name</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</p>";
+echo "<img src='images/$img_name' style='position: relative; top: 0px; left: 0px; border: 1px solid red; '>";
 echo "</div>";
 echo "</div></td>";
 
@@ -207,7 +217,7 @@ echo "<span style='position: relative; top: 0px; left: 0px; border: 1px solid re
 echo "<span style='position: relative; top: 0px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:12px; color:white;'>$device_units</span>";
 echo "</div>";
 
-#---------- 12v Sockets status
+#---------- 240v Sockets status
 
 echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
 $device_id      = 15;
@@ -234,7 +244,43 @@ echo "</div>";
 echo "</body></html>";
 exit;
 
+function create_graph($input, $output, $start, $title, $units, $height, $width) {
 
+  $options = array(
+    "--slope-mode",
+    "--start", $start,
+    "--title=$title",
+    "--vertical-label=$units",
+#    "--lower=0",
+    "--height=$height",
+    "--width=$width",
+    "-cBACK#161616",
+    "-cCANVAS#1e1e1e",
+    "-cSHADEA#000000",
+    "-cSHADEB#000000",
+    "-cFONT#c7c7c7",
+    "-cGRID#888800",
+    "-cMGRID#ffffff",
+    "-nTITLE:10",
+    "-nAXIS:9",
+    "-nUNIT:10",
+    "-y 0.2:5",
+    "-cFRAME#ffffff",
+    "-cARROW#000000",
+    "DEF:dataavg=$input:data:AVERAGE",
+    "CDEF:transdataavg=dataavg,1,*",
+    "AREA:transdataavg#b6d14b40",
+    "LINE4:transdataavg#a0b842:$title $units",
+    "COMMENT:\\n",
+    "GPRINT:transdataavg:MAX:$units Avergage %6.2lf"
+  );
+
+ $ret = rrd_graph($output, $options );
+
+  if (! $ret) {
+    echo "<b>Graph error: </b>".rrd_error()."\n";
+  }
+}
 
 function read_last_value($rrd_filename) {
 
