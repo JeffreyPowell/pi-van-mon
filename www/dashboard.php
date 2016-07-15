@@ -27,8 +27,8 @@ echo "</style>";
 echo "</head><body>";
 
 
-echo "<div style='background-color:#000000; height: 100%; width: 100%; border: 1px dashed yellow;'>";
-echo "<table style='width:100%; border: 3px dashed blue;'><tr>";
+echo "<div style='background-color:#000000; height: 100%; width: 100%; border: 0px dashed yellow;'>";
+echo "<table style='width:100%; border: 0px dashed blue;'><tr>";
 
 #========== Column Left
 
