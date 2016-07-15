@@ -37,7 +37,7 @@ echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-
 
 #---------- Van battery status
 
-echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 240px; background-color:#242424; border: 2px solid yellow;'>";
+echo "<div style='position: static; top: 0;	left: 0; height: 100px; width: 200px; background-color:#242424; border: 2px solid yellow;'>";
 $device_id      = 1;
 $device_type    = (string) $config['devices']['type'][$device_id];
 $device_ref     = (string) $config['devices']['ref'][$device_id];
@@ -68,7 +68,7 @@ echo "</div>";
 
 #---------- Mains charger status
 
-echo "<div style='position: static; top: 120px;	left: 240px; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+echo "<div style='position: relative; top: 000px;	left: 000px; height: 100px; width: 200px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
 $device_id      = 2;
 $device_type    = (string) $config['devices']['type'][$device_id];
 $device_ref     = (string) $config['devices']['ref'][$device_id];
@@ -214,7 +214,7 @@ echo "</td>";
 echo "<td style='width: 50%'></td>";
 
 #========== Column Right Mid
-echo "<td style='width:1%; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
+echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-align: middle;'>";
 #echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
 
 echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 120px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
@@ -236,7 +236,7 @@ echo "</div></td>";
 echo "<td style='width: 50%'></td>";
 
 #========== Column Right
-echo "<td style='width:1%; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
+echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-align: middle;'>";
 
 #---------- Fridge status
 
