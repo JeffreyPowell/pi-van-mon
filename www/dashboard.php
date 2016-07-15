@@ -194,17 +194,17 @@ $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value     = round( read_last_value($rrd_filename), 2 );
 
 $period_span    = '-12h';
-$chart_width    = 120;
-$chart_height   = 80;
+$chart_width    = 200;
+$chart_height   = 100;
 $img_name = $device_type.'-'.$device_ref.'-'.$device_pin_num.$period_span.'-'.$chart_height.'x'.$chart_width;
 $img_filename = '/home/pi/bin/van/www/images/'.$img_name.'.png';
 create_graph( $rrd_filename, $img_filename,  $period_span, $device_name.' '.$period_span, $device_units, $chart_height, $chart_width);
 
 
-echo "<span style='position: absolute; top: 000px; left: 020px; border: 1px solid red; font-family:sans-serif; font-size:18px; text-align:center; color:white;'>$device_name</span>";
-echo "<span style='position: absolute; top: 010px; left: 040px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
-echo "<span style='position: absolute; top: 020px; left: 050px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
-echo "<img  style='position: absolute; top: 100px; left: 100px; border: 1px solid red;' src='images/$img_name.png' >";
+echo "<span style='position: relative; top: 000px; left: 020px; border: 1px solid red; font-family:sans-serif; font-size:18px; text-align:center; color:white;'>$device_name</span>";
+echo "<span style='position: relative; top: 010px; left: 040px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
+echo "<span style='position: relative; top: 020px; left: 050px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
+echo "<img  style='position: relative; top: 100px; left: 100px; border: 1px solid red;' src='images/$img_name.png' >";
 echo "</div>";
 
 #echo "</div>";
