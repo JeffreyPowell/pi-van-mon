@@ -32,7 +32,7 @@ echo "<table style='width:100%; border: 3px dashed blue;'><tr>";
 
 #========== Column Left
 
-echo "<td style='width:10%; border: 1px dashed green; text-align: left; vertical-align: middle;'>";
+echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-align: middle;'>";
 #echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
 
 #---------- Van battery status
@@ -149,11 +149,11 @@ echo "</div>";
 
 echo "</td>";
 
-echo "<td style='width: 20%'></td>";
+echo "<td style='width: 50%'></td>";
 
 #========== Column Left Mid
 
-echo "<td style='width:10%; border: 1px dashed green; text-align: left; vertical-align: middle;'>";
+echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-align: middle;'>";
 #echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
 $device_id      = 14;
 $device_type    = (string) $config['devices']['type'][$device_id];
@@ -173,11 +173,11 @@ echo "<span style='position: relative; top: 000px; left: 000px; border: 1px soli
 
 echo "</div></td>";
 
-echo "<td style='width: 20%'></td>";
+echo "<td style='width: 50%'></td>";
 
 #========== Column Center
 
-echo "<td style='width:10%; border: 1px dashed green; text-align: left; vertical-align: middle;'>";
+echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-align: middle;'>";
 #echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
 
 #---------- Split battery status
@@ -195,7 +195,7 @@ $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value     = round( read_last_value($rrd_filename), 2 );
 
 $period_span    = '-12h';
-$chart_width    = 180;
+$chart_width    = 160;
 $chart_height   = 100;
 $img_name = $device_type.'-'.$device_ref.'-'.$device_pin_num.$period_span.'-'.$chart_height.'x'.$chart_width;
 $img_filename = '/home/pi/bin/van/www/images/'.$img_name.'.png';
@@ -205,13 +205,13 @@ create_graph( $rrd_filename, $img_filename,  $period_span, $device_name.' '.$per
 echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:18px; text-align:center; color:white;'>$device_name</span>";
 echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
 echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
-echo "<img  style='position: relative; top: 000px; left: 000px; border: 1px solid red;' src='images/$img_name.png' >";
+echo "<img  style='position: relative; top: 000px; left: 000px;' src='images/$img_name.png' >";
 echo "</div>";
 
 #echo "</div>";
 echo "</td>";
 
-echo "<td style='width: 20%'></td>";
+echo "<td style='width: 50%'></td>";
 
 #========== Column Right Mid
 echo "<td style='width:1%; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
