@@ -195,7 +195,7 @@ $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
 $last_value     = round( read_last_value($rrd_filename), 2 );
 
 $period_span    = '-12h';
-$chart_width    = 200;
+$chart_width    = 180;
 $chart_height   = 100;
 $img_name = $device_type.'-'.$device_ref.'-'.$device_pin_num.$period_span.'-'.$chart_height.'x'.$chart_width;
 $img_filename = '/home/pi/bin/van/www/images/'.$img_name.'.png';
