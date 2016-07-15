@@ -66,7 +66,7 @@ echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-
   echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
   echo "</div>";
 
-#---------- Mains charger status
+#---------- Hookup charger status
 
   #echo "<div style='position: relative; top: 000px;	left: 000px; height: 100px; width: 200px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
   echo "<div style='position: static; top: 0;	left: 0; height: 100px; width: 200px; background-color:#242424; border: 2px solid yellow;'>";
@@ -99,7 +99,7 @@ echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-
 
 #---------- Solar panel 1 status
 
-  echo "<div style='position: static; top: 120px;	left: 240px; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  echo "<div style='position: static; top: 0;	left: 0; height: 100px; width: 200px; background-color:#242424; border: 2px solid yellow;'>";
   $device_id      = 3;
   $device_type    = (string) $config['devices']['type'][$device_id];
   $device_ref     = (string) $config['devices']['ref'][$device_id];
@@ -133,7 +133,7 @@ echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-
 
 #---------- Wind charger status
 
-  echo "<div style='position: static; top: 120px;	left: 240px; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  echo "<div style='position: static; top: 0;	left: 0; height: 100px; width: 200px; background-color:#242424; border: 2px solid yellow;'>";
   $device_id      = 5;
   $device_type    = (string) $config['devices']['type'][$device_id];
   $device_ref     = (string) $config['devices']['ref'][$device_id];
@@ -237,7 +237,7 @@ echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-
 
 #---------- Fridge status
 
-  echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  echo "<div style='position: static; top: 0;	left: 0; height: 100px; width: 200px; background-color:#242424; border: 2px solid yellow;'>";
   $device_id      = 13;
   $device_type    = (string) $config['devices']['type'][$device_id];
   $device_ref     = (string) $config['devices']['ref'][$device_id];
@@ -254,7 +254,7 @@ echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-
 
 #---------- 12v Sockets status
 
-  echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  echo "<div style='position: static; top: 0;	left: 0; height: 100px; width: 200px; background-color:#242424; border: 2px solid yellow;'>";
   $device_id      = 14;
   $device_type    = (string) $config['devices']['type'][$device_id];
   $device_ref     = (string) $config['devices']['ref'][$device_id];
@@ -271,7 +271,7 @@ echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-
 
 #---------- 240v Sockets status
 
-  echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  echo "<div style='position: static; top: 0;	left: 0; height: 100px; width: 200px; background-color:#242424; border: 2px solid yellow;'>";
   $device_id      = 15;
   $device_type    = (string) $config['devices']['type'][$device_id];
   $device_ref     = (string) $config['devices']['ref'][$device_id];
