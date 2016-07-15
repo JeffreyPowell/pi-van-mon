@@ -37,115 +37,115 @@ echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-
 
 #---------- Van battery status
 
-echo "<div style='position: static; top: 0;	left: 0; height: 100px; width: 200px; background-color:#242424; border: 2px solid yellow;'>";
-$device_id      = 1;
-$device_type    = (string) $config['devices']['type'][$device_id];
-$device_ref     = (string) $config['devices']['ref'][$device_id];
-$device_pin_num = (string) $config['devices']['pin'][$device_id];
-$device_name    = (string) $config['devices']['name'][$device_id];
-$device_units   = (string) $config['devices']['units'][$device_id];
-$rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
-$rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
-$last_value     = round( read_last_value($rrd_filename), 2 );
-echo "<img src='images/none.png' style='position: static; top: 000px; left: 0px; border: 1px solid red; '>";
-echo "<span style='position: relative; top: 000px; left: 10px; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</span>";
-echo "<span style='position: relative; top: 000px; left: 30px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
-$device_id      = 9;
-$device_type    = (string) $config['devices']['type'][$device_id];
-$device_ref     = (string) $config['devices']['ref'][$device_id];
-$device_pin_num = (string) $config['devices']['pin'][$device_id];
-$device_name    = (string) $config['devices']['name'][$device_id];
-$device_units   = (string) $config['devices']['units'][$device_id];
-$rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
-$rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
-$last_value     = round( read_last_value($rrd_filename), 2 );
-echo "<img src='images/none.png' style='position: relative; top: 000px; left: 0px; border: 1px solid red; '>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</span>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
-echo "</div>";
+  echo "<div style='position: static; top: 0;	left: 0; height: 100px; width: 200px; background-color:#242424; border: 2px solid yellow;'>";
+  $device_id      = 1;
+  $device_type    = (string) $config['devices']['type'][$device_id];
+  $device_ref     = (string) $config['devices']['ref'][$device_id];
+  $device_pin_num = (string) $config['devices']['pin'][$device_id];
+  $device_name    = (string) $config['devices']['name'][$device_id];
+  $device_units   = (string) $config['devices']['units'][$device_id];
+  $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
+  $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+  $last_value     = round( read_last_value($rrd_filename), 2 );
+  echo "<img src='images/none.png' style='position: static; top: 000px; left: 0px; border: 1px solid red; '>";
+  echo "<span style='position: relative; top: 000px; left: 10px; border: 1px solid red; font-family:sans-serif; font-size:18px; text-align:center; color:white;'>$device_name</span>";
+  echo "<span style='position: relative; top: 000px; left: 30px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
+  $device_id      = 9;
+  $device_type    = (string) $config['devices']['type'][$device_id];
+  $device_ref     = (string) $config['devices']['ref'][$device_id];
+  $device_pin_num = (string) $config['devices']['pin'][$device_id];
+  $device_name    = (string) $config['devices']['name'][$device_id];
+  $device_units   = (string) $config['devices']['units'][$device_id];
+  $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
+  $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+  $last_value     = round( read_last_value($rrd_filename), 2 );
+  echo "<img src='images/none.png' style='position: relative; top: 000px; left: 0px; border: 1px solid red; '>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</span>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
+  echo "</div>";
 
 #---------- Mains charger status
 
-echo "<div style='position: relative; top: 000px;	left: 000px; height: 100px; width: 200px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
-$device_id      = 2;
-$device_type    = (string) $config['devices']['type'][$device_id];
-$device_ref     = (string) $config['devices']['ref'][$device_id];
-$device_pin_num = (string) $config['devices']['pin'][$device_id];
-$device_name    = (string) $config['devices']['name'][$device_id];
-$device_units   = (string) $config['devices']['units'][$device_id];
-$rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
-$rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
-$last_value     = round( read_last_value($rrd_filename), 2 );
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</span>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
-$device_id      = 10;
-$device_type    = (string) $config['devices']['type'][$device_id];
-$device_ref     = (string) $config['devices']['ref'][$device_id];
-$device_pin_num = (string) $config['devices']['pin'][$device_id];
-$device_name    = (string) $config['devices']['name'][$device_id];
-$device_units   = (string) $config['devices']['units'][$device_id];
-$rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
-$rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
-$last_value     = round( read_last_value($rrd_filename), 2 );
-echo "<img src='images/none.png' style='position: relative; top: 000px; left: 0px; border: 1px solid red; '>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</span>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
-echo "</div>";
+  echo "<div style='position: relative; top: 000px;	left: 000px; height: 100px; width: 200px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  $device_id      = 2;
+  $device_type    = (string) $config['devices']['type'][$device_id];
+  $device_ref     = (string) $config['devices']['ref'][$device_id];
+  $device_pin_num = (string) $config['devices']['pin'][$device_id];
+  $device_name    = (string) $config['devices']['name'][$device_id];
+  $device_units   = (string) $config['devices']['units'][$device_id];
+  $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
+  $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+  $last_value     = round( read_last_value($rrd_filename), 2 );
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</span>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
+  $device_id      = 10;
+  $device_type    = (string) $config['devices']['type'][$device_id];
+  $device_ref     = (string) $config['devices']['ref'][$device_id];
+  $device_pin_num = (string) $config['devices']['pin'][$device_id];
+  $device_name    = (string) $config['devices']['name'][$device_id];
+  $device_units   = (string) $config['devices']['units'][$device_id];
+  $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
+  $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+  $last_value     = round( read_last_value($rrd_filename), 2 );
+  echo "<img src='images/none.png' style='position: relative; top: 000px; left: 0px; border: 1px solid red; '>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</span>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
+  echo "</div>";
 
 #---------- Solar panel 1 status
 
-echo "<div style='position: static; top: 120px;	left: 240px; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
-$device_id      = 3;
-$device_type    = (string) $config['devices']['type'][$device_id];
-$device_ref     = (string) $config['devices']['ref'][$device_id];
-$device_pin_num = (string) $config['devices']['pin'][$device_id];
-$device_name    = (string) $config['devices']['name'][$device_id];
-$device_units   = (string) $config['devices']['units'][$device_id];
-$rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
-$rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
-$last_value     = round( read_last_value($rrd_filename), 2 );
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</span>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
+  echo "<div style='position: static; top: 120px;	left: 240px; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  $device_id      = 3;
+  $device_type    = (string) $config['devices']['type'][$device_id];
+  $device_ref     = (string) $config['devices']['ref'][$device_id];
+  $device_pin_num = (string) $config['devices']['pin'][$device_id];
+  $device_name    = (string) $config['devices']['name'][$device_id];
+  $device_units   = (string) $config['devices']['units'][$device_id];
+  $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
+  $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+  $last_value     = round( read_last_value($rrd_filename), 2 );
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</span>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
+  echo "</div>";
 
 #---------- Solar panel 2 status
 
-echo "</div>";
-$device_id      = 4;
-$device_type    = (string) $config['devices']['type'][$device_id];
-$device_ref     = (string) $config['devices']['ref'][$device_id];
-$device_pin_num = (string) $config['devices']['pin'][$device_id];
-$device_name    = (string) $config['devices']['name'][$device_id];
-$device_units   = (string) $config['devices']['units'][$device_id];
-$rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
-$rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
-$last_value     = round( read_last_value($rrd_filename), 2 );
-echo "<div style='position: static; top: 120px;	left: 0px; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</span>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
-echo "</div>";
+  echo "<div style='position: static; top: 120px;	left: 0px; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  $device_id      = 4;
+  $device_type    = (string) $config['devices']['type'][$device_id];
+  $device_ref     = (string) $config['devices']['ref'][$device_id];
+  $device_pin_num = (string) $config['devices']['pin'][$device_id];
+  $device_name    = (string) $config['devices']['name'][$device_id];
+  $device_units   = (string) $config['devices']['units'][$device_id];
+  $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
+  $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+  $last_value     = round( read_last_value($rrd_filename), 2 );
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</span>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
+  echo "</div>";
 
 #---------- Wind charger status
 
-echo "<div style='position: static; top: 120px;	left: 240px; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
-$device_id      = 5;
-$device_type    = (string) $config['devices']['type'][$device_id];
-$device_ref     = (string) $config['devices']['ref'][$device_id];
-$device_pin_num = (string) $config['devices']['pin'][$device_id];
-$device_name    = (string) $config['devices']['name'][$device_id];
-$device_units   = (string) $config['devices']['units'][$device_id];
-$rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
-$rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
-$last_value     = round( read_last_value($rrd_filename), 2 );
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</span>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
-echo "</div>";
+  echo "<div style='position: static; top: 120px;	left: 240px; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  $device_id      = 5;
+  $device_type    = (string) $config['devices']['type'][$device_id];
+  $device_ref     = (string) $config['devices']['ref'][$device_id];
+  $device_pin_num = (string) $config['devices']['pin'][$device_id];
+  $device_name    = (string) $config['devices']['name'][$device_id];
+  $device_units   = (string) $config['devices']['units'][$device_id];
+  $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
+  $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+  $last_value     = round( read_last_value($rrd_filename), 2 );
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</span>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
+  echo "</div>";
 
 echo "</td>";
 
@@ -154,84 +154,80 @@ echo "<td style='width: 33%'></td>";
 #========== Column Left Mid
 
 echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-align: middle;'>";
-#echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
-$device_id      = 14;
-$device_type    = (string) $config['devices']['type'][$device_id];
-$device_ref     = (string) $config['devices']['ref'][$device_id];
-$device_pin_num = (string) $config['devices']['pin'][$device_id];
-$device_name    = (string) $config['devices']['name'][$device_id];
-$device_units   = (string) $config['devices']['units'][$device_id];
-$rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
-$rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
-$last_value     = round( read_last_value($rrd_filename), 2 );
-echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 120px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</span>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
 
-#echo "</div>";
+  echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 120px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  $device_id      = 14;
+  $device_type    = (string) $config['devices']['type'][$device_id];
+  $device_ref     = (string) $config['devices']['ref'][$device_id];
+  $device_pin_num = (string) $config['devices']['pin'][$device_id];
+  $device_name    = (string) $config['devices']['name'][$device_id];
+  $device_units   = (string) $config['devices']['units'][$device_id];
+  $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
+  $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+  $last_value     = round( read_last_value($rrd_filename), 2 );
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</span>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
+  echo "</div>";
 
-echo "</div></td>";
+echo "</td>";
 
 echo "<td style='width: 33%'></td>";
 
 #========== Column Center
 
 echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-align: middle;'>";
-#echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
 
 #---------- Split battery status
 
-echo "<div style='position: static; top: 0;	left: 0; height: 360px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
-$device_id      = 16;
-$device_type    = (string) $config['devices']['type'][$device_id];
-$device_ref     = (string) $config['devices']['ref'][$device_id];
-$device_pin_num = (string) $config['devices']['pin'][$device_id];
-$device_name    = (string) $config['devices']['name'][$device_id];
-$device_units   = (string) $config['devices']['units'][$device_id];
+  echo "<div style='position: static; top: 0;	left: 0; height: 360px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  $device_id      = 16;
+  $device_type    = (string) $config['devices']['type'][$device_id];
+  $device_ref     = (string) $config['devices']['ref'][$device_id];
+  $device_pin_num = (string) $config['devices']['pin'][$device_id];
+  $device_name    = (string) $config['devices']['name'][$device_id];
+  $device_units   = (string) $config['devices']['units'][$device_id];
 
-$rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
-$rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
-$last_value     = round( read_last_value($rrd_filename), 2 );
+  $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
+  $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+  $last_value     = round( read_last_value($rrd_filename), 2 );
 
-$period_span    = '-12h';
-$chart_width    = 160;
-$chart_height   = 100;
-$img_name = $device_type.'-'.$device_ref.'-'.$device_pin_num.$period_span.'-'.$chart_height.'x'.$chart_width;
-$img_filename = '/home/pi/bin/van/www/images/'.$img_name.'.png';
-create_graph( $rrd_filename, $img_filename,  $period_span, $device_name.' '.$period_span, $device_units, $chart_height, $chart_width);
+  $period_span    = '-12h';
+  $chart_width    = 160;
+  $chart_height   = 100;
+  $img_name = $device_type.'-'.$device_ref.'-'.$device_pin_num.$period_span.'-'.$chart_height.'x'.$chart_width;
+  $img_filename = '/home/pi/bin/van/www/images/'.$img_name.'.png';
+  create_graph( $rrd_filename, $img_filename,  $period_span, $device_name.' '.$period_span, $device_units, $chart_height, $chart_width);
 
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:18px; text-align:center; color:white;'>$device_name</span>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
+  echo "<img  style='position: relative; top: 000px; left: 000px;' src='images/$img_name.png' >";
+  echo "</div>";
 
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:18px; text-align:center; color:white;'>$device_name</span>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
-echo "<img  style='position: relative; top: 000px; left: 000px;' src='images/$img_name.png' >";
-echo "</div>";
-
-#echo "</div>";
 echo "</td>";
 
 echo "<td style='width: 33%'></td>";
 
 #========== Column Right Mid
 echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-align: middle;'>";
-#echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
 
-echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 120px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
-$device_id      = 14;
-$device_type    = (string) $config['devices']['type'][$device_id];
-$device_ref     = (string) $config['devices']['ref'][$device_id];
-$device_pin_num = (string) $config['devices']['pin'][$device_id];
-$device_name    = (string) $config['devices']['name'][$device_id];
-$device_units   = (string) $config['devices']['units'][$device_id];
-$rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
-$rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
-$last_value     = round( read_last_value($rrd_filename), 2 );
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</span>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
-echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
-#echo "</div>";
-echo "</div></td>";
+  echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 120px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  $device_id      = 14;
+  $device_type    = (string) $config['devices']['type'][$device_id];
+  $device_ref     = (string) $config['devices']['ref'][$device_id];
+  $device_pin_num = (string) $config['devices']['pin'][$device_id];
+  $device_name    = (string) $config['devices']['name'][$device_id];
+  $device_units   = (string) $config['devices']['units'][$device_id];
+  $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
+  $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+  $last_value     = round( read_last_value($rrd_filename), 2 );
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</span>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
+  echo "<span style='position: relative; top: 000px; left: 000px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
+  echo "</div>";
+
+echo "</td>";
 
 echo "<td style='width: 33%'></td>";
 
@@ -240,54 +236,54 @@ echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-
 
 #---------- Fridge status
 
-echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
-$device_id      = 13;
-$device_type    = (string) $config['devices']['type'][$device_id];
-$device_ref     = (string) $config['devices']['ref'][$device_id];
-$device_pin_num = (string) $config['devices']['pin'][$device_id];
-$device_name    = (string) $config['devices']['name'][$device_id];
-$device_units   = (string) $config['devices']['units'][$device_id];
-$rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
-$rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
-$last_value     = round( read_last_value($rrd_filename), 2 );
-echo "<span style='position: relative; top: 000px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:18px; color:white;'>$device_name</span>";
-echo "<span style='position: relative; top: 000px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:12px; color:white;'>$last_value</span>";
-echo "<span style='position: relative; top: 000px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:12px; color:white;'>$device_units</span>";
-echo "</div>";
+  echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  $device_id      = 13;
+  $device_type    = (string) $config['devices']['type'][$device_id];
+  $device_ref     = (string) $config['devices']['ref'][$device_id];
+  $device_pin_num = (string) $config['devices']['pin'][$device_id];
+  $device_name    = (string) $config['devices']['name'][$device_id];
+  $device_units   = (string) $config['devices']['units'][$device_id];
+  $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
+  $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+  $last_value     = round( read_last_value($rrd_filename), 2 );
+  echo "<span style='position: relative; top: 000px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:18px; color:white;'>$device_name</span>";
+  echo "<span style='position: relative; top: 000px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:12px; color:white;'>$last_value</span>";
+  echo "<span style='position: relative; top: 000px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:12px; color:white;'>$device_units</span>";
+  echo "</div>";
 
 #---------- 12v Sockets status
 
-echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
-$device_id      = 14;
-$device_type    = (string) $config['devices']['type'][$device_id];
-$device_ref     = (string) $config['devices']['ref'][$device_id];
-$device_pin_num = (string) $config['devices']['pin'][$device_id];
-$device_name    = (string) $config['devices']['name'][$device_id];
-$device_units   = (string) $config['devices']['units'][$device_id];
-$rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
-$rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
-$last_value     = round( read_last_value($rrd_filename), 2 );
-echo "<span style='position: relative; top: 000px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:18px; color:white;'>$device_name</span>";
-echo "<span style='position: relative; top: 000px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:12px; color:white;'>$last_value</span>";
-echo "<span style='position: relative; top: 000px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:12px; color:white;'>$device_units</span>";
-echo "</div>";
+  echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  $device_id      = 14;
+  $device_type    = (string) $config['devices']['type'][$device_id];
+  $device_ref     = (string) $config['devices']['ref'][$device_id];
+  $device_pin_num = (string) $config['devices']['pin'][$device_id];
+  $device_name    = (string) $config['devices']['name'][$device_id];
+  $device_units   = (string) $config['devices']['units'][$device_id];
+  $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
+  $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+  $last_value     = round( read_last_value($rrd_filename), 2 );
+  echo "<span style='position: relative; top: 000px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:18px; color:white;'>$device_name</span>";
+  echo "<span style='position: relative; top: 000px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:12px; color:white;'>$last_value</span>";
+  echo "<span style='position: relative; top: 000px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:12px; color:white;'>$device_units</span>";
+  echo "</div>";
 
 #---------- 240v Sockets status
 
-echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
-$device_id      = 15;
-$device_type    = (string) $config['devices']['type'][$device_id];
-$device_ref     = (string) $config['devices']['ref'][$device_id];
-$device_pin_num = (string) $config['devices']['pin'][$device_id];
-$device_name    = (string) $config['devices']['name'][$device_id];
-$device_units   = (string) $config['devices']['units'][$device_id];
-$rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
-$rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
-$last_value     = round( read_last_value($rrd_filename), 2 );
-echo "<span style='position: relative; top: 000px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:18px; color:white;'>$device_name</span>";
-echo "<span style='position: relative; top: 000px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:12px; color:white;'>$last_value</span>";
-echo "<span style='position: relative; top: 000px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:12px; color:white;'>$device_units</span>";
-echo "</div>";
+  echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  $device_id      = 15;
+  $device_type    = (string) $config['devices']['type'][$device_id];
+  $device_ref     = (string) $config['devices']['ref'][$device_id];
+  $device_pin_num = (string) $config['devices']['pin'][$device_id];
+  $device_name    = (string) $config['devices']['name'][$device_id];
+  $device_units   = (string) $config['devices']['units'][$device_id];
+  $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
+  $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+  $last_value     = round( read_last_value($rrd_filename), 2 );
+  echo "<span style='position: relative; top: 000px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:18px; color:white;'>$device_name</span>";
+  echo "<span style='position: relative; top: 000px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:12px; color:white;'>$last_value</span>";
+  echo "<span style='position: relative; top: 000px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:12px; color:white;'>$device_units</span>";
+  echo "</div>";
 
 echo "</td>";
 
