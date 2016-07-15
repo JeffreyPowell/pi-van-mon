@@ -201,10 +201,10 @@ $img_filename = '/home/pi/bin/van/www/images/'.$img_name.'.png';
 create_graph( $rrd_filename, $img_filename,  $period_span, $device_name.' '.$period_span, $device_units, $chart_height, $chart_width);
 
 
-echo "<span style='position: static; top: 0px; left: 20px; border: 1px solid red; font-family:sans-serif; font-size:18px; text-align:center; color:white;'>$device_name</span>";
-echo "<span style='position: static; top: 10px; left: 40px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
-echo "<span style='position: static; top: 20px; left: 50px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
-echo "<img src='images/$img_name.png' style='position: static; top: 100px; left: 100px; border: 1px solid red; '>";
+echo "<span style='position: absolute; top: 000px; left: 020px; border: 1px solid red; font-family:sans-serif; font-size:18px; text-align:center; color:white;'>$device_name</span>";
+echo "<span style='position: absolute; top: 010px; left: 040px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
+echo "<span style='position: absolute; top: 020px; left: 050px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
+echo "<img  style='position: absolute; top: 100px; left: 100px; border: 1px solid red;' src='images/$img_name.png' >";
 echo "</div>";
 
 #echo "</div>";
