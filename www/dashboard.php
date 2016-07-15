@@ -68,7 +68,8 @@ echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-
 
 #---------- Mains charger status
 
-  echo "<div style='position: relative; top: 000px;	left: 000px; height: 100px; width: 200px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  #echo "<div style='position: relative; top: 000px;	left: 000px; height: 100px; width: 200px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  echo "<div style='position: static; top: 0;	left: 0; height: 100px; width: 200px; background-color:#242424; border: 2px solid yellow;'>";
   $device_id      = 2;
   $device_type    = (string) $config['devices']['type'][$device_id];
   $device_ref     = (string) $config['devices']['ref'][$device_id];
