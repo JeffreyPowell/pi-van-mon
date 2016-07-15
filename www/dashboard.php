@@ -47,8 +47,8 @@ echo "<td style='width:1%; border: 0px dashed green; text-align: left; vertical-
   $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
   $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
   $last_value_volts     = round( read_last_value($rrd_filename), 2 );
-  echo "<span style='position: relative; top: 000px; left: 000px; border: 0px solid red; font-family:sans-serif; font-size:18px; color:white;'>$device_name<br></span><br>";
-  echo "<img  style='position: relative; top: 012px; left: 000px; width: 064px; height: 064px; border: 1px dashed red;' src='images/battery-wht.png'><br>";
+  echo "<span style='position: relative; top: 000px; left: 016px; border: 0px solid red; font-family:sans-serif; font-size:18px; color:white;'>$device_name<br></span><br>";
+  echo "<img  style='position: relative; top: -64px; left: 000px; width: 064px; height: 064px; border: 1px dashed red;' src='images/battery-wht.png'><br>";
   echo "<span style='position: relative; top: 000px; left: 000px; border: 0px solid red; font-family:sans-serif; font-size:12px; color:white;'>$last_value_volts [V]</span><br>";
   #echo "<span style='position: relative; top: 000px; left: 000px; border: 0px solid red; font-family:sans-serif; font-size:09px; color:white;'>$device_units</span>";
   $device_id      = 9;
