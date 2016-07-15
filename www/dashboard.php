@@ -32,8 +32,8 @@ echo "<table style='width:100%; border: 3px dashed blue;'><tr>";
 
 #========== Column Left
 
-echo "<td style='width:20%; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
-echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
+echo "<td style='width:10%; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
+#echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
 
 #---------- Van battery status
 
@@ -66,7 +66,7 @@ echo "<span style='position: relative; top: 10px; left: 40px; border: 1px solid 
 echo "<span style='position: relative; top: 20px; left: 50px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
 echo "</div>";
 
-#---------- Solar panels status
+#---------- Solar panel 1 status
 
 echo "<div style='position: static; top: 120px;	left: 240px; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
 $device_id      = 16;
@@ -81,6 +81,9 @@ $last_value     = round( read_last_value($rrd_filename), 2 );
 echo "<p style='display: inline; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</p>";
+
+#---------- Solar panel 2 status
+
 echo "</div>";
 $device_id      = 17;
 $device_type    = (string) $config['devices']['type'][$device_id];
@@ -96,13 +99,32 @@ echo "<p style='display: inline; border: 1px solid red; font-family:sans-serif; 
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</p>";
 echo "</div>";
-echo "</div></td>";
 
-echo "<td style='width: 10%'></td>";
+#---------- Mains charger status
+
+echo "<div style='position: static; top: 120px;	left: 240px; height: 120px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+$device_id      = 16;
+$device_type    = (string) $config['devices']['type'][$device_id];
+$device_ref     = (string) $config['devices']['ref'][$device_id];
+$device_pin_num = (string) $config['devices']['pin'][$device_id];
+$device_name    = (string) $config['devices']['name'][$device_id];
+$device_units   = (string) $config['devices']['units'][$device_id];
+$rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
+$rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+$last_value     = round( read_last_value($rrd_filename), 2 );
+echo "<p style='display: inline; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</p>";
+echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</p>";
+echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</p>";
+
+#echo "</div>";
+
+echo "</td>";
+
+echo "<td style='width: 20%'></td>";
 
 #========== Column Left Mid
 
-echo "<td style='width:20%; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
+echo "<td style='width:10%; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
 echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
 $device_id      = 14;
 $device_type    = (string) $config['devices']['type'][$device_id];
@@ -120,12 +142,12 @@ echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; t
 echo "</div>";
 echo "</div></td>";
 
-echo "<td style='width: 10%'></td>";
+echo "<td style='width: 20%'></td>";
 
 #========== Column Center
 
-echo "<td style='width:20%; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
-echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
+echo "<td style='width:10%; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
+#echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
 
 #---------- Split battery status
 
@@ -148,17 +170,19 @@ $img_name = $device_type.'-'.$device_ref.'-'.$device_pin_num.$period_span.'-'.$c
 $img_filename = '/home/pi/bin/van/www/images/'.$img_name.'.png';
 create_graph( $rrd_filename, $img_filename,  $period_span, $device_name.' '.$period_span, $device_units, $chart_height, $chart_width);
 
-echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:18px; text-align:center; color:white;'>$device_name</p>";
+echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:18px; text-align:left; color:white;'>$device_name</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</p>";
 echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</p>";
 echo "<img src='images/$img_name.png' style='position: relative; top: 0px; left: 0px; border: 1px solid red; '>";
 echo "</div>";
-echo "</div></td>";
 
-echo "<td style='width: 10%'></td>";
+#echo "</div>";
+echo "</td>";
+
+echo "<td style='width: 20%'></td>";
 
 #========== Column Right Mid
-echo "<td style='width:20%; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
+echo "<td style='width:10%; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
 echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
 
 echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 120px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
@@ -177,10 +201,10 @@ echo "<p style='border: 1px solid red; font-family:sans-serif; font-size:09px; t
 echo "</div>";
 echo "</div></td>";
 
-echo "<td style='width: 10%'></td>";
+echo "<td style='width: 20%'></td>";
 
 #========== Column Right
-echo "<td style='width:20%; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
+echo "<td style='width:10%; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
 echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
 
 #---------- Fridge status
