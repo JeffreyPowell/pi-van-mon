@@ -177,7 +177,6 @@ echo "<td style='width: 20%'></td>";
 
 #========== Column Center
 
-#echo "<td style='width:10%; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
 echo "<td style='width:10%; border: 1px dashed green; text-align: left; vertical-align: middle;'>";
 #echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
 
