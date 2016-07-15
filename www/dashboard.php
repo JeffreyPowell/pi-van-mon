@@ -181,7 +181,7 @@ echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-
 
 #---------- Split battery status
 
-  echo "<div style='position: static; top: 0;	left: 0; height: 360px; width: 240px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  echo "<div style='position: static; height: 300px; width: 200px; background-color:#242424; background-image: url(images/none.png); border: 0px solid yellow;'>";
   $device_id      = 16;
   $device_type    = (string) $config['devices']['type'][$device_id];
   $device_ref     = (string) $config['devices']['ref'][$device_id];
