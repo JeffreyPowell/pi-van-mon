@@ -9,42 +9,42 @@ devices:
         1:
           name: Van Battery 1
           unit: Volts
-          factor: 6.56
+          factor: 1.00
           offset: 0.00
         2:
           name: Van Battery 2
           unit: Volts
-          factor: 6.60
+          factor: 1.00
           offset: 0.00
         3:
           name: Van Battery 3
           unit: Volts
-          factor: 6.60
+          factor: 1.00
           offset: 0.00
         4:
           name: Van Battery 4
           unit: Volts
-          factor: 6.60
+          factor: 1.00
           offset: 0.00
         5:
           name: Van Battery 5
           unit: Volts
-          factor: 6.60
+          factor: 1.00
           offset: 0.00
         6:
           name: Van Battery 6
           unit: Volts
-          factor: 6.60
+          factor: 1.00
           offset: 0.00
         7:
           name: Van Battery 7
           unit: Volts
-          factor: 6.60
+          factor: 1.00
           offset: 0.00
         8:
           name: Van Battery 8
           unit: Volts
-          factor: 6.60
+          factor: 1.00
           offset: 0.00
     2:
       type: adc
