@@ -168,7 +168,9 @@ echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 120px
 echo "<span style='position: relative; top: 0px; left: 20px; border: 1px solid red; font-family:sans-serif; font-size:12px; text-align:center; color:white;'>$device_name</span>";
 echo "<span style='position: relative; top: 10px; left: 40px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$last_value</span>";
 echo "<span style='position: relative; top: 20px; left: 50px; border: 1px solid red; font-family:sans-serif; font-size:09px; text-align:center; color:white;'>$device_units</span>";
+
 #echo "</div>";
+
 echo "</div></td>";
 
 echo "<td style='width: 20%'></td>";
