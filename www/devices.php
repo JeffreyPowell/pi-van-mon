@@ -127,7 +127,12 @@ function create_graph($input, $output, $start, $title, $units, $height, $width) 
     "AREA:transdataavg#b6d14b40",
     "LINE4:transdataavg#a0b842:$title $units",
     "COMMENT:\\n",
-    "GPRINT:transdataavg:MAX:$units Avergage %6.2lf"
+    "GPRINT:transdataavg:MIN:$units min %6.2lf",
+    "GPRINT:transdataavg:MAX:$units max %6.2lf",
+    "GPRINT:transdataavg:LAST:$units last %6.2lf\\n"
+
+    "GPRINT:b$DAYIDST:MIN:min %6.2lf",
+    "GPRINT:b$DAYIDST:MAX:max %6.2lf\\n"
   );
 
  $ret = rrd_graph($output, $options );
