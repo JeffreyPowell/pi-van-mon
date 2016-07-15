@@ -38,7 +38,7 @@ echo "<td style='width:1%; border: 0px dashed green; text-align: left; vertical-
 #---------- Main battery status
 
   echo "<div style='position: static; top: 0;	left: 0; height: 100px; width: 200px; background-color:#242424; border: 2px solid black; white-space: nowrap;'>";
-  $device_id      = 1;
+  $device_id      = 9;
   $device_type    = (string) $config['devices']['type'][$device_id];
   $device_ref     = (string) $config['devices']['ref'][$device_id];
   $device_pin_num = (string) $config['devices']['pin'][$device_id];
