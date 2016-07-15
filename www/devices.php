@@ -130,9 +130,6 @@ function create_graph($input, $output, $start, $title, $units, $height, $width) 
     "GPRINT:transdataavg:MIN:$units min %6.2lf",
     "GPRINT:transdataavg:MAX:$units max %6.2lf",
     "GPRINT:transdataavg:LAST:$units last %6.2lf\\n"
-
-    "GPRINT:b$DAYIDST:MIN:min %6.2lf",
-    "GPRINT:b$DAYIDST:MAX:max %6.2lf\\n"
   );
 
  $ret = rrd_graph($output, $options );
