@@ -65,7 +65,7 @@ echo "<td style='width:1%; border: 0px dashed green; text-align: left; vertical-
   echo "<span style='position: relative; top: 000px; left: 000px; border: 0px solid red; font-family:sans-serif; font-size:12px; color:white;'>$last_value_amps[A]</span>";
   #echo "<span style='position: relative; top: 000px; left: 000px; border: 0px solid red; font-family:sans-serif; font-size:09px; color:white;'>$device_units</span>";
 
-  $last_value_watts = $last_value_volts * $last_value_amps
+  $last_value_watts = $last_value_volts * $last_value_amps;
   echo "<span style='position: relative; top: 000px; left: 000px; border: 0px solid red; font-family:sans-serif; font-size:12px; color:white;'>$last_value_watts[W]</span>";
 
   echo "</div>";
