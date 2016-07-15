@@ -191,7 +191,7 @@ $device_units   = (string) $config['devices']['units'][$device_id];
 
 $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
 $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
-$last_value     = read_last_value($rrd_filename);
+$last_value     = round( read_last_value($rrd_filename), 2 );
 
 $period_span    = '-12h';
 $chart_width    = 120;
