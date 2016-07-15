@@ -48,8 +48,8 @@ echo "<td style='width:1%; border: 0px dashed green; text-align: left; vertical-
   $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
   $last_value_volts     = round( read_last_value($rrd_filename), 2 );
   echo "<span style='position: relative; top: 000px; left: 016px; border: 0px solid red; font-family:sans-serif; font-size:18px; color:white;'>$device_name<br></span><br>";
-  echo "<img  style='position: relative; top: -16px; left: 000px; border: 0px dashed red; width: 064px; height: 064px;' src='images/battery-wht.png'><br>";
-  echo "<span style='position: relative; top: 000px; left: 000px; border: 0px solid red; font-family:sans-serif; font-size:12px; color:white;'>$last_value_volts [V]</span><br>";
+  echo "<img  style='position: relative; top: -16px; left: 008px; border: 0px dashed red; width: 064px; height: 064px;' src='images/battery-wht.png'><br>";
+  echo "<span style='position: relative; top: -64px; left: 064px; border: 0px solid red; font-family:sans-serif; font-size:12px; color:red;'>$last_value_volts [V]</span><br>";
   #echo "<span style='position: relative; top: 000px; left: 000px; border: 0px solid red; font-family:sans-serif; font-size:09px; color:white;'>$device_units</span>";
   $device_id      = 9;
   $device_type    = (string) $config['devices']['type'][$device_id];
