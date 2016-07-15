@@ -325,7 +325,7 @@ function create_graph($input, $output, $start, $title, $units, $height, $width) 
     "-cGRID#888800",
     "-cMGRID#ffffff",
     "-nTITLE:10",
-    "-nAXIS:4",
+    "-nAXIS:0",
     "-nUNIT:10",
     "-y 0.2:5",
     "-cFRAME#ffffff",
