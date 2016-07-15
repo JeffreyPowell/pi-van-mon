@@ -209,7 +209,7 @@ echo "<td style='width:1%; border: 0px dashed green; text-align: left; vertical-
   echo "<span style='position: relative; top: 000px; left: 000px; border: 0px solid red; font-family:sans-serif; font-size:18px; color:white;'>$device_name</span>";
   echo "<span style='position: relative; top: 000px; left: 000px; border: 0px solid red; font-family:sans-serif; font-size:12px; color:white;'>$last_value</span>";
   echo "<span style='position: relative; top: 000px; left: 000px; border: 0px solid red; font-family:sans-serif; font-size:09px; color:white;'>$device_units</span>";
-  echo "<img  style='position: relative; top: 200px; left: 100px;' src='images/$img_name.png' >";
+  echo "<img  style='position: relative; top: 150px; left: 050px;' src='images/$img_name.png' >";
   echo "</div>";
 
 echo "</td>";
@@ -324,8 +324,8 @@ function create_graph($input, $output, $start, $title, $units, $height, $width) 
     "-cFONT#c7c7c7",
     "-cGRID#888800",
     "-cMGRID#ffffff",
-    "-nTITLE:10",
-    "-nAXIS:0",
+#    "-nTITLE:10",
+#    "-nAXIS:0",
     "-nUNIT:10",
     "-y 0.2:5",
     "-cFRAME#ffffff",
