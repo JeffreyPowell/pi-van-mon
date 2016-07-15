@@ -47,7 +47,8 @@ echo "<td style='width:1%; border: 0px dashed green; text-align: left; vertical-
   $rrd_name       = $device_type.'-'.$device_ref.'-'.$device_pin_num;
   $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
   $last_value     = round( read_last_value($rrd_filename), 2 );
-  echo "<img  style='position: relative; top: 000px; left: 000px; border: 0px solid red;' src='images/none.png'>";
+  #echo "<img  style='position: relative; top: 000px; left: 000px; width: 100px; height: 100px; border: 1px dashed red;' src='images/battery-wht.png'>";
+  echo "<img  style='position: relative; top: 000px; left: 000px; border: 1px dashed red;' src='images/battery-wht.png'>";
   echo "<span style='position: relative; top: 000px; left: 000px; border: 0px solid red; font-family:sans-serif; font-size:18px; color:white;'>$device_name</span>";
   echo "<span style='position: relative; top: 000px; left: 000px; border: 0px solid red; font-family:sans-serif; font-size:12px; color:white;'>$last_value</span>";
   echo "<span style='position: relative; top: 000px; left: 000px; border: 0px solid red; font-family:sans-serif; font-size:09px; color:white;'>$device_units</span>";
@@ -198,7 +199,7 @@ echo "<td style='width:1%; border: 0px dashed green; text-align: left; vertical-
   $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
   $last_value     = round( read_last_value($rrd_filename), 2 );
 
-  $period_span    = '-12h';
+  $period_span    = '-1h';
   $chart_width    = 160;
   $chart_height   = 100;
   $img_name = $device_type.'-'.$device_ref.'-'.$device_pin_num.$period_span.'-'.$chart_height.'x'.$chart_width;
