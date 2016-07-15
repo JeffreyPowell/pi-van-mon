@@ -149,7 +149,7 @@ echo "</div>";
 
 echo "</td>";
 
-echo "<td style='width: 50%'></td>";
+echo "<td style='width: 33%'></td>";
 
 #========== Column Left Mid
 
@@ -173,7 +173,7 @@ echo "<span style='position: relative; top: 000px; left: 000px; border: 1px soli
 
 echo "</div></td>";
 
-echo "<td style='width: 50%'></td>";
+echo "<td style='width: 33%'></td>";
 
 #========== Column Center
 
@@ -211,7 +211,7 @@ echo "</div>";
 #echo "</div>";
 echo "</td>";
 
-echo "<td style='width: 50%'></td>";
+echo "<td style='width: 33%'></td>";
 
 #========== Column Right Mid
 echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-align: middle;'>";
@@ -233,7 +233,7 @@ echo "<span style='position: relative; top: 000px; left: 000px; border: 1px soli
 #echo "</div>";
 echo "</div></td>";
 
-echo "<td style='width: 50%'></td>";
+echo "<td style='width: 33%'></td>";
 
 #========== Column Right
 echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-align: middle;'>";
