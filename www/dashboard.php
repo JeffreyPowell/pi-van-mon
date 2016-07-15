@@ -198,7 +198,7 @@ echo "<td style='width:1%; border: 0px dashed green; text-align: left; vertical-
   $rrd_filename   = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
   $last_value     = round( read_last_value($rrd_filename), 2 );
 
-  $period_span    = '-12h';
+  $period_span    = '-1h';
   $chart_width    = 160;
   $chart_height   = 100;
   $img_name = $device_type.'-'.$device_ref.'-'.$device_pin_num.$period_span.'-'.$chart_height.'x'.$chart_width;
