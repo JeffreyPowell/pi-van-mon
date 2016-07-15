@@ -156,7 +156,7 @@ echo "<td style='width: 33%'></td>";
 
 echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-align: middle;'>";
 
-  echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 120px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  echo "<div style='position: static; height: 100px; width: 100px; background-color:#242424; background-image: url(images/none.png); border: 0px solid yellow;'>";
   $device_id      = 14;
   $device_type    = (string) $config['devices']['type'][$device_id];
   $device_ref     = (string) $config['devices']['ref'][$device_id];
@@ -213,7 +213,7 @@ echo "<td style='width: 33%'></td>";
 #========== Column Right Mid
 echo "<td style='width:1%; border: 1px dashed green; text-align: left; vertical-align: middle;'>";
 
-  echo "<div style='position: static; top: 0;	left: 0; height: 120px; width: 120px; background-color:#242424; background-image: url(images/none.png); border: 5px solid yellow;'>";
+  echo "<div style='position: static; height: 100px; width: 100px; background-color:#242424; background-image: url(images/none.png); border: 0px solid yellow;'>";
   $device_id      = 14;
   $device_type    = (string) $config['devices']['type'][$device_id];
   $device_ref     = (string) $config['devices']['ref'][$device_id];
