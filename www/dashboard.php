@@ -209,7 +209,7 @@ echo "<td style='width:1%; border: 0px dashed green; text-align: left; vertical-
   echo "<span style='position: relative; top: 000px; left: 000px; border: 0px solid red; font-family:sans-serif; font-size:18px; color:white;'>$device_name</span>";
   echo "<span style='position: relative; top: 000px; left: 000px; border: 0px solid red; font-family:sans-serif; font-size:12px; color:white;'>$last_value</span>";
   echo "<span style='position: relative; top: 000px; left: 000px; border: 0px solid red; font-family:sans-serif; font-size:09px; color:white;'>$device_units</span>";
-  echo "<img  style='position: relative; top: 150px; left: 050px;' src='images/$img_name.png' >";
+  echo "<img  style='position: relative; top: 100px; left: 020px;' src='images/$img_name.png' >";
   echo "</div>";
 
 echo "</td>";
