@@ -233,11 +233,10 @@ echo "<span style='position: relative; top: 20px; left: 50px; border: 1px solid 
 #echo "</div>";
 echo "</div></td>";
 
-echo "<td style='width: 20%'></td>";
+echo "<td style='width: 10%'></td>";
 
 #========== Column Right
 echo "<td style='width:10%; border: 1px dashed green; text-align: center; vertical-align: middle;'>";
-#echo "<div style='display: block; position: relative; width: 100%; height: 100%; border: 1px solid orange;'>";
 
 #---------- Fridge status
 
@@ -289,8 +288,6 @@ echo "<span style='position: relative; top: 0px; left: 0px; border: 1px solid re
 echo "<span style='position: relative; top: 0px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:12px; color:white;'>$last_value</span>";
 echo "<span style='position: relative; top: 0px; left: 0px; border: 1px solid red; font-family:sans-serif; font-size:12px; color:white;'>$device_units</span>";
 echo "</div>";
-
-#echo "</div>";
 
 echo "</td>";
 
