@@ -1,5 +1,4 @@
 import time
-time.sleep(5)
 
 try:
     import RPi.GPIO as GPIO
@@ -20,6 +19,23 @@ GPIO.setup(chan_list, GPIO.OUT, initial=GPIO.LOW)
 
 while True :
 
+
+    GPIO.output(31, 1)
+
+    time.sleep(1)
+
+    GPIO.output(31, 0)
+
+    time.sleep(1)
+
+    GPIO.output(31, 1)
+
+    time.sleep(1)
+
+    GPIO.output(31, 0)
+
+    time.sleep(1)
+    
     GPIO.output(31, not GPIO.input(31))
 
     time.sleep(1)
