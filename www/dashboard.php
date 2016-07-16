@@ -197,7 +197,7 @@ echo "</td>";
 echo "<td style='width: 33%'></td>";
 
 #========== Column Left Mid
-
+/*
 echo "<td style='width:1%; border: 0px dashed green; text-align: left; vertical-align: middle;'>";
 
   echo "<div style='position: static; height: 100px; width: 100px; background-color:#242424; background-image: url(images/none.png); border: 0px solid yellow;'>";
@@ -219,6 +219,7 @@ echo "<td style='width:1%; border: 0px dashed green; text-align: left; vertical-
 echo "</td>";
 
 echo "<td style='width: 33%'></td>";
+*/
 
 #========== Column Center
 
@@ -257,6 +258,7 @@ echo "</td>";
 echo "<td style='width: 33%'></td>";
 
 #========== Column Right Mid
+/*
 echo "<td style='width:1%; border: 0px dashed green; text-align: left; vertical-align: middle;'>";
 
   echo "<div style='position: static; height: 100px; width: 100px; background-color:#242424; background-image: url(images/none.png); border: 0px solid yellow;'>";
@@ -278,6 +280,7 @@ echo "<td style='width:1%; border: 0px dashed green; text-align: left; vertical-
 echo "</td>";
 
 echo "<td style='width: 33%'></td>";
+*/
 
 #========== Column Right
 echo "<td style='width:1%; border: 0px dashed green; text-align: left; vertical-align: middle;'>";
