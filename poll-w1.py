@@ -19,7 +19,7 @@ for device in config['devices']['w1']:
         x=1
     except:
         pass
-    
+
     # Open the file that we viewed earlier so that python can see what is in it. Replace the serial number as before.
     tfile = open("/sys/bus/w1/devices/"+add+"/w1_slave")
     # Read all of the text in the file.
@@ -41,11 +41,11 @@ for device in config['devices']['w1']:
     offset = float(config['devices']['w1'][device]['offset'])
 
     #print( factor, offset )
-    data = str( ( temperature * factor ) + offset )
+    data = str( ( rawdata + offset ) * factor )
 
     filename = '/home/pi/bin/van/data/w1-'+str(add)+'-0.rrd'
     #print filename
-    
+
     if( not os.path.exists( filename ) ):
         #print ( os.path.exists( filename ))
         os.system('/usr/bin/rrdtool create '+filename+' --step 60 \
