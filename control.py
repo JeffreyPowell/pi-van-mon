@@ -12,7 +12,7 @@ GPIO.setwarnings(False)
 
 chan_list = [31,33,35,37]
 
-GPIO.setup(chan_list, GPIO.OUT, initial=GPIO.HIGH)
+GPIO.setup(chan_list, GPIO.OUT, initial=GPIO.LOW)
 
 while True :
 
