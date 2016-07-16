@@ -14,8 +14,10 @@ chan_list = [32,36,38,40]
 
 GPIO.setup(chan_list, GPIO.OUT, initial=GPIO.LOW)
 
-while True :
+n = 10
 
+while n>0 :
+    n = n - 1
 
     GPIO.output(31, 1)
 
@@ -64,3 +66,5 @@ while True :
     GPIO.output(40, not GPIO.input(40))
 
     time.sleep(0.1)
+
+GPIO.cleanup()
