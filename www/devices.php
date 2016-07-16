@@ -126,7 +126,7 @@ function create_graph($input, $output, $start, $title, $units, $height, $width) 
     "CDEF:transdataavg=dataavg,1,*",
     "AREA:transdataavg#b6d14b40",
     "LINE4:transdataavg#a0b842:$title $units",
-    "COMMENT:\\n",
+#    "COMMENT:\\n",
     "GPRINT:transdataavg:MIN: min %6.2lf",
     "GPRINT:transdataavg:MAX: max %6.2lf",
     "GPRINT:transdataavg:AVERAGE: avg %6.2lf",
