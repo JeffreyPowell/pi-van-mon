@@ -91,7 +91,7 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
 
   # display the image
   echo "<a href='device-dod.php?id=$device_index'>";
-  echo "<img src='images/".$img_name.".png' alt='Generated RRD image'><br><br>";
+  echo "<img src='images/".$img_name.".png' alt='Generated RRD image'>";
   echo "</a>";
 }
 
