@@ -19,7 +19,7 @@ devices:
         3:
           name: 1-3
           unit: Volts
-          factor: 23.000
+          factor: -0.2300
           offset: -4.910
         4:
           name: 1-4
