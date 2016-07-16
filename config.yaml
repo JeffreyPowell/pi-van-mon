@@ -36,16 +36,16 @@ devices:
           unit: Volts
           factor: 1.000
           offset: 0.000
-        7:
-          name: 1-7
-          unit: Volts
-          factor: 1.000
-          offset: 0.000
-        8:
-          name: 1-8
-          unit: Volts
-          factor: 1.000
-          offset: 0.000
+#        7:
+#          name: 1-7
+#          unit: Volts
+#          factor: 1.000
+#          offset: 0.000
+#        8:
+#          name: 1-8
+#          unit: Volts
+#          factor: 1.000
+#          offset: 0.000
     2:
       type: adc
       adda: 0x6a
