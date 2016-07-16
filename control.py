@@ -14,7 +14,7 @@ chan_list = [6,13,19,26]
 
 GPIO.setup(chan_list, GPIO.OUT, initial=GPIO.HIGH)
 
-while true :
+while True :
 
     GPIO.output(06, not GPIO.input(06))
 
