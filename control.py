@@ -5,10 +5,11 @@ GPIO.setmode(GPIO.BOARD)
 
 #GPIO.setwarnings(False)
 
-GPIO.setmode(GPIO.BOARD)
+#GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM)
 
 #chan_list = [31,33,35,37,32,36,38,40]
-chan_list = [31,35,37,32,36,40]
+chan_list = [6]
 
 GPIO.setup(chan_list, GPIO.OUT)
 
@@ -18,14 +19,14 @@ while n>0 :
     n = n - 1
     print n
 
-    GPIO.output(31, True)
+    GPIO.output(6, True)
 
     time.sleep(0.1)
 
-    GPIO.output(31, False)
+    GPIO.output(6, False)
 
     time.sleep(0.1)
-
+'''
     GPIO.output(40, True)
 
     time.sleep(0.1)
@@ -33,7 +34,7 @@ while n>0 :
     GPIO.output(40, False)
 
     time.sleep(0.1)
-'''
+
     GPIO.output(31, 1)
 
     time.sleep(0.1)
