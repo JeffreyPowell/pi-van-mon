@@ -25,7 +25,7 @@ while n>0 :
     GPIO.output(31, 0)
 
     time.sleep(0.1)
-
+'''
     GPIO.output(31, 1)
 
     time.sleep(0.1)
@@ -65,5 +65,5 @@ while n>0 :
     GPIO.output(40, not GPIO.input(40))
 
     time.sleep(0.1)
-
+'''
 GPIO.cleanup()
