@@ -1,3 +1,5 @@
+#!/usr/bin/sudo /usr/bin/python
+
 import time
 import RPi.GPIO as GPIO
 
