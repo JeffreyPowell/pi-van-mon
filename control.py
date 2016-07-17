@@ -11,6 +11,10 @@ chan_list = [31,33,35,37,32,36,38,40]
 
 GPIO.setup(chan_list, GPIO.OUT)
 
+n = 30
+while n>0:
+    print n, GPIO.input(n)
+
 
 n = 10
 
@@ -18,11 +22,11 @@ while n>0 :
     n = n - 1
     print n
 
-    GPIO.output(31, 1)
+    GPIO.output(31, True)
 
     time.sleep(0.1)
 
-    GPIO.output(31, 0)
+    GPIO.output(31, False)
 
     time.sleep(0.1)
 '''
