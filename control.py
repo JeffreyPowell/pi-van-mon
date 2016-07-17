@@ -17,11 +17,11 @@ while n>0 :
     n = n - 1
     print n
 
-    GPIO.output(6, True)
+    GPIO.output(6, GPIO.HIGH)
 
     time.sleep(0.1)
 
-    GPIO.output(6, False)
+    GPIO.output(6, GPIO.LOW)
 
     time.sleep(0.1)
 '''
