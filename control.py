@@ -3,7 +3,7 @@ import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BOARD)
 
-GPIO.setwarnings(False)
+#GPIO.setwarnings(False)
 
 GPIO.setmode(GPIO.BOARD)
 
@@ -16,6 +16,7 @@ n = 10
 
 while n>0 :
     n = n - 1
+    print n
 
     GPIO.output(31, 1)
 
@@ -65,4 +66,4 @@ while n>0 :
 
     time.sleep(0.1)
 
-#GPIO.cleanup()
+GPIO.cleanup()
