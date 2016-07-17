@@ -13,6 +13,7 @@ GPIO.setup(chan_list, GPIO.OUT)
 
 n = 40
 while n>31:
+    n = n - 1
     print n, GPIO.input(n)
 
 
