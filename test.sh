@@ -22,4 +22,5 @@ sleep 1
 echo 0 > /sys/class/gpio/gpio40/value
 sleep 1
 echo 1 > /sys/class/gpio/gpio40/value
-sleep 1 
+sleep 1
+echo "40" > /sys/class/gpio/unexport
