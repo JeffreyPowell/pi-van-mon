@@ -16,10 +16,10 @@ def turn_off(pin):
 
     GPIO.output(pin, GPIO.LOW)
 
-    GPIO.setup(pin, GPIO.OUT)
+    GPIO.setup(pin, GPIO.IN)
 
     return
-    
+
 #GPIO.setwarnings(False)
 
 print GPIO.RPI_REVISION
