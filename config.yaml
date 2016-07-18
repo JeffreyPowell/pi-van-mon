@@ -44,7 +44,7 @@ devices:
         8:
           name: 1-8
           unit: Volts
-          factor: 07.130
+          factor: 07.090
           offset: 00.0000
     2:
       type: adc
