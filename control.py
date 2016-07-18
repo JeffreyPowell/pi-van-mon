@@ -5,6 +5,8 @@ import RPi.GPIO as GPIO
 
 #GPIO.setwarnings(False)
 
+print GPIO.RPI_REVISION
+
 #GPIO.setmode(GPIO.BOARD)
 GPIO.setmode(GPIO.BCM)
 
