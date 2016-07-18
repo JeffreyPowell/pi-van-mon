@@ -7,8 +7,8 @@ import RPi.GPIO as GPIO
 
 print GPIO.RPI_REVISION
 
-#GPIO.setmode(GPIO.BOARD)
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
+#GPIO.setmode(GPIO.BCM)
 
 chan_list = [31,33,35,37,32,36,38,40]
 #chan_list = [6]
