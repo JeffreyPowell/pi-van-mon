@@ -24,6 +24,7 @@ for pin in chan_list:
 
     while n>0 :
         n = n - 1
+
         print pin, n
 
         GPIO.output(pin, GPIO.HIGH)
