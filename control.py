@@ -24,7 +24,7 @@ for pin in chan_list:
 
     while n>0 :
         n = n - 1
-        print n
+        print pin, n
 
         GPIO.output(pin, GPIO.HIGH)
 
@@ -33,5 +33,5 @@ for pin in chan_list:
         GPIO.output(pin, GPIO.LOW)
 
         time.sleep(0.1)
-        
+
 GPIO.cleanup()
