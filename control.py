@@ -18,8 +18,6 @@ time.sleep(1)
 for pin in chan_list:
     print pin
 
-    GPIO.setup(pin, GPIO.OUT)
-
     n = 10
 
     while n>0 :
@@ -27,12 +25,29 @@ for pin in chan_list:
 
         print pin, n
 
-        GPIO.output(pin, GPIO.HIGH)
+        turn_on(pin)
 
         time.sleep(0.1)
 
-        GPIO.output(pin, GPIO.LOW)
+        turn_off(pin)
 
         time.sleep(0.1)
 
 GPIO.cleanup()
+
+def turn_on(pin):
+    "Turns on GPIO pin"
+
+    GPIO.setup(pin, GPIO.OUT)
+
+    GPIO.output(pin, GPIO.HIGH)
+
+    return
+
+def turn_off(pin):
+
+    GPIO.output(pin, GPIO.LOW)
+
+    GPIO.setup(pin, GPIO.OUT)
+
+    return
