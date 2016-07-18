@@ -3,6 +3,23 @@
 import time
 import RPi.GPIO as GPIO
 
+def turn_on(pin):
+    "Turns on GPIO pin"
+
+    GPIO.setup(pin, GPIO.OUT)
+
+    GPIO.output(pin, GPIO.HIGH)
+
+    return
+
+def turn_off(pin):
+
+    GPIO.output(pin, GPIO.LOW)
+
+    GPIO.setup(pin, GPIO.OUT)
+
+    return
+    
 #GPIO.setwarnings(False)
 
 print GPIO.RPI_REVISION
@@ -34,20 +51,3 @@ for pin in chan_list:
         time.sleep(0.1)
 
 GPIO.cleanup()
-
-def turn_on(pin):
-    "Turns on GPIO pin"
-
-    GPIO.setup(pin, GPIO.OUT)
-
-    GPIO.output(pin, GPIO.HIGH)
-
-    return
-
-def turn_off(pin):
-
-    GPIO.output(pin, GPIO.LOW)
-
-    GPIO.setup(pin, GPIO.OUT)
-
-    return
