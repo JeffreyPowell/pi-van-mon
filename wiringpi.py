@@ -1,7 +1,7 @@
 #!/usr/bin/sudo /usr/bin/python
 
 import time
-import wiringpi2 as wiringpi
+import wiringpi as wiringpi
 
 
 
