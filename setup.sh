@@ -31,3 +31,6 @@ apt-get install python-smbus
 adduser pi i2c
 
 apt-get install python-yaml
+
+sudo apt-get install python-dev python-pip
+sudo pip install wiringpi2
