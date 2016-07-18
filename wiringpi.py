@@ -5,7 +5,7 @@ import wiringpi
 
 
 
-wiringpi.wiringPiSetupPhys()
+wiringpi.wiringPiSetup()
 
 chan_list = [31,33,35,37,32,36,38,40]
 #chan_list = [6]
