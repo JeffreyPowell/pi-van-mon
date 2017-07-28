@@ -147,7 +147,7 @@ then
  rm -rf "/var/www/pi-heating-hub"
 fi
 
-cp "/home/pi/code/pi-van-mon/www" "/var/www/pi-van-mon"
+cp -r "/home/pi/code/pi-van-mon/www" "/var/www/pi-van-mon"
 
 chown -R pi:www-data "/var/www/pi-van-mon"
 chmod -R 755 "/var/www/pi-van-mon"
