@@ -132,30 +132,9 @@ else
   printf "\n\n RRD tool is already installed. \n"
 fi
 
-#sudo apt-get install nmap
-
-#NMP_INSTALLED=$(find /var/lib/dpkg -name nmap*)
-#if [[ "$NMP_INSTALLED" == "" ]]
-#then
-#  printf "\n\n Installing nmap ...\n"
-  # Install Apache
-#  apt-get install nmap -y
-
-#  NMP_INSTALLED=$(find /var/lib/dpkg -name nmap*)
-#    if [[ "$NMP_INSTALLED" == "" ]]
-#    then
-#      printf "\n\n EXITING : nmap  installation FAILED\n"
-#      exit 1
-#    fi
-#else
-#  printf "\n\n nmap is already installed. \n"
-#fi
-
-# Install 'pi-van-mon' app
-
 
 if [ ! -f "/etc/cron.d/pi-van-mon-update" ]
-
+then
     cat > /etc/cron.d/pi-van-mon-update <<CRON
 */5 8-23  * * *    cd /home/pi/code/pi-van-mon && git pull && cd scripts && bash default.sh
 CRON
