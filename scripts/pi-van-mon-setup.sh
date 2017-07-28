@@ -157,7 +157,7 @@ fi
 if [ ! -f "/etc/cron.d/pi-van-mon-update" ]
 
     cat > /etc/cron.d/pi-van-mon-update <<CRON
-*/5 8-23  * * *    cd /home/pi/code/pi-van-mon && git pull && cd scripts && ./default.sh
+*/5 8-23  * * *    cd /home/pi/code/pi-van-mon && git pull && cd scripts && bash default.sh
 CRON
     service cron restart
 fi
@@ -173,15 +173,6 @@ cp "/home/pi/code/pi-van-mon/www" "/var/www/pi-van-mon"
 chown -R pi:www-data "/var/www/pi-van-mon"
 chmod -R 755 "/var/www/pi-van-mon"
 chmod -R 775 "/var/www/pi-van-mon"
-
-
-if [ ! -f "/etc/cron.d/pi-heating" ]
-
-   cat > /etc/cron.d/pi-heating <<CRON
-* * * * * pi /bin/bash /home/pi/pi-heating-hub/cron/wrapper.sh
-CRON
-   service cron restart
-fi
 
 
 
