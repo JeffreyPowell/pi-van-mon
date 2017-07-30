@@ -136,7 +136,7 @@ fi
 if [ ! -f "/etc/cron.d/pi-van-mon-update" ]
 then
     cat > /etc/cron.d/pi-van-mon-update <<CRON
-*/5 8-23  * * *    cd /home/pi/code/pi-van-mon && git pull && cd scripts && bash default.sh
+*/5 8-23  * * *    /bin/bash /home/pi/code/scripts/pi-van-mon-update.sh
 CRON
     service cron restart
 fi
