@@ -52,7 +52,7 @@ echo "<input type='button' onclick=\"location.href='devices.php?p=$period_span&w
 echo "<input type='button' onclick=\"location.href='devices.php?p=$period_span&w=$chart_width&h=$chart_shorter';\" value='Height -' />";
 echo "<br>";
 
-$config = parse_ini_file('/home/pi/bin/van/www/config.ini', true);
+$config = parse_ini_file('/home/pi/code/pi-van-mon/www/config.ini', true);
 
 $device_count = count($config['devices']['type']);
 
@@ -78,8 +78,8 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
   $img_name = $device_type.'-'.$device_ref.'-'.$device_pin_num.$period_span.'-'.$chart_height.'x'.$chart_width;
   $rrd_name = $device_type.'-'.$device_ref.'-'.$device_pin_num;
 
-  $img_filename = '/home/pi/bin/van/www/images/'.$img_name.'.png';
-  $rrd_filename = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+  $img_filename = '/var/www/pi-van-mon/images/'.$img_name.'.png';
+  $rrd_filename = '/var/www/pi-van-mon/data/'.$rrd_name.'.rrd';
 
   #print_r( $rrd_filename );
   #print_r( $img_filename );
