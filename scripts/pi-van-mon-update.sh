@@ -1,11 +1,11 @@
 #!/bin/bash
 
-cd /home/pi/bin/van
+cd /home/pi/code/pi-van-mon
 
 result=$( git pull 2>&1 )
 
 if [ "$result" = "Already up-to-date." ]; then
-  #echo "$result" | mail -s "Van Git Pull - NO CHANGE" jffrypwll@googlemail.com
+  echo "$result" | mail -s "Van Git Pull - NO CHANGE" jffrypwll@googlemail.com
   sleep 1
 elif [[ $result == *"Couldn't resolve host"* ]]
   sleep 1
