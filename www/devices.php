@@ -52,7 +52,7 @@ echo "<input type='button' onclick=\"location.href='devices.php?p=$period_span&w
 echo "<input type='button' onclick=\"location.href='devices.php?p=$period_span&w=$chart_width&h=$chart_shorter';\" value='Height -' />";
 echo "<br>";
 
-$config = parse_ini_file('/home/pi/code/pi-van-mon/www/config.ini', true);
+$config = parse_ini_file('/var/www/pi-van-mon/config.ini', true);
 
 $device_count = count($config['devices']['type']);
 
