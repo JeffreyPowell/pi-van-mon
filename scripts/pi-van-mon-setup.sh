@@ -132,15 +132,15 @@ else
   printf "\n\n RRD tool is already installed. \n"
 fi
 
-if [ ! -d "/home/pi/code" ]
+if [ ! -d "/home/pi/bin" ]
 then
-  mkdir "/home/pi/code"
+  mkdir "/home/pi/bin"
 fi
 
-if [ ! -d "/home/pi/code/ABElectronics_Python_Libraries" ]
+if [ ! -d "/home/pi/bin/ABElectronics_Python_Libraries" ]
 then
   printf "\n\n Installing ADC libraries ...\n"
-  cd "/home/pi/code"
+  cd "/home/pi/bin"
   git clone "https://github.com/abelectronicsuk/ABElectronics_Python_Libraries.git"
 else
   printf "\n\n ADC libraries are already installed. \n"
@@ -152,7 +152,7 @@ then
   printf "\n\n Installing cron job ...\n"
 
   cat > /etc/cron.d/pi-van-mon-update <<CRON
-*/5 8-23  * * *    /bin/bash /home/pi/code/scripts/pi-van-mon-update.sh
+*/5 8-23  * * *    /bin/bash /home/pi/bin/scripts/pi-van-mon-update.sh
 CRON
   service cron restart
 else
@@ -165,7 +165,7 @@ then
   printf "\n\n Copying code to /var/www/pi-van-mon ...\n"
   rm -rf "/var/www/pi-heating-hub"
 
-  cp -r "/home/pi/code/pi-van-mon/www" "/var/www/pi-van-mon"
+  cp -r "/home/pi/bin/pi-van-mon/www" "/var/www/pi-van-mon"
 
   chown -R pi:www-data "/var/www/pi-van-mon"
   chmod -R 755 "/var/www/pi-van-mon"
