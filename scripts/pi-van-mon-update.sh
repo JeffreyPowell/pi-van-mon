@@ -2,6 +2,8 @@
 
 cd /home/pi/bin/pi-van-mon
 
+git reset --hard HEAD
+
 result=$( git pull 2>&1 )
 
 if [ "$result" = "Already up-to-date." ]; then
