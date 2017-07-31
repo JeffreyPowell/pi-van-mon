@@ -180,7 +180,7 @@ fi
 
 # configure apache vh on port 8080
 
-if [ -f "/etc/apache2/sites-available/pi-van-mon.conf" ]
+if [ ! -f "/etc/apache2/sites-available/pi-van-mon.conf" ]
 then
   printf "\n\n Configuring VHost ...\n"
 
