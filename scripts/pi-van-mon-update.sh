@@ -13,5 +13,5 @@ else
   result+=$( echo && echo && git log -p -n 1 2>&1 )
   #echo "$result" | mail -s "Van Git Pull - UPDATED" jffrypwll@googlemail.com
 
-  cp -r "/home/pi/code/pi-van-mon/www" "/var/www/pi-van-mon"
+  cp -r "/home/pi/bin/pi-van-mon/www" "/var/www/pi-van-mon"
 fi
