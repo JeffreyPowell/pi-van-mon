@@ -153,7 +153,7 @@ then
 
   cat > /etc/cron.d/pi-van-mon-update <<CRON
 #m  h  d  m  dow
-*/5 8-23  * * *    root /bin/bash /home/pi/bin/scripts/pi-van-mon-update.sh
+*/5 8-23  * * *    root /bin/bash /home/pi/bin/pi-van-mon/scripts/pi-van-mon-update.sh >> /tmp/cronlog
 CRON
   chmod +x /etc.cron.d/pi-van-mon-update
   service cron restart
