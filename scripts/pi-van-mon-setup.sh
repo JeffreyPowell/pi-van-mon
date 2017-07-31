@@ -149,10 +149,14 @@ fi
 
 if [ ! -f "/etc/cron.d/pi-van-mon-update" ]
 then
-    cat > /etc/cron.d/pi-van-mon-update <<CRON
+  printf "\n\n Installing cron job ...\n"
+
+  cat > /etc/cron.d/pi-van-mon-update <<CRON
 */5 8-23  * * *    /bin/bash /home/pi/code/scripts/pi-van-mon-update.sh
 CRON
-    service cron restart
+  service cron restart
+else
+  printf "\n\n Cron job already installed. \n"
 fi
 
 
@@ -176,7 +180,9 @@ fi
 
 # configure apache vh on port 8080
 
-printf "\n\n Configuring Apache ...\n"
+if [ -f "/etc/apache2/sites-available/pi-van-mon.conf" ]
+then
+  printf "\n\n Configuring VHost ...\n"
 
   cat > /etc/apache2/ports.conf <<PORTS
 Listen 80
@@ -198,8 +204,11 @@ PORTS
 </VirtualHost>
 VHOST
 
-a2ensite pi-van-mon.conf
-service apache2 restart
+  a2ensite pi-van-mon.conf
+  service apache2 restart
+else
+  printf "\n\n VHost already exists. \n"
+fi
 
 printf "\n\n Installation Complete. Some changes might require a reboot. \n\n"
 exit 1
