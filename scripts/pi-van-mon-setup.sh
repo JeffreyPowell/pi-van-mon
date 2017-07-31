@@ -152,6 +152,7 @@ then
   printf "\n\n Installing cron job ...\n"
 
   cat > /etc/cron.d/pi-van-mon-update <<CRON
+#m  h  d  m  dow
 */5 8-23  * * *    root /bin/bash /home/pi/bin/scripts/pi-van-mon-update.sh
 CRON
   service cron restart
