@@ -155,6 +155,7 @@ then
 #m  h  d  m  dow
 */5 8-23  * * *    root /bin/bash /home/pi/bin/scripts/pi-van-mon-update.sh
 CRON
+  chmod +x /etc.cron.d/pi-van-mon-update
   service cron restart
 else
   printf "\n\n Cron job already installed. \n"
