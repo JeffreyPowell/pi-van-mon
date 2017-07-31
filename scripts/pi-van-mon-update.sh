@@ -2,7 +2,7 @@
 
 cd /home/pi/bin/pi-van-mon
 
-git reset --hard HEAD
+git reset --hard HEAD 2>&1 1>/dev/nul
 
 result=$( git pull 2>&1 )
 
