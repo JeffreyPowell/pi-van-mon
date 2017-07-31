@@ -132,11 +132,14 @@ else
   printf "\n\n RRD tool is already installed. \n"
 fi
 
+if [ ! -d "/home/pi/code" ]
+then
+  mkdir "/home/pi/code"
+fi
 
 if [ ! -d "/home/pi/code/ABElectronics_Python_Libraries" ]
 then
   printf "\n\n Installing ADC libraries ...\n"
-  mkdir "/home/pi/code"
   cd "/home/pi/code"
   git clone "https://github.com/abelectronicsuk/ABElectronics_Python_Libraries.git"
 else
