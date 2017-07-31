@@ -133,6 +133,17 @@ else
 fi
 
 
+if [ ! -d "/home/pi/code/ABElectronics_Python_Libraries" ]
+then
+  printf "\n\n Installing ADC libraries ...\n"
+  mkdir "/home/pi/code"
+  cd "/home/pi/code"
+  git clone "https://github.com/abelectronicsuk/ABElectronics_Python_Libraries.git"
+else
+  printf "\n\n ADC libraries are already installed. \n"
+fi
+
+
 if [ ! -f "/etc/cron.d/pi-van-mon-update" ]
 then
     cat > /etc/cron.d/pi-van-mon-update <<CRON
@@ -144,15 +155,17 @@ fi
 
 if [ -d "/var/www/pi-heating-hub" ]
 then
- rm -rf "/var/www/pi-heating-hub"
+  printf "\n\n Copying code to /var/www/pi-van-mon ...\n"
+  rm -rf "/var/www/pi-heating-hub"
+
+  cp -r "/home/pi/code/pi-van-mon/www" "/var/www/pi-van-mon"
+
+  chown -R pi:www-data "/var/www/pi-van-mon"
+  chmod -R 755 "/var/www/pi-van-mon"
+  chmod -R 775 "/var/www/pi-van-mon"
+else
+  printf "\n\n /var/www/pi-van-mon already exists. \n"
 fi
-
-cp -r "/home/pi/code/pi-van-mon/www" "/var/www/pi-van-mon"
-
-chown -R pi:www-data "/var/www/pi-van-mon"
-chmod -R 755 "/var/www/pi-van-mon"
-chmod -R 775 "/var/www/pi-van-mon"
-
 
 
 # configure app
