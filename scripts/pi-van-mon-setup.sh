@@ -22,7 +22,7 @@ then
   exit 1
 fi
 
-SMTP_INSTALLED=$(which apache2)
+SMTP_INSTALLED=$(which ssmtp)
 if [[ "$SMTP_INSTALLED" == "" ]]
 then
   printf "\n\n Installing SMTP ...\n"
