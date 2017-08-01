@@ -27,15 +27,16 @@ if [[ "$SMTP_INSTALLED" == "" ]]
 then
   printf "\n\n Installing SMTP ...\n"
   
+  echo "\nType the email address you wish to use to authenticate with gmail, followed by [ENTER]:\n"
+  read user
+  echo "\n\nType the password you wish to use to authenticate with gmail, followed by [ENTER]:\n"
+  read pword
+  echo "\n\n"
+
   # Install SMTP
   apt-get install ssmtp -y
   apt-get install mpack -y
   
-  echo "Type the email address you wish to use to authenticate with gmail, followed by [ENTER]:"
-  read user
-  echo "Type the password you wish to use to authenticate with gmail, followed by [ENTER]:"
-  read pword
-    
   cat > /etc/ssmtp <<MAIL
 root=$user
 mailhub=smtp.gmail.com:465
