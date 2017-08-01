@@ -46,7 +46,7 @@ UseTLS=YES
 MAIL
 
   echo "Email configured successfully" | ssmtp $user
-  mpack -s "Email configured successfully" /usr/share/raspberrypi-artwork/a*.png $user
+  mpack -s "Email configured successfully" /usr/share/raspberrypi-artwork/launch.png $user
   
   SMTP_INSTALLED=$(which apache2)
     if [[ "$SMTP_INSTALLED" == "" ]]
