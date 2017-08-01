@@ -18,7 +18,7 @@ else
   result+=$( echo && echo && git log -p -n 1 2>&1 )
   date
   echo $result
-  #echo "$result" | mail -s "Van Git Pull - UPDATED" jffrypwll@googlemail.com
+  echo "$result" | mail -s "pi-van-mon Git Pull - UPDATED" jffrypwll@googlemail.com
 
   cp -r "/home/pi/bin/pi-van-mon/www" "/var/www/pi-van-mon"
 fi
