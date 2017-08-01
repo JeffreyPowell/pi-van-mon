@@ -27,14 +27,15 @@ if [[ "$SMTP_INSTALLED" == "" ]]
 then
   printf "\n\n Installing SMTP ...\n"
   
+  # Install SMTP
+  apt-get install ssmtp -y
+  apt-get install mpack -y
+  
   echo "Type the email address you wish to use to authenticate with gmail, followed by [ENTER]:"
   read user
   echo "Type the password you wish to use to authenticate with gmail, followed by [ENTER]:"
   read pword
-  
-  # Install SMTP
-  apt-get install ssmtp -y
-  
+    
   cat > /etc/ssmtp <<MAIL
 root=$user
 mailhub=smtp.gmail.com:465
@@ -44,6 +45,9 @@ AuthPass=$pword
 UseTLS=YES
 MAIL
 
+  echo "Email configured successfully" | ssmtp $user
+  mpack -s "Email configured successfully" /usr/share/raspberrypi-artwork/a*.png $user
+  
   SMTP_INSTALLED=$(which apache2)
     if [[ "$SMTP_INSTALLED" == "" ]]
     then
