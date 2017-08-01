@@ -223,6 +223,18 @@ else
   printf "\n\n Cron job already installed. \n"
 fi
 
+if [ -d "/home/pi/bin/pi-van-mon/data" ]
+then
+  printf "\n\n Creating data directory ...\n"
+
+  mkdir "/home/pi/bin/pi-van-mon/data"
+
+  #chown -R pi:www-data "/var/www/pi-van-mon/data"
+  #chmod -R 755 "/var/www/pi-van-mon/data"
+  #chmod -R 775 "/var/www/pi-van-mon/data"
+else
+  printf "\n\n /var/www/pi-van-mon/data already exists. \n"
+fi
 
 if [ -d "/var/www/pi-heating-hub" ]
 then
