@@ -8,17 +8,17 @@ import yaml
 
 config = yaml.safe_load(open("/home/pi/bin/pi-van-mon/config.yaml"))
 
-#print( config )
+print( config )
 
 for device in config['devices']['adci2c']:
-    #print( device )
+    print( device )
 
     adda = int(config['devices']['adci2c'][device]['adda'])
     addb = int(config['devices']['adci2c'][device]['addb'])
 
     rate = int(config['devices']['adci2c'][device]['rate'])
 
-    #print( adda, addb, rate )
+    print( adda, addb, rate )
 
 
     try:
@@ -26,7 +26,7 @@ for device in config['devices']['adci2c']:
 
         for pin in config['devices']['adci2c'][device]['pins']:
 
-          #print( pin )
+          print( pin )
 
           t = datetime.datetime.now().strftime('%s')
 
