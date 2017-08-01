@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from ABElectronics_ADCPi import ADCPi
+from ADCPi import ADCPi
 import time
 import datetime
 import os

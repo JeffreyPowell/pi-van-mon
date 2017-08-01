@@ -185,6 +185,7 @@ then
   git clone "https://github.com/abelectronicsuk/ABElectronics_Python_Libraries.git"
   cd "ABElectronics_Python_Libraries"
   python setup.py install
+  apt-get install python-smbus -y
 else
   printf "\n\n ADC libraries are already installed. \n"
 fi
