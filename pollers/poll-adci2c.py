@@ -21,7 +21,7 @@ for device in config['devices']['adci2c']:
     print( adda, addb, rate )
 
 
-    try:
+    #try:
         adc = ADCPi( adda, addb, rate)
 
         for pin in config['devices']['adci2c'][device]['pins']:
@@ -49,5 +49,5 @@ for device in config['devices']['adci2c']:
 
           os.system('/usr/bin/rrdtool update '+filename+" "+str(t)+':'+data)
 
-    except: # Device probably not plugged in :(
-        pass
+    #except: # Device probably not plugged in :(
+    #    pass
