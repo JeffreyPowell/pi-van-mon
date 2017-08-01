@@ -215,7 +215,7 @@ then
 
   cat > /etc/cron.d/pi-van-mon-update <<CRON
 #m  h  d  m  dow
-*/5 8-23  * * *    root /bin/bash /home/pi/bin/pi-van-mon/scripts/pi-van-mon-update.sh >> /tmp/cronlog
+*/5 8-23  * * *    root /bin/bash /home/pi/bin/pi-van-mon/scripts/pi-van-mon-update.sh
 CRON
   chmod +x /etc.cron.d/pi-van-mon-update
   service cron restart
@@ -292,10 +292,10 @@ then
 
   cat > /etc/cron.d/pi-van-mon-pollers <<CRON
 #m  h  d  m  dow
- *  *  *  *  *    pi python /home/pi/bin/pi-van-mon/pollers/poll-adci2c.py
+ *  *  *  *  *    pi python /home/pi/bin/pi-van-mon/pollers/poll-adci2c.py 2>1&
 #*  *  *  *  *    pi python /home/pi/bin/pi-van-mon/pollers/poll-w1.py
 CRON
-  chmod +x /etc.cron.d/pi-van-mon-pollers
+  chmod +x /etc/cron.d/pi-van-mon-pollers
   service cron restart
 else
   printf "\n\n Poller Cron job already installed. \n"
