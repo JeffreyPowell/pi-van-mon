@@ -83,6 +83,24 @@ else
   printf "\n\n Apache is already installed. \n"
 fi
 
+
+PYTHON_YAML_INSTALLED=$(find /var/lib/dpkg -name python-yaml*)
+if [[ "$PYTHON_YAML_INSTALLED" == "" ]]
+then
+  printf "\n\n Installing Python-yaml ...\n"
+  # Install Apache
+  apt-get install python-yaml -y
+
+  PYTHON_YAML_INSTALLED=$(find /var/lib/dpkg -name python-yaml*)
+    if [[ "$PYTHON_YAML_INSTALLED" == "" ]]
+    then
+      printf "\n\n EXITING : Python-yaml installation FAILED\n"
+      exit 1
+    fi
+else
+  printf "\n\n Python-yaml is already installed. \n"
+fi
+
 PHP_INSTALLED=$(which php)
 if [[ "$PHP_INSTALLED" == "" ]]
 then
