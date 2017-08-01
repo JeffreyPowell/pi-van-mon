@@ -8,7 +8,7 @@ result=$( git pull 2>&1 )
 
 if [ "$result" = "Already up-to-date." ]; then
   #echo $result
-  #echo "$result" | ssmtp -s "Van Git Pull - NO CHANGE" jffrypwll@googlemail.com
+  echo "$result" | ssmtp -s "Van Git Pull - NO CHANGE" jffrypwll@googlemail.com
   sleep 1
 elif [[ $result == *"Couldn't resolve host"* ]]; then
   date
