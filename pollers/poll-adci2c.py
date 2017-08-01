@@ -35,7 +35,7 @@ for device in config['devices']['adci2c']:
 
       print( factor, offset )
 
-      rawdata = adc.readVoltage( pin )
+      rawdata = adc.read_voltage( pin )
       data = str( ( rawdata + offset ) * factor )
 
       print( device, pin, rawdata, data )
