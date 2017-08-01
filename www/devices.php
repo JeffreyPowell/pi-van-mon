@@ -79,7 +79,7 @@ for ($device_index=1; $device_index <= $device_count; $device_index++) {
   $rrd_name = $device_type.'-'.$device_ref.'-'.$device_pin_num;
 
   $img_filename = '/var/www/pi-van-mon/images/'.$img_name.'.png';
-  $rrd_filename = '/var/www/pi-van-mon/data/'.$rrd_name.'.rrd';
+  $rrd_filename = '/home/pi/bin/pi-van-mon/data/'.$rrd_name.'.rrd';
 
   #print_r( $rrd_filename );
   #print_r( $img_filename );

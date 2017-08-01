@@ -20,5 +20,5 @@ else
   echo $result
   echo "$result" | /usr/sbin/ssmtp -s "pi-van-mon Git Pull - UPDATED" jffrypwll@googlemail.com
 
-  cp -r "/home/pi/bin/pi-van-mon/www" "/var/www/pi-van-mon"
+  cp -r "/home/pi/bin/pi-van-mon/www/*" "/var/www/pi-van-mon/"
 fi

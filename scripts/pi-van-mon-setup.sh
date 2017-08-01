@@ -241,11 +241,14 @@ then
   printf "\n\n Copying code to /var/www/pi-van-mon ...\n"
   rm -rf "/var/www/pi-heating-hub"
 
-  cp -r "/home/pi/bin/pi-van-mon/www" "/var/www/pi-van-mon"
+  cp -r "/home/pi/bin/pi-van-mon/www/*" "/var/www/pi-van-mon/"
 
   chown -R pi:www-data "/var/www/pi-van-mon"
-  chmod -R 755 "/var/www/pi-van-mon"
   chmod -R 775 "/var/www/pi-van-mon"
+
+  mkdir "var/www/pi-van-mon/images"
+  chown -R pi:www-data "/var/www/pi-van-mon/images"
+  chmod -R 775 "var/www/pi-van-mon/images"
 else
   printf "\n\n /var/www/pi-van-mon already exists. \n"
 fi
