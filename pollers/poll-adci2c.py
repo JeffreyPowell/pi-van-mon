@@ -6,7 +6,7 @@ import datetime
 import os
 import yaml
 
-config = yaml.safe_load(open("/home/pi/bin/van/config.yaml"))
+config = yaml.safe_load(open("/home/pi/bin/pi-van-mon/config.yaml"))
 
 #print( config )
 
@@ -40,7 +40,7 @@ for device in config['devices']['adci2c']:
 
           #print( device, pin, rawdata, data )
 
-          filename = '/home/pi/bin/van/data/adci2c-'+str(device)+'-'+str(pin)+'.rrd'
+          filename = '/home/pi/bin/pi-van-mon/data/adci2c-'+str(device)+'-'+str(pin)+'.rrd'
 
 
           if( not os.path.exists( filename ) ):

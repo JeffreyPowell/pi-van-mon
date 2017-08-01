@@ -255,5 +255,20 @@ else
   printf "\n\n VHost already exists. \n"
 fi
 
+if [ ! -f "/etc/cron.d/pi-van-mon-pollers" ]
+then
+  printf "\n\n Installing poller cron job ...\n"
+
+  cat > /etc/cron.d/pi-van-mon-pollers <<CRON
+#m  h  d  m  dow
+ *  *  *  *  *    pi python /home/pi/bin/pi-van-mon/pollers/poll-adci2c.py
+#*  *  *  *  *    pi python /home/pi/bin/pi-van-mon/pollers/poll-w1.py
+CRON
+  chmod +x /etc.cron.d/pi-van-mon-pollers
+  service cron restart
+else
+  printf "\n\n Poller Cron job already installed. \n"
+fi
+
 printf "\n\n Installation Complete. Some changes might require a reboot. \n\n"
 exit 1
