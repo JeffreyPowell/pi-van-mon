@@ -223,7 +223,7 @@ else
   printf "\n\n Cron job already installed. \n"
 fi
 
-if [ -d "/home/pi/bin/pi-van-mon/data" ]
+if [ ! -d "/home/pi/bin/pi-van-mon/data" ]
 then
   printf "\n\n Creating data directory ...\n"
 
