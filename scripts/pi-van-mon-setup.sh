@@ -22,6 +22,38 @@ then
   exit 1
 fi
 
+SMTP_INSTALLED=$(which apache2)
+if [[ "$SMTP_INSTALLED" == "" ]]
+then
+  printf "\n\n Installing SMTP ...\n"
+  
+  echo "Type the email address you wish to use to authenticate with gmail, followed by [ENTER]:"
+  read user
+  echo "Type the password you wish to use to authenticate with gmail, followed by [ENTER]:"
+  read pword
+  
+  # Install SMTP
+  apt-get install ssmtp -y
+  
+  cat > /etc/ssmtp <<MAIL
+root=$user
+mailhub=smtp.gmail.com:465
+FromLineOverride=YES
+AuthUser=$user
+AuthPass=$pword
+UseTLS=YES
+MAIL
+
+  SMTP_INSTALLED=$(which apache2)
+    if [[ "$SMTP_INSTALLED" == "" ]]
+    then
+      printf "\n\n EXITING : SMTP installation FAILED\n"
+      exit 1
+    fi
+else
+  printf "\n\n SMTP is already installed. \n"
+fi
+
 APACHE_INSTALLED=$(which apache2)
 if [[ "$APACHE_INSTALLED" == "" ]]
 then
