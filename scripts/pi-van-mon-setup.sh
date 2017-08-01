@@ -30,7 +30,7 @@ SMTP_INSTALLED=$(which ssmtp)
 if [[ "$SMTP_INSTALLED" == "" ]]
 then
   printf "\n\n Installing SMTP ...\n"
-  
+
   printf "\nType the email address you wish to use to authenticate with gmail, followed by [ENTER]:\n"
   read user
   printf "\n\nType the password you wish to use to authenticate with gmail, followed by [ENTER]:\n"
@@ -40,7 +40,7 @@ then
   # Install SMTP
   apt-get install ssmtp -y
   apt-get install mpack -y
-  
+
   cat > /etc/ssmtp/ssmtp.conf <<MAIL
 root=$user
 mailhub=smtp.gmail.com:465
@@ -52,7 +52,7 @@ MAIL
 
   echo "Email configured successfully" | ssmtp $user
   mpack -s "Email configured successfully" /usr/share/raspberrypi-artwork/launch.png $user
-  
+
   SMTP_INSTALLED=$(which apache2)
     if [[ "$SMTP_INSTALLED" == "" ]]
     then
@@ -183,6 +183,8 @@ then
   printf "\n\n Installing ADC libraries ...\n"
   cd "/home/pi/bin"
   git clone "https://github.com/abelectronicsuk/ABElectronics_Python_Libraries.git"
+  cd "ABElectronics_Python_Libraries"
+  python setup.py install
 else
   printf "\n\n ADC libraries are already installed. \n"
 fi
