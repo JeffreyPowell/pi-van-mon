@@ -22,16 +22,20 @@ then
   exit 1
 fi
 
+apt-get update -y
+
+clear
+
 SMTP_INSTALLED=$(which ssmtp)
 if [[ "$SMTP_INSTALLED" == "" ]]
 then
   printf "\n\n Installing SMTP ...\n"
   
-  echo "\nType the email address you wish to use to authenticate with gmail, followed by [ENTER]:\n"
+  printf "\nType the email address you wish to use to authenticate with gmail, followed by [ENTER]:\n"
   read user
-  echo "\n\nType the password you wish to use to authenticate with gmail, followed by [ENTER]:\n"
+  printf "\n\nType the password you wish to use to authenticate with gmail, followed by [ENTER]:\n"
   read pword
-  echo "\n\n"
+  clear
 
   # Install SMTP
   apt-get install ssmtp -y
