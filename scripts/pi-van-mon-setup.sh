@@ -37,7 +37,7 @@ then
   apt-get install ssmtp -y
   apt-get install mpack -y
   
-  cat > /etc/ssmtp <<MAIL
+  cat > /etc/ssmtp/ssmtp.conf <<MAIL
 root=$user
 mailhub=smtp.gmail.com:465
 FromLineOverride=YES
