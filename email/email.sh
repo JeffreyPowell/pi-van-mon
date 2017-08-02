@@ -16,7 +16,7 @@ vertaxislabelpt=6
 allaxisvaluept=6
 legendpt=6
 
-/usr/bin/rrdtool graph /home/pi/bin/pi-van-mon/www/images/e-$datafile$start.png \
+result=/usr/bin/rrdtool graph /home/pi/bin/pi-van-mon/www/images/e-$datafile$start.png \
 --start $start \
 --vertical-label "$dataunit" \
 --height=$height \
