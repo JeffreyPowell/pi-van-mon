@@ -60,7 +60,7 @@ to="jffrypwll@googlemail.com"
 subject="rpi cons temp"
 body="Contents of backups/*.tar.*"
 declare -a attachments
-attachments=($( ls /home/pi/bin/ther/www/images/e-*.png ))
+attachments=($( ls /home/pi/bin/pi-van-mon/www/images/e-*.png ))
 #attachments={${ find /backups -maxdepth 1 -newermt $(date +%Y-%m-%d -d '1 day ago' ) -type f -print } }
 
 declare -a attargs
