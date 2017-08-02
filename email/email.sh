@@ -1,10 +1,10 @@
 #!/bin/bash
 
 
-datafile="adci2c-2-4"
-start="-1d"
-dataname="Kitchen temp"
-dataunit="(C)"
+datafile=$1
+start=$2
+dataname=$1
+dataunit=""
 datacf="AVERAGE"
 width=500
 height=300

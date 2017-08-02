@@ -304,5 +304,20 @@ else
   printf "\n\n Poller Cron job already installed. \n"
 fi
 
+
+if [ ! -f "/etc/cron.d/pi-van-mon-email" ]
+then
+  printf "\n\n Installing email cron job ...\n"
+
+  cat > /etc/cron.d/pi-van-mon-email <<CRON
+#m  h  d  m  dow
+ 1  */6  *  *  *    root bash /home/pi/bin/pi-van-mon/email/cron-wrapper.sh
+CRON
+  chmod +x /etc/cron.d/pi-van-mon-email
+  service cron restart
+else
+  printf "\n\n Email Cron job already installed. \n"
+fi
+
 printf "\n\n Installation Complete. Some changes might require a reboot. \n\n"
 exit 1
