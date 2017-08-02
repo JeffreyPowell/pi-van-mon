@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-datafile="sensor-28-000005cf873e-temp"
+datafile="adci2c-2-4"
 start="-1d"
 dataname="Kitchen temp"
 dataunit="(C)"
@@ -16,7 +16,7 @@ vertaxislabelpt=6
 allaxisvaluept=6
 legendpt=6
 
-/usr/bin/rrdtool graph /home/pi/bin/therm/www/images/e-$datafile$start.png \
+/usr/bin/rrdtool graph /home/pi/bin/pi-van-mon/www/images/e-$datafile$start.png \
 --start $start \
 --vertical-label "$dataunit" \
 --height=$height \
@@ -34,7 +34,7 @@ legendpt=6
 -nLEGEND:$legendpt \
 -nAXIS:$allaxisvaluept \
 -nUNIT:$vertaxislabelpt \
-DEF:a=/home/pi/bin/therm/data/$datafile.rrd:data:$datacf \
+DEF:a=/home/pi/bin/pi-van-mon/data/$datafile.rrd:data:$datacf \
 CDEF:b=a,1,* \
 AREA:b#$areacol \
 LINE$linewidth:b#$linecol:"$dataname" \
@@ -60,7 +60,7 @@ to="jffrypwll@googlemail.com"
 subject="rpi cons temp"
 body="Contents of backups/*.tar.*"
 declare -a attachments
-attachments=($( ls /home/pi/bin/therm/www/images/e-*.png ))
+attachments=($( ls /home/pi/bin/ther/www/images/e-*.png ))
 #attachments={${ find /backups -maxdepth 1 -newermt $(date +%Y-%m-%d -d '1 day ago' ) -type f -print } }
 
 declare -a attargs
