@@ -311,7 +311,7 @@ then
 
   cat > /etc/cron.d/pi-van-mon-email <<CRON
 #m  h  d  m  dow
- 1  */6  *  *  *    root bash /home/pi/bin/pi-van-mon/email/cron-wrapper.sh
+ 1  */6  *  *  *    root /bin/bash /home/pi/bin/pi-van-mon/email/cron-wrapper.sh
 CRON
   chmod +x /etc/cron.d/pi-van-mon-email
   service cron restart

@@ -3,6 +3,10 @@
 
 datafile=$1
 start=$2
+
+echo $datafile
+echo $start
+
 dataname=$1
 dataunit=""
 datacf="AVERAGE"
@@ -16,7 +20,7 @@ vertaxislabelpt=6
 allaxisvaluept=6
 legendpt=6
 
-result=/usr/bin/rrdtool graph /home/pi/bin/pi-van-mon/www/images/e-$datafile$start.png \
+/usr/bin/rrdtool graph /home/pi/bin/pi-van-mon/www/images/e-$datafile$start.png \
 --start $start \
 --vertical-label "$dataunit" \
 --height=$height \
