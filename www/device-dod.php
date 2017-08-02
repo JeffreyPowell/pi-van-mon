@@ -47,7 +47,7 @@ echo "<input type='button' onclick=\"location.href='device-dod.php?id=$device_in
 echo "<input type='button' onclick=\"location.href='device-dod.php?id=$device_index&w=$chart_width&h=$chart_shorter';\" value='Height -' />";
 echo "<br>";
 
-$config = parse_ini_file('/home/pi/bin/van/www/config.ini', true);
+$config = parse_ini_file('/home/pi/bin/pi-van-mon/www/config.ini', true);
 
 $device_count = count($config['devices']['type']);
 
@@ -82,8 +82,8 @@ $rrd_name = $device_type.'-'.$device_ref.'-'.$device_pin_num;
 print $device_pin_num;
 echo "<br>:$device_pin_num:<br>";
 
-$img_filename = '/home/pi/bin/van/www/images/'.$img_name.'.png';
-$rrd_filename = '/home/pi/bin/van/data/'.$rrd_name.'.rrd';
+$img_filename = '/var/www/pi-van-mon/images/'.$img_name.'.png';
+$rrd_filename = '/home/pi/bin/pi-van-mon/data/'.$rrd_name.'.rrd';
 
 #create_graph_dayonday($DEVICEID, "images/d-dayonday-temp-$DEVICEID.png", "temp",    "( C )",      "AVERAGE", $width, $height);
 #echo "<img src='images/d-dayonday-temp-$DEVICEID.png'>";
