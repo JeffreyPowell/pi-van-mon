@@ -70,7 +70,7 @@ devices:
         4:
           name: 2-4
           unit: Amps
-          factor: 06.680
+          factor: 06.800
           offset: 00.000
         5:
           name: 2-5
