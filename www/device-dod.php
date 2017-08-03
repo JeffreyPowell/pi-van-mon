@@ -211,7 +211,8 @@ function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $dat
      "LINE$linewidth:b$DAYIDST#$linecol:$DAYNAME",
      "SHIFT:b".$DAYIDST.":".$DAYSHIFT,
      "GPRINT:b$DAYIDST:MIN:min %6.2lf",
-     "GPRINT:b$DAYIDST:MAX:max %6.2lf\\n"
+     "GPRINT:b$DAYIDST:MAX:max %6.2lf"
+     "GPRINT:b$DAYIDST:LAST:last %6.2lf\\n"
      );
  }
 
