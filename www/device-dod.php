@@ -141,7 +141,7 @@ function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $dat
    "--alt-y-grid",
   # "--alt-autoscale",
   # "--rigid",
-   "-y 0.2:5",
+   "-y 0.2:10",
    "--slope-mode",
    "--end=midnight",
    "--start=end-1d",
