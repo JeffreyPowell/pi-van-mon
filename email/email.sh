@@ -22,6 +22,8 @@ legendpt=6
 
 /usr/bin/rrdtool graph /home/pi/bin/pi-van-mon/www/images/e-$datafile$start.png \
 --start $start \
+--alt-y-grid \
+--alt-autoscale \
 --vertical-label "$dataunit" \
 --height=$height \
 --width=$width \

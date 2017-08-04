@@ -139,9 +139,9 @@ function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $dat
  $options = array(
    "--title=$dataname",
    "--alt-y-grid",
-  # "--alt-autoscale",
+   "--alt-autoscale",
   # "--rigid",
-   "-y 0.2:10",
+  # "-y 0.2:10",
    "--slope-mode",
    "--end=midnight",
    "--start=end-1d",
@@ -211,9 +211,9 @@ function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $dat
    array_push($options,
      "LINE$linewidth:b$DAYIDST#$linecol:$DAYNAME",
      "SHIFT:b".$DAYIDST.":".$DAYSHIFT,
-     "GPRINT:b$DAYIDST:MIN:min %6.2lf",
-     "GPRINT:b$DAYIDST:MAX:max %6.2lf",
-     "GPRINT:b$DAYIDST:LAST:last %6.2lf\\n"
+     "GPRINT:b$DAYIDST:MIN:MIN %6.2lf",
+     "GPRINT:b$DAYIDST:MAX:MAX %6.2lf",
+     "GPRINT:b$DAYIDST:LAST:LAST %6.2lf\\n"
      );
  }
 
