@@ -165,7 +165,7 @@ function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $dat
 
  $offset = 60*60*24;
 
- for ( $DAYID = 0; $DAYID <7; $DAYID ++ ) {
+ for ( $DAYID = 6; $DAYID >=0; $DAYID -- ) {
 
    $DAYNAME  = date( 'D', mktime(0, 0, 0, date("m")  , date("d")-$DAYID, date("Y")));
    $linecol  = $days[$DAYID]."FF";
