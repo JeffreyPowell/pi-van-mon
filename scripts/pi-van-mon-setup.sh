@@ -62,6 +62,7 @@ else
   printf "\n\n SMTP is already installed. \n"
 fi
 
+
 if [ ! -f "/etc/cron.d/pi-van-mon-onboot" ]
 then
   printf "\n\n Installing onboot cron job ...\n"
