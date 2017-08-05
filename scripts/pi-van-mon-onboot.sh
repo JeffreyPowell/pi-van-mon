@@ -14,7 +14,7 @@ sleep 60
 #/bin/systemctl restart sendmail.service
 #/sbin/service sendmail restart
 
-IP=`hostname -i`
+IP=`hostname -I`
 HOSTNAME=`hostname -f`
 echo "$HOSTNAME online.  IP address: $IP" > /home/pi/bin/pi-van-mon/scripts/email.txt
 echo >> /home/pi/bin/pi-van-mon/scripts/email.txt
