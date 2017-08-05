@@ -49,7 +49,6 @@ AuthUser=$user
 AuthPass=$pword
 UseTLS=YES
 MAIL
-
   echo "Email configured successfully" | ssmtp $user
   mpack -s "Email configured successfully" /usr/share/raspberrypi-artwork/launch.png $user
 
@@ -61,6 +60,20 @@ MAIL
     fi
 else
   printf "\n\n SMTP is already installed. \n"
+fi
+
+if [ ! -f "/etc/cron.d/pi-van-mon-onboot" ]
+then
+  printf "\n\n Installing onboot cron job ...\n"
+
+  cat > /etc/cron.d/pi-van-mon-onboot <<CRON
+#m  h  d  m  dow
+@reboot /home/pi/bin/pi-van-mon/scripts/pi-van-mon-onboot.sh
+CRON
+  chmod +x /etc/cron.d/pi-van-mon-onboot
+  service cron restart
+else
+  printf "\n\n Onboot Cron job already installed. \n"
 fi
 
 APACHE_INSTALLED=$(which apache2)
