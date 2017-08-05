@@ -39,8 +39,10 @@ then
 
   # Install SMTP
   apt-get install ssmtp -y
-  apt-get install mpack -y
+  apt-get install mailutils -y
 
+  apt-get install mpack -y
+  
   cat > /etc/ssmtp/ssmtp.conf <<MAIL
 root=$user
 mailhub=smtp.gmail.com:465
