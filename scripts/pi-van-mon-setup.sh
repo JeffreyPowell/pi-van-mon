@@ -69,7 +69,7 @@ then
 
   cat > /etc/cron.d/pi-van-mon-onboot <<CRON
 #m  h  d  m  dow
-@reboot /home/pi/bin/pi-van-mon/scripts/pi-van-mon-onboot.sh
+@reboot root /bin/bash /home/pi/bin/pi-van-mon/scripts/pi-van-mon-onboot.sh
 CRON
   chmod +x /etc/cron.d/pi-van-mon-onboot
   service cron restart
