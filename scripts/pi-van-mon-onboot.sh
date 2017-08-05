@@ -20,7 +20,7 @@ echo "$HOSTNAME online.  IP address: $IP" > /home/pi/bin/pi-van-mon/scripts/emai
 echo >> /home/pi/bin/pi-van-mon/scripts/email.txt
 date >> /home/pi/bin/pi-van-mon/scripts/email.txt
 
-echo /home/pi/bin/pi-van-mon/scripts/email.txt | /usr/sbin/ssmtp -s "$HOSTNAME online" jffrypwll@googlemail.com
+cat /home/pi/bin/pi-van-mon/scripts/email.txt | /usr/sbin/ssmtp -s "$HOSTNAME online" jffrypwll@googlemail.com
 
 rm -rf /home/pi/bin/pi-van-mon/scripts/email.txt
 
