@@ -80,4 +80,6 @@ attachment="-a /home/pi/bin/pi-van-mon/www/images/e-$datafile$datastart.png"
 
 echo "$subject" "${attargs[@]}" "$to" "$body"
 
-mpack -s "$subject" "${attargs[@]}" "$to" <<< "$body"
+#mpack -s "$subject" "${attargs[@]}" "$to" <<< "$body"
+
+mpack -s "$subject" "$attachment" "$to" <<< "$body"
