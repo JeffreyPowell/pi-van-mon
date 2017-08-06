@@ -74,4 +74,6 @@ for att in "${attachments[@]}"; do
   attargs+=( "-a"  "$att" )
 done
 
+echo "$subject" "${attargs[@]}" "$to" "$body"
+
 mpack -s "$subject" "${attargs[@]}" "$to" <<< "$body"
