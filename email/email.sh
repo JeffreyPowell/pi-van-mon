@@ -22,7 +22,9 @@ vertaxislabelpt=6
 allaxisvaluept=6
 legendpt=6
 
-for t in $( "-1d" "-1w" "-1m" ); do
+list = ( "-1d" "-1w" "-1m" )
+
+for t in "${list[@]}"; do
 /usr/bin/rrdtool graph /home/pi/bin/pi-van-mon/www/images/e-$datafile$t.png \
 --start $start \
 --alt-y-grid \
