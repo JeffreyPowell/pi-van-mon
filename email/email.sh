@@ -62,7 +62,7 @@ GPRINT:b:MAX:"max %6.2lf\\n"
 #  }
 
 
-attachments+=( "-A" "/home/pi/bin/pi-van-mon/www/images/e-$datafile$t.png" )
+attargs+=( "-A" "/home/pi/bin/pi-van-mon/www/images/e-$datafile$t.png" )
 
 done
 
@@ -89,7 +89,7 @@ body="pi-van-mon charts"
 #done
 
 
-echo "$subject" "$attachment" "$to" "$body"
+#echo "$subject" "$attachment" "$to" "$body"
 
 #mpack -s "$subject" "${attargs[@]}" "$to" <<< "$body"
 
