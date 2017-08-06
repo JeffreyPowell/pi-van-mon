@@ -4,7 +4,7 @@ declare -a attachments
 declare -a attargs
 
 datafile=$1
-start=$2
+#start=$2
 
 #echo $datafile
 #echo $start
