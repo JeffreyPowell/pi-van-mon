@@ -1,5 +1,7 @@
 #!/bin/bash
 
+declare -a attachments
+declare -a attargs
 
 datafile=$1
 start=$2
@@ -20,7 +22,8 @@ vertaxislabelpt=6
 allaxisvaluept=6
 legendpt=6
 
-/usr/bin/rrdtool graph /home/pi/bin/pi-van-mon/www/images/e-$datafile$start.png \
+for t in ("-1d","-1w","-1m"); do
+/usr/bin/rrdtool graph /home/pi/bin/pi-van-mon/www/images/e-$datafile$t.png \
 --start $start \
 --alt-y-grid \
 --alt-autoscale \
@@ -54,7 +57,9 @@ GPRINT:b:MAX:"max %6.2lf\\n"
 #  }
 #}
 
+attachments+=( "-A" "/home/pi/bin/pi-van-mon/www/images/e-$datafile$t.png" )
 
+done
 
 #mail -a /home/pi/bin/therm/www/images/e-$datafile$start.png -s "$dataname" jffrypwll@googlemail.com < /dev/null
 
@@ -63,12 +68,13 @@ GPRINT:b:MAX:"max %6.2lf\\n"
 
 #from="jffrypwll@pi-kitchen"
 to="jffrypwll@googlemail.com"
-subject="pi-van-mon $datafile $start"
+subject="pi-van-mon $datafile"
 body="pi-van-mon charts"
-attachment="/home/pi/bin/pi-van-mon/www/images/e-$datafile$start.png"
+#attachment="/home/pi/bin/pi-van-mon/www/images/e-$datafile$start.png"
 
-#declare -a attachments
+
 #attachments=($( ls /home/pi/bin/pi-van-mon/www/images/e-*.png ))
+
 
 #attachments={${ find /backups -maxdepth 1 -newermt $(date +%Y-%m-%d -d '1 day ago' ) -type f -print } }
 
@@ -82,4 +88,4 @@ echo "$subject" "$attachment" "$to" "$body"
 
 #mpack -s "$subject" "${attargs[@]}" "$to" <<< "$body"
 
-mail -s "$subject" -A "$attachment" "$to" <<< "$body"
+mail -s "$subject" -A "${attargs[@]}" "$to" <<< "$body"
