@@ -82,4 +82,4 @@ echo "$subject" "$attachment" "$to" "$body"
 
 #mpack -s "$subject" "${attargs[@]}" "$to" <<< "$body"
 
-mpack -s "$subject" -A "$attachment" "$to" <<< "$body"
+mail -s "$subject" -A "$attachment" "$to" <<< "$body"
