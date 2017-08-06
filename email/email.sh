@@ -74,7 +74,7 @@ attachment="/home/pi/bin/pi-van-mon/www/images/e-$datafile$start.png"
 
 #declare -a attargs
 #for att in "${attachments[@]}"; do
-#  attargs+=( "-a"  "$att" )
+#  attargs+=( "-A"  "$att" )
 #done
 
 
@@ -82,4 +82,4 @@ echo "$subject" "$attachment" "$to" "$body"
 
 #mpack -s "$subject" "${attargs[@]}" "$to" <<< "$body"
 
-mpack -s "$subject" -a "$attachment" "$to" <<< "$body"
+mpack -s "$subject" -A "$attachment" "$to" <<< "$body"

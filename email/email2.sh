@@ -14,7 +14,7 @@ attachments=($( ls /home/pi/bin/pi-van-mon/www/images/*.png ))
 
 declare -a attargs
 for att in "${attachments[@]}"; do
-  attargs+=( "-a"  "$att" )
+  attargs+=( "-A"  "$att" )
 done
 
 mail -s "$subject" -r "$from" "${attargs[@]}" "$to" <<< "$body"
