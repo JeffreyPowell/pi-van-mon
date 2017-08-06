@@ -64,7 +64,7 @@ GPRINT:b:MAX:"max %6.2lf\\n"
 #from="jffrypwll@pi-kitchen"
 to="jffrypwll@googlemail.com"
 subject="rpi cons temp"
-body="pi-van-mon charts"
+body="-d pi-van-mon charts"
 attachment="-a /home/pi/bin/pi-van-mon/www/images/e-$datafile$datastart.png"
 
 #declare -a attachments
@@ -82,4 +82,4 @@ echo "$subject" "${attargs[@]}" "$to" "$body"
 
 #mpack -s "$subject" "${attargs[@]}" "$to" <<< "$body"
 
-mpack -s "$subject" "$attachment" "$to" <<< "$body"
+mpack -s "$subject" "$attachment" "$to" "$body"
