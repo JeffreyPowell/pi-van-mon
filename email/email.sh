@@ -29,7 +29,7 @@ for t in "${list[@]}"; do
 echo ">$t<"
 
 /usr/bin/rrdtool graph /home/pi/bin/pi-van-mon/www/images/e-$datafile$t.png \
---start $start \
+--start $t \
 --alt-y-grid \
 --alt-autoscale \
 --vertical-label "$dataunit" \
