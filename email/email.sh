@@ -65,7 +65,7 @@ GPRINT:b:MAX:"max %6.2lf\\n"
 to="jffrypwll@googlemail.com"
 subject="pi-van-mon"
 body="pi-van-mon charts"
-attachment="/home/pi/bin/pi-van-mon/www/images/e-$datafile$datastart.png"
+attachment="/home/pi/bin/pi-van-mon/www/images/e-$datafile$start.png"
 
 #declare -a attachments
 #attachments=($( ls /home/pi/bin/pi-van-mon/www/images/e-*.png ))
