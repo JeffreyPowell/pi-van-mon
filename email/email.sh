@@ -58,9 +58,9 @@ GPRINT:b:MAX:"max %6.2lf\\n"
 
 # $ret = rrd_graph($output, $options);
 #  if (! $ret) {
-#    echo "<b>Graph error: </b>".rrd_error()."\n";
+    echo "<b>Graph error: </b>".rrd_error()."\n";
 #  }
-#}
+
 
 attachments+=( "-A" "/home/pi/bin/pi-van-mon/www/images/e-$datafile$t.png" )
 
