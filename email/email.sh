@@ -64,15 +64,19 @@ GPRINT:b:MAX:"max %6.2lf\\n"
 #from="jffrypwll@pi-kitchen"
 to="jffrypwll@googlemail.com"
 subject="rpi cons temp"
-body="Contents of backups/*.tar.*"
-declare -a attachments
-attachments=($( ls /home/pi/bin/pi-van-mon/www/images/e-*.png ))
+body="pi-van-mon charts"
+attachment="-a /home/pi/bin/pi-van-mon/www/images/e-$datafile$datastart.png"
+
+#declare -a attachments
+#attachments=($( ls /home/pi/bin/pi-van-mon/www/images/e-*.png ))
+
 #attachments={${ find /backups -maxdepth 1 -newermt $(date +%Y-%m-%d -d '1 day ago' ) -type f -print } }
 
-declare -a attargs
-for att in "${attachments[@]}"; do
-  attargs+=( "-a"  "$att" )
-done
+#declare -a attargs
+#for att in "${attachments[@]}"; do
+#  attargs+=( "-a"  "$att" )
+#done
+
 
 echo "$subject" "${attargs[@]}" "$to" "$body"
 
