@@ -26,7 +26,7 @@ list=( "-1d" "-1w" "-1m" )
 
 for t in "${list[@]}"; do
 
-echo $t
+echo ">$t<"
 
 /usr/bin/rrdtool graph /home/pi/bin/pi-van-mon/www/images/e-$datafile$t.png \
 --start $start \
