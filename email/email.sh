@@ -63,7 +63,7 @@ GPRINT:b:MAX:"max %6.2lf\\n"
 
 #from="jffrypwll@pi-kitchen"
 to="jffrypwll@googlemail.com"
-subject="pi-van-mon"
+subject="pi-van-mon $datafile $start"
 body="pi-van-mon charts"
 attachment="/home/pi/bin/pi-van-mon/www/images/e-$datafile$start.png"
 
