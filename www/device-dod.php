@@ -109,7 +109,7 @@ exit;
 
 
 
-function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $datacf, $min, $max) {
+function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $datacf, $height, $width, $ymin, $ymax) {
 
  $red          = "FF0000";
  $red_dark     = "880000";
@@ -158,8 +158,8 @@ function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $dat
    "--vertical-label=$dataunit",
    "--height=$height",
    "--width=$width",
-   "--lower-limit=$min",
-   "--upper-limit=$max",
+   "--lower-limit=$ymin",
+   "--upper-limit=$ymax",
    "-cBACK#$grey_dark_vv",
    "-cSHADEA#$black",
    "-cSHADEB#$black",
