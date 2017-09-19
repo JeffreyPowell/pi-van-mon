@@ -19,14 +19,22 @@ if( $iPod || $iPhone ){
     $default_width = 1000 ; $default_height = 500 ;
 }
 
+$default_min = 10 ;
+$default_max = 15 ;
+
+
 $device_index = $_GET['id'];
 $chart_width = $_GET['w'];
 $chart_height = $_GET['h'];
+$chart_min = $_GET['min'];
+$chart_max = $_GET['max'];
 
-if( $device_index == "" ) { $device_index = '1';             header("Location: device-dod.php?id=$device_index&w=$chart_width&h=$chart_height"); exit; }
-if( $chart_width  == "" ) { $chart_width  = $default_width;  header("Location: device-dod.php?id=$device_index&w=$chart_width&h=$chart_height"); exit; }
-if( $chart_height == "" ) { $chart_height = $default_height; header("Location: device-dod.php?id=$device_index&w=$chart_width&h=$chart_height"); exit; }
+if( $device_index == "" ) { $device_index = '1';             header("Location: device-dod.php?id=$device_index&w=$chart_width&h=$chart_height&min=$chart_min&max=$chart_max"); exit; }
+if( $chart_width  == "" ) { $chart_width  = $default_width;  header("Location: device-dod.php?id=$device_index&w=$chart_width&h=$chart_height&min=$chart_min&max=$chart_max"); exit; }
+if( $chart_height == "" ) { $chart_height = $default_height; header("Location: device-dod.php?id=$device_index&w=$chart_width&h=$chart_height&min=$chart_min&max=$chart_max"); exit; }
 
+if( $chart_min == "" ) { $chart_min = $default_min; header("Location: device-dod.php?id=$device_index&w=$chart_width&h=$chart_height&min=$chart_min&max=$chart_max"); exit; }
+if( $chart_max == "" ) { $chart_max = $default_max; header("Location: device-dod.php?id=$device_index&w=$chart_width&h=$chart_height&min=$chart_min&max=$chart_max"); exit; }
 
 echo "<html><head>";
 echo "<meta http-equiv=\"refresh\" content=\"240\">";
@@ -89,7 +97,7 @@ $rrd_filename = '/home/pi/bin/pi-van-mon/data/'.$rrd_name.'.rrd';
 #echo "<img src='images/d-dayonday-temp-$DEVICEID.png'>";
 
 
-create_graph_dayonday( $rrd_filename, $img_filename, $device_name.' Day on Day', $device_units, "AVERAGE",$chart_height, $chart_width);
+create_graph_dayonday( $rrd_filename, $img_filename, $device_name.' Day on Day', $device_units, "AVERAGE",$chart_height, $chart_width, $chart_min, $chart_max);
 
 echo "<img src='images/".$img_name.".png' alt='Generated RRD image'><br><br>";
 
@@ -101,7 +109,7 @@ exit;
 
 
 
-function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $datacf, $height, $width) {
+function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $datacf, $min, $max) {
 
  $red          = "FF0000";
  $red_dark     = "880000";
@@ -138,16 +146,20 @@ function create_graph_dayonday($inputrrd, $outputimg, $dataname, $dataunit, $dat
 
  $options = array(
    "--title=$dataname",
-   "--alt-y-grid",
-   "--alt-autoscale",
-  # "--rigid",
+  # "--alt-y-grid",
+  # "--alt-autoscale",
   # "-y 0.2:10",
+   "--lower-limit=$min",
+   "--upper-limit=$max",
+   "--rigid",
    "--slope-mode",
    "--end=midnight",
    "--start=end-1d",
    "--vertical-label=$dataunit",
    "--height=$height",
    "--width=$width",
+   "--lower-limit=$min",
+   "--upper-limit=$max",
    "-cBACK#$grey_dark_vv",
    "-cSHADEA#$black",
    "-cSHADEB#$black",
