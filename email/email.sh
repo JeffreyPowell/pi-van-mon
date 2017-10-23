@@ -22,7 +22,7 @@ vertaxislabelpt=6
 allaxisvaluept=6
 legendpt=6
 
-list=( "-14h" "-50h" "-1w" "-2w" )
+list=( "-3h" "-1d" "-1w" "-1m" )
 
 for t in "${list[@]}"; do
 
