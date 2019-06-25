@@ -101,7 +101,6 @@ echo "</body></html>";
 exit;
 
 function create_graph($input, $output, $start, $title, $units, $height, $width) {
-
   $options = array(
     "--slope-mode",
     "--start", $start,
@@ -120,7 +119,9 @@ function create_graph($input, $output, $start, $title, $units, $height, $width) 
     "-nTITLE:10",
     "-nAXIS:9",
     "-nUNIT:10",
- #   "-y 0.2:5",
+    "-Y",
+ #   "-y 1:5",
+    "--alt-autoscale",
     "-cFRAME#ffffff",
     "-cARROW#000000",
     "DEF:dataavg=$input:data:AVERAGE",
@@ -132,8 +133,8 @@ function create_graph($input, $output, $start, $title, $units, $height, $width) 
     "GPRINT:transdataavg:MAX: max %6.3lf",
     "GPRINT:transdataavg:AVERAGE: avg %6.3lf",
     "GPRINT:transdataavg:LAST: last %6.3lf\\n"
-  );
-
+  );    
+    
  $ret = rrd_graph($output, $options );
 
   if (! $ret) {
